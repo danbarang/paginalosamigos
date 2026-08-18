@@ -1080,3 +1080,10 @@ body.rounded-cards {
   --radius-md: 12px;
   --radius-lg: 24px;
 }
+
+.badge-cta:hover {
+  background: var(--primary-color) !important;
+  color: var(--white) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(32, 170, 115, 0.2);
+}
