@@ -319,17 +319,19 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
     const prevBtn = wrapper.querySelector('.carousel-prev');
     const nextBtn = wrapper.querySelector('.carousel-next');
-    // Find the scrollable container: either .mobile-carousel or .marquee-track
-    const container = wrapper.querySelector('.mobile-carousel, .marquee-track');
+    // Find the scrollable container: either .mobile-carousel or .marquee-content
+    const container = wrapper.querySelector('.mobile-carousel, .marquee-content');
 
     if (prevBtn && nextBtn && container) {
       const scrollAmount = 300; // Pixels to scroll per click
 
-      prevBtn.addEventListener('click', () => {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
       });
 
-      nextBtn.addEventListener('click', () => {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
         container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
       });
     }

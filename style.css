@@ -873,9 +873,11 @@ a {
   right: -22px;
 }
 
-/* Hide on desktop if not needed, or adjust positioning */
-@media (min-width: 900px) {
-  .carousel-prev { left: -40px; }
-  .carousel-next { right: -40px; }
+/* Only show carousel buttons on mobile where scrolling makes sense */
+@media (min-width: 769px) {
+  .carousel-btn {
+    display: none !important;
+  }
 }
+
 
