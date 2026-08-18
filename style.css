@@ -381,19 +381,7 @@ a {
 }
 
 
-/* Service Grid Cards */
-.services-grid .service-col {
-  background: var(--white);
-  padding: var(--spacing-6);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(0,0,0,0.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.services-grid .service-col:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-}
+
 
 /* --- Perpetual Marquee --- */
 .marquee-wrapper {
@@ -1071,15 +1059,17 @@ a {
 /* Service col adjustments for solid bg */
 .service-col {
   padding: var(--spacing-4);
-  background: var(--white);
+  background: transparent;
   border-radius: var(--radius-lg);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(0, 0, 0, 0.03);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none;
+  border: 1px solid transparent;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.4s ease, box-shadow 0.4s ease;
   height: 100%;
 }
 
 .service-col:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
+  background: #fffae6; /* soft premium yellow */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.03);
 }
