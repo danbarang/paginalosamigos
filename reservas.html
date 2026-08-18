@@ -13,17 +13,38 @@
 </head>
 <body onload="document.body.style.opacity='1'">
   <nav class="navbar" aria-label="Navegación Principal">
-    <div class="nav-links">
+    <!-- Mobile Logo -->
+    <div class="logo mobile-only-logo" style="display: none;">
+      <a href="index.html">
+        <img src="/logo.svg" alt="Los Amigos" style="height: 40px; display: block;" />
+      </a>
+    </div>
+
+    <!-- Mobile Menu Toggle Button -->
+    <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" onclick="document.querySelector('.navbar').classList.toggle('menu-open')">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Left Links -->
+    <div class="nav-links nav-left">
       <a href="index.html" class="nav-link">Inicio</a>
       <a href="sello.html" class="nav-link">Nuestro sello</a>
       <a href="especialidades.html" class="nav-link">Especialidades</a>
     </div>
-    <div class="logo">
+    
+    <!-- Desktop Logo -->
+    <div class="logo desktop-logo">
       <a href="index.html">
         <img src="/logo.svg" alt="Los Amigos" style="height: 60px; display: block;" />
       </a>
     </div>
-    <div class="nav-links">
+    
+    <!-- Right Links -->
+    <div class="nav-links nav-right">
       <a href="programas.html" class="nav-link">Programas</a>
       <a href="terapias.html" class="nav-link">Terapias</a>
       <a href="reservas.html" class="nav-link">Reservas</a>

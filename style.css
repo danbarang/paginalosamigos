@@ -638,6 +638,74 @@ a {
     -ms-overflow-style: none;
     gap: var(--spacing-4) !important;
   }
+}
+
+/* Mobile Carousel for Services Grid */
+@media (max-width: 768px) {
+  .mobile-carousel {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--spacing-4);
+    /* Bleed out of the container so scrolling goes to the edge of the screen */
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mobile-carousel > * {
+    flex: 0 0 75% !important; /* The card takes 75% width so the next one peaks */
+    scroll-snap-align: center;
+    min-width: 260px;
+  }
+  .mobile-carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .mobile-carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Mobile swipeable carousel for marquee */
+@media (max-width: 768px) {
+  .marquee-wrapper {
+    overflow: hidden; /* Prevent horizontal scroll on body */
+  }
+  
+  .marquee-track {
+    animation: none !important;
+    width: auto !important;
+    display: block !important;
+  }
+  
+  /* Hide the duplicated loop block entirely on mobile */
+  .marquee-content[aria-hidden="true"] {
+    display: none !important;
+  }
+  
+  /* Make the main content block the swipeable container */
+  .marquee-content:not([aria-hidden="true"]) {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: var(--spacing-4);
+    
+    /* Bleed out to screen edge */
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    gap: var(--spacing-4) !important;
+  }
   
   .marquee-content:not([aria-hidden="true"])::-webkit-scrollbar {
     display: none;
@@ -647,5 +715,122 @@ a {
     flex: 0 0 85% !important; /* Peek effect */
     scroll-snap-align: center;
     max-width: none !important;
+  }
+}
+
+/* ==========================================================================
+   Mobile Responsive Overrides & Craft Improvements
+   ========================================================================== */
+
+/* 1. Navbar Mobile Layout */
+.mobile-only-logo { display: none; }
+.mobile-menu-btn { 
+  display: none; 
+  background: none; 
+  border: none; 
+  cursor: pointer; 
+  color: var(--primary-dark); 
+  padding: var(--spacing-1); 
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    justify-content: space-between;
+    padding: var(--spacing-2) var(--spacing-4);
+    align-items: center;
+  }
+
+  .desktop-logo { display: none !important; }
+  .mobile-only-logo { display: block; }
+  .mobile-menu-btn { display: block; }
+
+  /* Hide links by default, prep for flex-column */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: var(--spacing-2);
+  }
+
+  /* When JS toggles 'menu-open' */
+  .navbar.menu-open {
+    flex-wrap: wrap;
+    border-radius: 24px;
+    padding-bottom: var(--spacing-4);
+    background-color: rgba(255, 255, 255, 0.98); /* Solidify for contrast */
+  }
+
+  .navbar.menu-open .nav-links {
+    display: flex;
+    order: 3; /* Push below header */
+  }
+  
+  .navbar.menu-open .nav-left { margin-top: var(--spacing-3); }
+  .navbar.menu-open .nav-right { margin-top: 0; }
+  
+  /* Touch target sizing for accessible mobile links */
+  .nav-link { 
+    padding: var(--spacing-2) 0; 
+    display: block; 
+    width: 100%; 
+  }
+}
+
+/* 2. Hero Section Typography & Flow */
+@media (max-width: 768px) {
+  /* Recalibrate typography density for small screens */
+  .text-hero {
+    font-size: clamp(2.2rem, 8vw, 3rem);
+    text-align: center;
+  }
+  
+  .text-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+  }
+  
+  /* Force flex items to full width to avoid awkward wrapping */
+  #hero-section .container > div {
+    flex: 0 0 100%;
+    min-width: 100% !important;
+    text-align: center;
+  }
+  
+  #hero-section .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Reduce blob visual noise on mobile */
+  .bg-shape {
+    transform: scale(0.6);
+  }
+}
+
+/* 3. Services Grid Stability */
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .services-grid .service-col {
+    padding: var(--spacing-4);
+  }
+}
+
+/* 4. Footer Information Hierarchy */
+@media (max-width: 768px) {
+  .footer .container {
+    grid-template-columns: 1fr !important;
+    text-align: center !important;
+  }
+  /* Elevate brand presence on mobile */
+  .footer-brand {
+    order: -1; 
+    margin-bottom: var(--spacing-4);
+  }
+  .footer-contact {
+    text-align: center;
+    margin-bottom: var(--spacing-4);
   }
 }
