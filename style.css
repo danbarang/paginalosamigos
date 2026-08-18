@@ -995,5 +995,67 @@ a {
     display: none !important;
   }
 }
+}
 
+/* ==========================================================================
+   Accordion Toggle Content
+   ========================================================================== */
+.toggle-content {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: var(--spacing-6);
+  transition: all 0.3s ease;
+}
 
+.toggle-content__toggle {
+  user-select: none;
+  background-color: var(--mint-bg, #f2f9f5);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: background-color 0.3s ease;
+}
+
+.toggle-content__toggle:hover {
+  background-color: var(--accent-green-light);
+}
+
+.toggle-content__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.toggle-content.active .toggle-content__content {
+  max-height: 5000px;
+  transition: max-height 1s ease-in-out;
+}
+
+.toggle-content .plus {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.toggle-content.active .plus {
+  transform: rotate(45deg); /* Turns into an X */
+}
+
+.three-col .services-grid {
+  padding-top: var(--spacing-6);
+}
+
+/* Service col adjustments for solid bg */
+.service-col {
+  padding: var(--spacing-4);
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.service-col:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
