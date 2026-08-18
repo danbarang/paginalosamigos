@@ -117,115 +117,98 @@
       
     </section>
 
-    <!-- Especialidades Preview (Solid bg, Toggle Accordion) -->
-    <section class="section bg-mint toggle-section" style="padding: 0;">
-      <div id="togglecontent" class="toggle-content active">
-        <!-- Toggle Header -->
-        <div class="toggle-content__toggle active" onclick="this.parentElement.classList.toggle('active')">
-          <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: var(--spacing-4) 0; cursor: pointer;">
-            <h2 class="heading" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 2rem; margin: 0;">
-              Nuestros servicios integrales
-            </h2>
-            <span class="plus" style="font-size: 2rem; color: var(--primary-dark); font-weight: bold; transition: transform 0.3s ease;">+</span>
-          </div>
-        </div>
+    <!-- Especialidades Preview (Solid bg, 3 Columns) -->
+    <section class="section bg-mint" style="padding: var(--spacing-8) 0;">
+      <div class="container">
+        <!-- Clean Header -->
+        <h2 class="heading text-center" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 2.5rem; margin-bottom: var(--spacing-6);">
+          Nuestros servicios integrales
+        </h2>
         
-        <!-- Toggle Content -->
-        <div class="toggle-content__content active">
-          <div class="three-col" style="padding-bottom: var(--spacing-6);">
-            <div class="container services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-6) var(--spacing-5);">
-              
-              <!-- Item 1 -->
-              <div class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                  <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-1@2x.png" aria-label="icon" style="width: 50%;" />
-                </span>
-                <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Terapia de integración sensorial</h3>
-                <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Intervención para procesar y organizar la información sensorial del entorno, mejorando la respuesta adaptativa.</p>
-                <a href="terapias.html" class="btn btn-secondary mt-4" style="padding: 10px 20px; font-size: 0.9rem; text-decoration: none;">Ver terapia</a>
-              </div>
+        <div class="three-col">
+          <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-6) var(--spacing-5);">
+            
+            <!-- Item 1 -->
+            <a href="terapias.html#integracion-sensorial" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
+              <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-1@2x.png" aria-label="icon" style="width: 50%;" />
+              </span>
+              <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Terapia de integración sensorial</h3>
+              <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Intervención para procesar y organizar la información sensorial del entorno, mejorando la respuesta adaptativa.</p>
+            </a>
 
-              <!-- Item 2 -->
-              <div class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                  <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-2@2x.png" aria-label="icon" style="width: 50%;" />
-                </span>
-                <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Terapia para ansiedad</h3>
-                <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Estrategias y herramientas psicológicas para el manejo del estrés y la regulación emocional.</p>
-                <a href="terapias.html" class="btn btn-secondary mt-4" style="padding: 10px 20px; font-size: 0.9rem; text-decoration: none;">Saber más</a>
-              </div>
+            <!-- Item 2 -->
+            <a href="terapias.html#ansiedad" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
+              <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-2@2x.png" aria-label="icon" style="width: 50%;" />
+              </span>
+              <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Terapia para ansiedad</h3>
+              <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Estrategias y herramientas psicológicas para el manejo del estrés y la regulación emocional.</p>
+            </a>
 
-              <!-- Item 3 -->
-              <div class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                  <img src="https://www.hopebridge.com/wp-content/uploads/2023/10/HPB-Icon-3@2x.png" aria-label="icon" style="width: 50%;" />
-                </span>
-                <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Rehabilitación cardiometabólica</h3>
-                <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Programas de ejercicios y pautas nutricionales para mejorar la salud cardiovascular y metabólica.</p>
-                <a href="terapias.html" class="btn btn-secondary mt-4" style="padding: 10px 20px; font-size: 0.9rem; text-decoration: none;">Ver programa</a>
-              </div>
+            <!-- Item 3 -->
+            <a href="terapias.html#rehabilitacion-cardiometabolica" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
+              <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+                <img src="https://www.hopebridge.com/wp-content/uploads/2023/10/HPB-Icon-3@2x.png" aria-label="icon" style="width: 50%;" />
+              </span>
+              <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Rehabilitación cardiometabólica</h3>
+              <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Programas de ejercicios y pautas nutricionales para mejorar la salud cardiovascular y metabólica.</p>
+            </a>
 
-              <!-- Item 4 -->
-              <div class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                  <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-4@2x.png" aria-label="icon" style="width: 50%;" />
-                </span>
-                <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Deglución atípica</h3>
-                <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Rehabilitación de los patrones de masticación y deglución para evitar problemas funcionales y estructurales.</p>
-                <a href="terapias.html" class="btn btn-secondary mt-4" style="padding: 10px 20px; font-size: 0.9rem; text-decoration: none;">Ver terapia</a>
-              </div>
+            <!-- Item 4 -->
+            <a href="terapias.html#deglucion-atipica" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
+              <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-4@2x.png" aria-label="icon" style="width: 50%;" />
+              </span>
+              <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Deglución atípica</h3>
+              <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Rehabilitación de los patrones de masticación y deglución para evitar problemas funcionales y estructurales.</p>
+            </a>
 
-              <!-- Item 5 -->
-              <div class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                  <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-5@2x.png" aria-label="icon" style="width: 50%;" />
-                </span>
-                <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Terapia de Alimentación</h3>
-                <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Apoyo especializado para superar dificultades en la ingesta, ampliando la aceptación de alimentos.</p>
-                <a href="terapias.html" class="btn btn-secondary mt-4" style="padding: 10px 20px; font-size: 0.9rem; text-decoration: none;">Ver terapia</a>
-              </div>
+            <!-- Item 5 -->
+            <a href="terapias.html#terapia-alimentacion" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
+              <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-5@2x.png" aria-label="icon" style="width: 50%;" />
+              </span>
+              <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Terapia de Alimentación</h3>
+              <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Apoyo especializado para superar dificultades en la ingesta, ampliando la aceptación de alimentos.</p>
+            </a>
 
-              <!-- Item 6 -->
-              <div class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                  <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-6@2x.png" aria-label="icon" style="width: 50%;" />
-                </span>
-                <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Apraxia del habla infantil</h3>
-                <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Tratamiento para mejorar la planificación motora del habla, facilitando una comunicación clara.</p>
-                <a href="terapias.html" class="btn btn-secondary mt-4" style="padding: 10px 20px; font-size: 0.9rem; text-decoration: none;">Saber más</a>
-              </div>
+            <!-- Item 6 -->
+            <a href="terapias.html#apraxia-infantil" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
+              <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-6@2x.png" aria-label="icon" style="width: 50%;" />
+              </span>
+              <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Apraxia del habla infantil</h3>
+              <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Tratamiento para mejorar la planificación motora del habla, facilitando una comunicación clara.</p>
+            </a>
 
-              <!-- Item 7 -->
-              <div class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                  <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-7@2x.png" aria-label="icon" style="width: 50%;" />
-                </span>
-                <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Neurorehabilitación</h3>
-                <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Atención integral para recuperar funciones motoras y cognitivas tras alteraciones neurológicas.</p>
-                <a href="terapias.html" class="btn btn-secondary mt-4" style="padding: 10px 20px; font-size: 0.9rem; text-decoration: none;">Ver programa</a>
-              </div>
+            <!-- Item 7 -->
+            <a href="terapias.html#neurorehabilitacion" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
+              <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-7@2x.png" aria-label="icon" style="width: 50%;" />
+              </span>
+              <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Neurorehabilitación</h3>
+              <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Atención integral para recuperar funciones motoras y cognitivas tras alteraciones neurológicas.</p>
+            </a>
 
-              <!-- Item 8 -->
-              <div class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                  <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-8@2x.png" aria-label="icon" style="width: 50%;" />
-                </span>
-                <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Condición del espectro autista</h3>
-                <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Abordaje terapéutico multidisciplinario para favorecer el desarrollo y la integración social.</p>
-                <a href="terapias.html" class="btn btn-secondary mt-4" style="padding: 10px 20px; font-size: 0.9rem; text-decoration: none;">Ver terapia</a>
-              </div>
+            <!-- Item 8 -->
+            <a href="terapias.html#espectro-autista" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
+              <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-8@2x.png" aria-label="icon" style="width: 50%;" />
+              </span>
+              <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Condición del espectro autista</h3>
+              <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Abordaje terapéutico multidisciplinario para favorecer el desarrollo y la integración social.</p>
+            </a>
 
-              <!-- Item 9 -->
-              <div class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                  <img src="https://www.hopebridge.com/wp-content/uploads/2023/10/HPB-Icon-9@2x.png" aria-label="icon" style="width: 50%;" />
-                </span>
-                <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Terapia de la voz y el habla</h3>
-                <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Tratamiento para corregir alteraciones vocales y mejorar la articulación y fluidez verbal.</p>
-                <a href="terapias.html" class="btn btn-secondary mt-4" style="padding: 10px 20px; font-size: 0.9rem; text-decoration: none;">Saber más</a>
-              </div>
+            <!-- Item 9 -->
+            <a href="terapias.html#voz-habla" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
+              <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
+                <img src="https://www.hopebridge.com/wp-content/uploads/2023/10/HPB-Icon-9@2x.png" aria-label="icon" style="width: 50%;" />
+              </span>
+              <h3 class="heading hie mb-2" style="font-family: 'Nunito', sans-serif; font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Terapia de la voz y el habla</h3>
+              <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Tratamiento para corregir alteraciones vocales y mejorar la articulación y fluidez verbal.</p>
+            </a>
 
-            </div>
           </div>
         </div>
       </div>
