@@ -28,9 +28,9 @@
   --spacing-8: 6rem;     /* 96px */
 
   /* Border Radius */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 24px;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
   --radius-full: 9999px;
 
   /* Shadows (Depth) */
