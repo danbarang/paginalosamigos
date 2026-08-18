@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestras Terapias | Los Amigos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { opacity: 0; transition: opacity 0.3s; }
+    
+    /* Accordion styles */
+    details > summary {
+      list-style: none;
+    }
+    details > summary::-webkit-details-marker {
+      display: none;
+    }
+    details > summary::after {
+      content: '+';
+      float: right;
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 1;
+      transition: transform 0.3s ease;
+    }
+    details[open] > summary::after {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body onload="document.body.style.opacity='1'">
+  <nav class="navbar" aria-label="Navegación Principal">
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="sello.html" class="nav-link">Nuestro sello</a>
+      <a href="especialidades.html" class="nav-link">Especialidades</a>
+    </div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="/logo.svg" alt="Los Amigos" style="height: 60px; display: block;" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="programas.html" class="nav-link">Programas</a>
+      <a href="terapias.html" class="nav-link">Terapias</a>
+      <a href="reservas.html" class="nav-link">Reservas</a>
+    </div>
+  </nav>
+
+  <main style="padding-top: 180px; padding-bottom: calc(var(--spacing-8) + 40px); background-color: var(--bg-color);">
+    <div class="container text-center">
+      <h1 class="text-hero mb-2 animate-on-scroll">Tratamiento para cada condición</h1>
+      <p class="text-subtitle mb-6 animate-on-scroll">Nuestro equipo multidisciplinario aborda cada caso desde una perspectiva integral. Descubre cómo podemos ayudarte.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--spacing-4); text-align: left; align-items: start;">
+        
+        <!-- Condition 1 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Secuelas ACV</h3>
+          <details name="terapias" style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Kinesiología:</strong> Rehabilitación de la marcha, equilibrio y control motor para recuperar la movilidad funcional de las extremidades.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Terapia ocupacional:</strong> Reentrenamiento en actividades de la vida diaria (AVD) y adaptación del entorno para maximizar la independencia.</p>
+              <p style="margin-bottom: 0;"><strong>Fonoaudiología:</strong> Tratamiento especializado de afasias para recuperar la comunicación y rehabilitación de dificultades al tragar (disfagia).</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 2 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Alzheimer</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Terapia ocupacional:</strong> Estimulación cognitiva estructurada y adaptación de rutinas para mantener la autonomía el mayor tiempo posible.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Fonoaudiología:</strong> Preservación de habilidades comunicativas y prevención/manejo de problemas de deglución.</p>
+              <p style="margin-bottom: 0;"><strong>Psicología:</strong> Acompañamiento emocional, estrategias de afrontamiento y psicoeducación dirigida tanto al paciente como a la familia.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 3 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Parkinson</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Kinesiología:</strong> Ejercicios de amplitud de movimiento para prevenir la rigidez, mejorar el equilibrio postural y evitar caídas.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Fonoaudiología:</strong> Tratamiento intensivo de la hipofonía (volumen bajo de voz) y monitorización constante de la deglución segura.</p>
+              <p style="margin-bottom: 0;"><strong>Terapia ocupacional:</strong> Estrategias prácticas y adaptaciones físicas para superar bloqueos motores en actividades diarias e instrumentales.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 4 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Infarto al miocardio</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Kinesiología:</strong> Programas de ejercicio físico graduado, progresivo y monitoreado para recuperar y fortalecer la capacidad cardiovascular.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Nutrición:</strong> Asesoría dietética antiinflamatoria y cardioprotectora esencial para el control crónico de los factores de riesgo.</p>
+              <p style="margin-bottom: 0;"><strong>Psicología:</strong> Intervención para el manejo de la ansiedad y la depresión post-evento, facilitando el apego al nuevo estilo de vida.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 5 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Condición del espectro autista</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Terapia ocupacional:</strong> Abordaje mediante integración sensorial para regular respuestas a estímulos del entorno y fomentar la participación social.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Fonoaudiología:</strong> Desarrollo del lenguaje comprensivo, expresivo, y trabajo específico en las habilidades pragmáticas de comunicación social.</p>
+              <p style="margin-bottom: 0;"><strong>Psicología:</strong> Apoyo activo en regulación emocional, fomento de la flexibilidad cognitiva y entrega de herramientas psicoeducativas a la familia.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 6 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Parálisis cerebral</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Kinesiología:</strong> Técnicas para prevenir deformidades articulares, manejar la espasticidad muscular y fomentar el desarrollo motor.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Terapia ocupacional:</strong> Prescripción y entrenamiento en ayudas técnicas, buscando maximizar la participación autónoma en el juego y el colegio.</p>
+              <p style="margin-bottom: 0;"><strong>Fonoaudiología:</strong> Implementación guiada de sistemas alternativos/aumentativos de comunicación (SAAC) y abordaje integral de la alimentación segura.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 7 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">TDAH</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Psicología:</strong> Entrenamiento directo en funciones ejecutivas (como planificación y atención focalizada) e implementación de estrategias conductuales.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Terapia ocupacional:</strong> Modulación efectiva del nivel de alerta y atención mediante integración sensorial y estructuración ambiental.</p>
+              <p style="margin-bottom: 0;"><strong>Fonoaudiología:</strong> Apoyo para mejorar la comprensión auditiva compleja y estructuración narrativa en situaciones de alta demanda.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 8 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Discapacidad intelectual</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Terapia ocupacional:</strong> Entrenamiento pragmático en habilidades adaptativas y rutinas comunitarias orientadas a promover la vida independiente.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Fonoaudiología:</strong> Fomento de sistemas y herramientas para la comunicación funcional, asegurando la comprensión del entorno.</p>
+              <p style="margin-bottom: 0;"><strong>Psicología:</strong> Apoyo vital en el desarrollo socioafectivo pleno y manejo de conductas o desregulaciones desafiantes.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 9 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Síndrome de Down</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Kinesiología:</strong> Estimulación psicomotora temprana clave para compensar la hipotonía y alcanzar satisfactoriamente los hitos del desarrollo motor.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Fonoaudiología:</strong> Terapia miofuncional enfocada en la tonicidad orofacial y el desarrollo temprano de un habla clara e inteligible.</p>
+              <p style="margin-bottom: 0;"><strong>Terapia ocupacional:</strong> Estimulación del procesamiento viso-motor, habilidades de motricidad fina y fomento de la autonomía preescolar/escolar.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 10 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Depresión</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Psicología:</strong> Psicoterapia basada en evidencia (cognitivo-conductual) para identificar y reestructurar ciclos de pensamiento disfuncionales.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Nutrición:</strong> Diseño de pautas de alimentación antiinflamatorias que apoyan biológicamente la regulación del ánimo y la energía vital.</p>
+              <p style="margin-bottom: 0;"><strong>Terapia ocupacional:</strong> Programación de reactivación conductual mediante la estructuración gradual de rutinas diarias y roles significativos.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 11 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Ansiedad</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Psicología:</strong> Intervención y entrenamiento en técnicas de relajación profunda, afrontamiento de crisis y reestructuración cognitiva.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Terapia ocupacional:</strong> Identificación proactiva de desencadenantes y aplicación de estrategias sensoriales y físicas para la modulación.</p>
+              <p style="margin-bottom: 0;"><strong>Kinesiología:</strong> Técnicas de conciencia y esquema corporal con ejercicios focales para liberar la tensión muscular psicosomática acumulada.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 12 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Obesidad</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Nutrición:</strong> Diseño realista de planes de alimentación adaptados al paciente, enfocados en la educación y sostenibilidad a largo plazo.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Psicología:</strong> Abordaje de la conducta alimentaria (hambre emocional), fortalecimiento de la imagen corporal y autoestima.</p>
+              <p style="margin-bottom: 0;"><strong>Kinesiología:</strong> Ejecución de programas de ejercicio terapéutico guiado, protegiendo las articulaciones y favoreciendo un progreso seguro.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 13 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Secuelas TEC</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Fonoaudiología:</strong> Rehabilitación focalizada en las redes del lenguaje, memoria de trabajo verbal y habilidades comunicativas complejas.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Terapia ocupacional:</strong> Reentrenamiento exhaustivo en funciones ejecutivas y adaptación de puestos de trabajo para el retorno seguro.</p>
+              <p style="margin-bottom: 0;"><strong>Kinesiología:</strong> Programas de rehabilitación vestibular y neuromotora para compensar déficits de equilibrio o coordinación post-trauma.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 14 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Apraxia Infantil</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Fonoaudiología:</strong> Terapia motora del habla altamente estructurada para enseñar al cerebro a programar secuencias de movimientos orales.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Terapia ocupacional:</strong> Soporte global en la praxis motora del desarrollo y modulación especializada de los sistemas táctil y propioceptivo.</p>
+              <p style="margin-bottom: 0;"><strong>Psicología:</strong> Acompañamiento fundamental para manejar la frustración comunicativa, protegiendo y reforzando la autoestima infantil.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 15 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Deterioro cognitivo leve</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Terapia ocupacional:</strong> Diseño y ejecución de talleres de estimulación y uso de compensaciones ambientales para los olvidos cotidianos.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Fonoaudiología:</strong> Dinámicas activas para el mantenimiento del vocabulario léxico, la agilidad verbal y la comprensión auditiva veloz.</p>
+              <p style="margin-bottom: 0;"><strong>Psicología:</strong> Apoyo emocional temprano ante el declive, prevención de depresión secundaria reactiva y asesoramiento familiar.</p>
+            </div>
+          </details>
+        </article>
+
+        <!-- Condition 16 -->
+        <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
+          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Trastornos del aprendizaje</h3>
+          <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
+            <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
+            <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
+              <p style="margin-bottom: var(--spacing-2);"><strong>Psicología:</strong> Intervención de apoyo afectivo para prevenir baja autoestima académica y entrenamiento de actitudes frente al fracaso escolar.</p>
+              <p style="margin-bottom: var(--spacing-2);"><strong>Fonoaudiología:</strong> Fortalecimiento intenso de las bases del aprendizaje: conciencia fonológica, decodificación lectora y ortografía.</p>
+              <p style="margin-bottom: 0;"><strong>Terapia ocupacional:</strong> Perfeccionamiento del procesamiento visual-motor, la grafomotricidad y la postura ergonómica dentro del aula escolar.</p>
+            </div>
+          </details>
+        </article>
+
+      </div>
+    </div>
+  </main>
+
+  
+  <footer class="footer bg-cream" style="padding-top: var(--spacing-8); padding-bottom: var(--spacing-4);">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-6); align-items: center; text-align: left;">
+      
+      <!-- Left: Contact Info -->
+      <div class="footer-contact" style="font-size: 0.95rem;">
+        <h4 style="color: var(--primary-dark); margin-bottom: var(--spacing-3); font-size: 1.2rem;">Contacto</h4>
+        <p style="margin-bottom: var(--spacing-2);"><strong>Ubicación:</strong><br>Eusebio Lillo 147, Castro, Chile</p>
+        <p style="margin-bottom: var(--spacing-2);"><strong>Teléfono:</strong><br><a href="tel:+56912345678" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='inherit'">+56 9 1234 5678</a></p>
+        <p><strong>Correo:</strong><br><a href="mailto:contacto@losamigos.cl" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='inherit'">contacto@losamigos.cl</a></p>
+      </div>
+
+      <!-- Middle: Brand -->
+      <div class="footer-brand" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <img src="/simbolo.svg" alt="Los Amigos Símbolo" style="height: 80px; margin-bottom: var(--spacing-3);" />
+        <h3 style="color: var(--primary-dark); letter-spacing: 1px; font-size: 1.5rem; margin-bottom: var(--spacing-1);">LOS AMIGOS</h3>
+        <p style="color: var(--text-color); font-size: 0.9rem;">Centro Terapéutico y de Rehabilitación</p>
+      </div>
+
+      <!-- Right: Map -->
+      <div class="footer-map" style="border-radius: var(--radius-lg); overflow: hidden; height: 200px; box-shadow: var(--shadow-sm);">
+        <iframe src="https://maps.google.com/maps?q=Eusebio%20Lillo%20147,%20Castro,%20Chile&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+    
+    <!-- Bottom: Copyright -->
+    <div class="container text-center" style="margin-top: var(--spacing-6); padding-top: var(--spacing-4); border-top: 1px solid rgba(0,0,0,0.05);">
+      <p style="font-size: 0.85rem; opacity: 0.6; margin: 0;">&copy; 2026 Centro Terapéutico Los Amigos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script type="module" src="/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const accordions = document.querySelectorAll('details');
+      
+      accordions.forEach(acc => {
+        const summary = acc.querySelector('summary');
+        const content = acc.querySelector('div');
+
+        summary.addEventListener('click', (e) => {
+          e.preventDefault();
+
+          // Close all other open accordions smoothly
+          accordions.forEach(otherAcc => {
+            if (otherAcc !== acc && otherAcc.hasAttribute('open')) {
+              const otherContent = otherAcc.querySelector('div');
+              otherContent.style.overflow = 'hidden';
+              
+              const startHeight = otherContent.offsetHeight;
+              const animation = otherContent.animate(
+                [
+                  { height: startHeight + 'px', opacity: 1, transform: 'translateY(0)' },
+                  { height: '0px', opacity: 0, transform: 'translateY(-10px)' }
+                ],
+                { duration: 350, easing: 'ease-in-out' }
+              );
+              
+              animation.onfinish = () => {
+                otherAcc.removeAttribute('open');
+                otherContent.style.height = '';
+                otherContent.style.overflow = '';
+              };
+            }
+          });
+
+          // Toggle current accordion
+          if (acc.hasAttribute('open')) {
+            // Close it
+            content.style.overflow = 'hidden';
+            const startHeight = content.offsetHeight;
+            const animation = content.animate(
+              [
+                { height: startHeight + 'px', opacity: 1, transform: 'translateY(0)' },
+                { height: '0px', opacity: 0, transform: 'translateY(-10px)' }
+              ],
+              { duration: 350, easing: 'ease-in-out' }
+            );
+            
+            animation.onfinish = () => {
+              acc.removeAttribute('open');
+              content.style.height = '';
+              content.style.overflow = '';
+            };
+          } else {
+            // Open it
+            acc.setAttribute('open', '');
+            content.style.overflow = 'hidden';
+            const targetHeight = content.offsetHeight;
+            
+            content.animate(
+              [
+                { height: '0px', opacity: 0, transform: 'translateY(-10px)' },
+                { height: targetHeight + 'px', opacity: 1, transform: 'translateY(0)' }
+              ],
+              { duration: 350, easing: 'ease-in-out' }
+            ).onfinish = () => {
+               content.style.overflow = '';
+               content.style.height = '';
+            };
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
