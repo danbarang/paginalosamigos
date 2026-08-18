@@ -834,3 +834,48 @@ a {
     margin-bottom: var(--spacing-4);
   }
 }
+
+/* --- Carousel Navigation Buttons --- */
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background-color: var(--white);
+  border: 1px solid rgba(0,0,0,0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: var(--shadow-md);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-prev {
+  left: -22px;
+}
+
+.carousel-next {
+  right: -22px;
+}
+
+/* Hide on desktop if not needed, or adjust positioning */
+@media (min-width: 900px) {
+  .carousel-prev { left: -40px; }
+  .carousel-next { right: -40px; }
+}
+

@@ -314,3 +314,24 @@ document.addEventListener('DOMContentLoaded', () => {
       };
     }
   });
+
+  // Carousel Navigation Buttons Logic
+  document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+    const prevBtn = wrapper.querySelector('.carousel-prev');
+    const nextBtn = wrapper.querySelector('.carousel-next');
+    // Find the scrollable container: either .mobile-carousel or .marquee-track
+    const container = wrapper.querySelector('.mobile-carousel, .marquee-track');
+
+    if (prevBtn && nextBtn && container) {
+      const scrollAmount = 300; // Pixels to scroll per click
+
+      prevBtn.addEventListener('click', () => {
+        container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+
+      nextBtn.addEventListener('click', () => {
+        container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+    }
+  });
+
