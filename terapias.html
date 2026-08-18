@@ -32,21 +32,22 @@
 </head>
 <body onload="document.body.style.opacity='1'">
   <nav class="navbar" aria-label="Navegación Principal">
-    <!-- Mobile Logo -->
-    <div class="logo mobile-only-logo" style="display: none;">
-      <a href="index.html">
-        <img src="/logo.svg" alt="Los Amigos" style="height: 40px; display: block;" />
-      </a>
+    <!-- Cabecera Móvil (Oculta en escritorio) -->
+    <div class="mobile-nav-header">
+      <div class="logo mobile-only-logo">
+        <a href="index.html">
+          <img src="/logo.svg" alt="Los Amigos" style="height: 40px; display: block;" />
+        </a>
+      </div>
+      
+      <!-- Botón Hamburguesa Premium -->
+      <button class="mobile-menu-btn" aria-label="Abrir menú" onclick="document.querySelector('.navbar').classList.toggle('menu-open')">
+        <div class="hamburger">
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+        </div>
+      </button>
     </div>
-
-    <!-- Mobile Menu Toggle Button -->
-    <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" onclick="document.querySelector('.navbar').classList.toggle('menu-open')">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="3" y1="12" x2="21" y2="12"></line>
-        <line x1="3" y1="6" x2="21" y2="6"></line>
-        <line x1="3" y1="18" x2="21" y2="18"></line>
-      </svg>
-    </button>
 
     <!-- Left Links -->
     <div class="nav-links nav-left">
