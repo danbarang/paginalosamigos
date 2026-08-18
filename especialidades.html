@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Especialidades | Los Amigos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { opacity: 0; transition: opacity 0.3s; }
+    .esp-section {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 100px;
+      margin-bottom: 50px;
+    }
+  </style>
+</head>
+<body onload="document.body.style.opacity='1'">
+  <nav class="navbar" aria-label="Navegación Principal">
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="sello.html" class="nav-link">Nuestro sello</a>
+      <a href="especialidades.html" class="nav-link">Especialidades</a>
+    </div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="/logo.svg" alt="Los Amigos" style="height: 60px; display: block;" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="programas.html" class="nav-link">Programas</a>
+      <a href="terapias.html" class="nav-link">Terapias</a>
+      <a href="reservas.html" class="nav-link">Reservas</a>
+    </div>
+  </nav>
+
+  <main style="padding-top: 180px;">
+    
+    <div class="container">
+      <h1 class="text-hero text-center mb-4 animate-on-scroll">Nuestras especialidades</h1>
+      
+      <!-- Fonoaudiología -->
+      <section id="fonoaudiologia" class="esp-section">
+        <div class="card" style="background-color: var(--accent-green-light); padding: var(--spacing-6);">
+          <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-6); align-items: center;">
+            
+            <div style="flex: 1; min-width: 300px;">
+              <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: var(--radius-full); background: var(--white); margin-bottom: var(--spacing-4); box-shadow: 0 4px 12px rgba(43, 95, 72, 0.1);">
+                <!-- Icono representativo (Comunicación / Diálogo) -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                  <path d="M13 8H7"></path>
+                  <path d="M17 12H7"></path>
+                </svg>
+              </div>
+              <h2 class="text-title mb-3">Fonoaudiología</h2>
+              <p class="mb-4" style="line-height: 1.7;">La fonoaudiología en Los Amigos se centra en la evaluación, diagnóstico y tratamiento integral de los trastornos asociados a la comunicación humana. Nuestro objetivo principal es proporcionar herramientas dinámicas y lúdicas que potencien el desarrollo del lenguaje, mejorando así la interacción social y calidad de vida de nuestros pacientes desde la primera infancia.</p>
+              <a href="reservas.html" class="btn btn-primary mt-2">Agendar Sesión</a>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px; background: rgba(255, 255, 255, 0.6); padding: var(--spacing-5); border-radius: var(--radius-lg);">
+              <h3 style="font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: var(--spacing-3);">Problemas que atendemos:</h3>
+              <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--spacing-3);">
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Trastornos del Lenguaje (TEL/TDL):</strong> Dificultades en la comprensión y expresión oral.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Trastornos de la Articulación:</strong> Dificultad para pronunciar ciertos sonidos (dislalias).</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Desafíos en la Deglución:</strong> Problemas de alimentación, masticación y succión.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Comunicación Social:</strong> Dificultades en el uso práctico del lenguaje en contextos sociales.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Estimulación Temprana:</strong> Intervención preventiva en infantes con retraso en el desarrollo comunicativo.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Terapia ocupacional -->
+      <section id="terapia-ocupacional" class="esp-section">
+        <div class="card" style="background-color: var(--accent-yellow-light); padding: var(--spacing-6);">
+          <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-6); align-items: center;">
+            
+            <div style="flex: 1; min-width: 300px;">
+              <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: var(--radius-full); background: var(--white); margin-bottom: var(--spacing-4); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+                <!-- Icono representativo (Manos / Actividad) -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+                  <path d="M14 4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+                  <path d="M10 4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"></path>
+                  <path d="M6 6v7"></path>
+                  <path d="M2 14c0 4 4 8 10 8s10-4 10-8V11a2 2 0 0 0-2-2h-2"></path>
+                </svg>
+              </div>
+              <h2 class="text-title mb-3">Terapia ocupacional</h2>
+              <p class="mb-4" style="line-height: 1.7;">Buscamos fomentar la máxima independencia y autonomía en las actividades de la vida diaria. A través de actividades significativas y lúdicas, apoyamos el desarrollo de habilidades motoras y facilitamos la integración sensorial para que cada niño pueda participar plenamente en su entorno.</p>
+              <a href="reservas.html" class="btn btn-primary mt-2">Agendar Sesión</a>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px; background: rgba(255, 255, 255, 0.6); padding: var(--spacing-5); border-radius: var(--radius-lg);">
+              <h3 style="font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: var(--spacing-3);">Áreas de intervención:</h3>
+              <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--spacing-3);">
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Integración Sensorial:</strong> Abordaje de dificultades en el procesamiento de estímulos del entorno.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Actividades de la Vida Diaria (AVD):</strong> Entrenamiento en vestido, alimentación e higiene.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Motricidad Fina y Gruesa:</strong> Desarrollo de la coordinación, agarre y destreza manual.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Adaptación al Entorno:</strong> Modificaciones en el hogar o escuela para facilitar la participación.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Kinesiología -->
+      <section id="kinesiologia" class="esp-section">
+        <div class="card" style="background-color: var(--bg-color); padding: var(--spacing-6);">
+          <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-6); align-items: center;">
+            
+            <div style="flex: 1; min-width: 300px;">
+              <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: var(--radius-full); background: var(--white); margin-bottom: var(--spacing-4); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);">
+                <!-- Icono representativo (Movimiento / Actividad) -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <h2 class="text-title mb-3">Kinesiología</h2>
+              <p class="mb-4" style="line-height: 1.7;">Acompañamos la rehabilitación motora de los niños, enfocándonos en mejorar la movilidad, la fuerza y la coordinación general. A través de un enfoque basado en el juego y el movimiento, diseñamos ejercicios personalizados para asegurar un desarrollo físico óptimo y seguro.</p>
+              <a href="reservas.html" class="btn btn-primary mt-2">Agendar Sesión</a>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px; background: rgba(255, 255, 255, 0.6); padding: var(--spacing-5); border-radius: var(--radius-lg);">
+              <h3 style="font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: var(--spacing-3);">Áreas de intervención:</h3>
+              <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--spacing-3);">
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Rehabilitación Neuromotora:</strong> Tratamiento de condiciones neurológicas que afectan el movimiento.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Retraso del Desarrollo Psicomotor:</strong> Estimulación temprana de hitos motores.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Alteraciones Posturales:</strong> Corrección de posturas y problemas ortopédicos infantiles.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Kinesiología Respiratoria:</strong> Manejo de cuadros obstructivos y mejora de la función pulmonar.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Psicología -->
+      <section id="psicologia" class="esp-section">
+        <div class="card" style="background-color: var(--accent-yellow); padding: var(--spacing-6);">
+          <div style="display: flex; flex-wrap: wrap; gap: var(--spacing-6); align-items: center;">
+            
+            <div style="flex: 1; min-width: 300px;">
+              <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: var(--radius-full); background: var(--white); margin-bottom: var(--spacing-4); box-shadow: 0 4px 12px rgba(255, 233, 92, 0.2);">
+                <!-- Icono representativo (Mente / Corazón) -->
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </div>
+              <h2 class="text-title mb-3">Psicología</h2>
+              <p class="mb-4" style="line-height: 1.7;">Ofrecemos un espacio seguro, cálido y confidencial enfocado en el bienestar emocional y el desarrollo cognitivo. Nuestro equipo acompaña tanto a los niños como a sus familias, brindando estrategias prácticas para enfrentar los desafíos socioemocionales propios de cada etapa del crecimiento.</p>
+              <a href="reservas.html" class="btn btn-primary mt-2">Agendar Sesión</a>
+            </div>
+            
+            <div style="flex: 1; min-width: 300px; background: rgba(255, 255, 255, 0.6); padding: var(--spacing-5); border-radius: var(--radius-lg);">
+              <h3 style="font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--primary-dark); margin-bottom: var(--spacing-3);">Áreas de intervención:</h3>
+              <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--spacing-3);">
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Regulación Emocional:</strong> Manejo de frustración, ansiedad infantil y miedos.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Condiciones del Neurodesarrollo:</strong> Apoyo en Trastorno del Espectro Autista (TEA) y TDAH.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Habilidades Sociales:</strong> Fomento de la empatía, interacción entre pares y autoestima.</span>
+                </li>
+                <li style="display: flex; align-items: flex-start; gap: 10px;">
+                  <span style="color: var(--primary-color); font-size: 1.2rem;">✦</span> 
+                  <span><strong>Orientación Familiar:</strong> Asesoramiento a padres para el manejo conductual en el hogar.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  
+  <footer class="footer bg-cream" style="padding-top: var(--spacing-8); padding-bottom: var(--spacing-4);">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-6); align-items: center; text-align: left;">
+      
+      <!-- Left: Contact Info -->
+      <div class="footer-contact" style="font-size: 0.95rem;">
+        <h4 style="color: var(--primary-dark); margin-bottom: var(--spacing-3); font-size: 1.2rem;">Contacto</h4>
+        <p style="margin-bottom: var(--spacing-2);"><strong>Ubicación:</strong><br>Eusebio Lillo 147, Castro, Chile</p>
+        <p style="margin-bottom: var(--spacing-2);"><strong>Teléfono:</strong><br><a href="tel:+56912345678" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='inherit'">+56 9 1234 5678</a></p>
+        <p><strong>Correo:</strong><br><a href="mailto:contacto@losamigos.cl" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='inherit'">contacto@losamigos.cl</a></p>
+      </div>
+
+      <!-- Middle: Brand -->
+      <div class="footer-brand" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <img src="/simbolo.svg" alt="Los Amigos Símbolo" style="height: 80px; margin-bottom: var(--spacing-3);" />
+        <h3 style="color: var(--primary-dark); letter-spacing: 1px; font-size: 1.5rem; margin-bottom: var(--spacing-1);">LOS AMIGOS</h3>
+        <p style="color: var(--text-color); font-size: 0.9rem;">Centro Terapéutico y de Rehabilitación</p>
+      </div>
+
+      <!-- Right: Map -->
+      <div class="footer-map" style="border-radius: var(--radius-lg); overflow: hidden; height: 200px; box-shadow: var(--shadow-sm);">
+        <iframe src="https://maps.google.com/maps?q=Eusebio%20Lillo%20147,%20Castro,%20Chile&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+    
+    <!-- Bottom: Copyright -->
+    <div class="container text-center" style="margin-top: var(--spacing-6); padding-top: var(--spacing-4); border-top: 1px solid rgba(0,0,0,0.05);">
+      <p style="font-size: 0.85rem; opacity: 0.6; margin: 0;">&copy; 2026 Centro Terapéutico Los Amigos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

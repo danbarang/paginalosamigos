@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sello Los Amigos | Centro Terapéutico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { opacity: 0; transition: opacity 0.3s; }
+  </style>
+</head>
+<body onload="document.body.style.opacity='1'">
+  <nav class="navbar" aria-label="Navegación Principal">
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <a href="sello.html" class="nav-link">Nuestro sello</a>
+      <a href="especialidades.html" class="nav-link">Especialidades</a>
+    </div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="/logo.svg" alt="Los Amigos" style="height: 60px; display: block;" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="programas.html" class="nav-link">Programas</a>
+      <a href="terapias.html" class="nav-link">Terapias</a>
+      <a href="reservas.html" class="nav-link">Reservas</a>
+    </div>
+  </nav>
+
+  <main style="padding-top: 80px;">
+    <!-- Hero Section (Cream bg) -->
+    <section id="hero-section" class="section bg-cream" style="overflow: hidden; padding-bottom: calc(var(--spacing-8) + 40px); position: relative;">
+      <div class="bg-shape" style="background: var(--accent-yellow-light); width: 400px; height: 400px; border-radius: var(--blob-1); top: 10%; right: -100px;"></div>
+      <div class="bg-shape" style="background: var(--accent-green-light); width: 300px; height: 300px; border-radius: var(--blob-2); bottom: 10%; left: -50px;"></div>
+      
+      <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-4); position: relative; z-index: 2;">
+        <div style="flex: 1; min-width: 300px;">
+          <h1 class="text-hero animate-on-scroll" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">Sello Los Amigos: más allá de la terapia.</h1>
+          <p class="text-subtitle animate-on-scroll mb-4">
+            Creemos que la mejor terapia nace cuando los profesionales tienen el espacio perfecto para brillar. No somos una clínica tradicional; somos una plataforma de recursos y crecimiento para terapeutas excepcionales.
+          </p>
+          <div class="animate-on-scroll">
+            <a href="#unete" class="btn btn-primary">¿Terapeuta? ¡únete!</a>
+          </div>
+        </div>
+        <div style="flex: 1; min-width: 300px; position: relative;" class="animate-on-scroll">
+          <img src="/therapist.jpg" alt="Terapeuta trabajando felizmente" class="img-organic" width="600" height="400" />
+        </div>
+      </div>
+      
+      <!-- Wave Divider to next section (Mint) -->
+      <div class="wave-divider bottom">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill" style="fill: var(--accent-green-light);"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Nuestra Filosofía (Mint bg) -->
+    <section id="filosofia" class="section bg-mint" style="padding-bottom: calc(var(--spacing-8) + 40px); padding-top: var(--spacing-8);">
+      <div class="container text-center" style="max-width: 800px;">
+        <h2 class="text-title animate-on-scroll mb-4">El ecosistema para el desarrollo</h2>
+        <p class="text-subtitle animate-on-scroll mb-6">
+          En los centros tradicionales, la burocracia y la frialdad de los espacios clínicos limitan la creatividad y desgastan al profesional. El <strong>Sello Los Amigos</strong> nace para romper ese esquema. Hemos diseñado un entorno cálido y colaborativo donde el centro de atención es <strong>facilitar el trabajo del terapeuta</strong>. Sabemos que si nuestros profesionales cuentan con las mejores herramientas, los niños y las familias reciben atención de primer nivel.
+        </p>
+      </div>
+      
+      <div class="wave-divider bottom">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill" style="fill: var(--bg-color);"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Recursos y Espacios (Cream bg) -->
+    <section class="section bg-cream" style="padding-bottom: calc(var(--spacing-8) + 40px);">
+      <div class="container">
+        <h2 class="text-title text-center animate-on-scroll mb-6">¿Qué le ofrecemos a nuestra red de terapeutas?</h2>
+        
+        <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--spacing-6) var(--spacing-5);">
+          
+          <!-- Item 1 -->
+          <div class="service-col animate-on-scroll card" style="text-align: left;">
+            <div class="card-blob">
+              <div class="geometric-shape shape-circle"></div>
+            </div>
+            <h3 class="heading hie mb-3" style="color: var(--primary-dark); font-size: 1.4rem;">Espacios diseñados</h3>
+            <p>Salas terapéuticas adaptadas, con mobiliario y estímulos precisos para kinesiología, fonoaudiología y psicología, creando un entorno seguro y estimulante.</p>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="service-col animate-on-scroll card" style="text-align: left;">
+            <div class="card-blob">
+              <div class="geometric-shape shape-triangle"></div>
+            </div>
+            <h3 class="heading hie mb-3" style="color: var(--primary-dark); font-size: 1.4rem;">Accesibilidad administrativa</h3>
+            <p>Eliminamos las barreras burocráticas y simplificamos la gestión de reservas para que el terapeuta solo deba preocuparse de lo más importante: la evolución de sus pacientes.</p>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="service-col animate-on-scroll card" style="text-align: left;">
+            <div class="card-blob">
+              <div class="geometric-shape shape-pill"></div>
+            </div>
+            <h3 class="heading hie mb-3" style="color: var(--primary-dark); font-size: 1.4rem;">Disposición de recursos</h3>
+            <p>Acceso para creación de materiales, coordinación entre profesionales y software de apoyo. Entre otros.</p>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="service-col animate-on-scroll card" style="text-align: left;">
+            <div class="card-blob">
+              <div class="geometric-shape shape-diamond"></div>
+            </div>
+            <h3 class="heading hie mb-3" style="color: var(--primary-dark); font-size: 1.4rem;">Comunidad colaborativa</h3>
+            <p>Fomentamos un entorno interdisciplinario donde terapeutas de distintas especialidades comparten experiencias, discuten casos clínicos y crecen profesionalmente juntos.</p>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="service-col animate-on-scroll card" style="text-align: left;">
+            <div class="card-blob">
+              <div class="geometric-shape shape-circle"></div>
+            </div>
+            <h3 class="heading hie mb-3" style="color: var(--primary-dark); font-size: 1.4rem;">Aranceles flexibles</h3>
+            <p>Ofrecemos un modelo transparente basado en cuota de ingreso más un porcentaje. Esta estructura te permite proyectarte y escalar tu práctica clínica sin presiones financieras, fomentando una relación de confianza donde nos conocemos y crecemos juntos.</p>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="service-col animate-on-scroll card" style="text-align: left;">
+            <div class="card-blob">
+              <div class="geometric-shape shape-triangle"></div>
+            </div>
+            <h3 class="heading hie mb-3" style="color: var(--primary-dark); font-size: 1.4rem;">Foco en la terapia y rehabilitación</h3>
+            <p>Somos un centro especializado exclusivamente en el bienestar clínico. Todo nuestro crecimiento y proyecciones apuntan a consolidar un modelo de atención biopsicosocial real y tangible, que se vive en el día a día y no solo en el papel.</p>
+          </div>
+
+        </div>
+      </div>
+      
+      <!-- Wave Divider to next section (Dark bg) -->
+      <div class="wave-divider bottom">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill" style="fill: var(--primary-dark);"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Call to Action (Dark bg) -->
+    <section class="section bg-dark" style="padding-top: 140px; padding-bottom: 140px;">
+      <div class="bg-shape" style="background: rgba(255, 233, 92, 0.1); width: 500px; height: 500px; border-radius: var(--blob-3); bottom: -50px; left: -100px;"></div>
+      <div id="unete" class="container text-center" style="max-width: 800px; scroll-margin-top: 35vh;">
+        <h2 class="text-title animate-on-scroll mb-5" style="color: var(--accent-yellow-light); line-height: 1.5;">¿Eres terapeuta y buscas el lugar ideal?</h2>
+        <p class="animate-on-scroll mb-5 text-subtitle" style="color: var(--white); opacity: 0.9; line-height: 1.8;">
+          Únete a nuestra red de profesionales y descubre un espacio diseñado pensando exclusivamente en potenciar tu impacto terapéutico.
+        </p>
+        <div class="animate-on-scroll" style="display: flex; gap: var(--spacing-3); justify-content: center; flex-wrap: wrap;">
+          <a href="reservas.html" class="btn btn-accent">Únete a nuestro equipo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="footer bg-cream" style="padding-top: var(--spacing-8); padding-bottom: var(--spacing-4);">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-6); align-items: center; text-align: left;">
+      
+      <!-- Left: Contact Info -->
+      <div class="footer-contact" style="font-size: 0.95rem;">
+        <h4 style="color: var(--primary-dark); margin-bottom: var(--spacing-3); font-size: 1.2rem;">Contacto</h4>
+        <p style="margin-bottom: var(--spacing-2);"><strong>Ubicación:</strong><br>Eusebio Lillo 147, Castro, Chile</p>
+        <p style="margin-bottom: var(--spacing-2);"><strong>Teléfono:</strong><br><a href="tel:+56912345678" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='inherit'">+56 9 1234 5678</a></p>
+        <p><strong>Correo:</strong><br><a href="mailto:contacto@losamigos.cl" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='inherit'">contacto@losamigos.cl</a></p>
+      </div>
+
+      <!-- Middle: Brand -->
+      <div class="footer-brand" style="text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <img src="/simbolo.svg" alt="Los Amigos Símbolo" style="height: 80px; margin-bottom: var(--spacing-3);" />
+        <h3 style="color: var(--primary-dark); letter-spacing: 1px; font-size: 1.5rem; margin-bottom: var(--spacing-1);">LOS AMIGOS</h3>
+        <p style="color: var(--text-color); font-size: 0.9rem;">Centro Terapéutico y de Rehabilitación</p>
+      </div>
+
+      <!-- Right: Map -->
+      <div class="footer-map" style="border-radius: var(--radius-lg); overflow: hidden; height: 200px; box-shadow: var(--shadow-sm);">
+        <iframe src="https://maps.google.com/maps?q=Eusebio%20Lillo%20147,%20Castro,%20Chile&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+    
+    <!-- Bottom: Copyright -->
+    <div class="container text-center" style="margin-top: var(--spacing-6); padding-top: var(--spacing-4); border-top: 1px solid rgba(0,0,0,0.05);">
+      <p style="font-size: 0.85rem; opacity: 0.6; margin: 0;">&copy; 2026 Centro Terapéutico Los Amigos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
