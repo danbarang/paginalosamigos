@@ -532,32 +532,39 @@ a {
 }
 
 /* Global Custom Cursor Effect */
-*, *::before, *::after {
-  cursor: none !important;
-}
-
 .custom-cursor {
-  position: fixed;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  /* Inverso matemático de #ede411 para que bajo mix-blend-mode se vea amarillo brillante sobre fondos claros */
-  background: #121BEE;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  translate: -1000px -1000px; /* Posición inicial fuera de pantalla */
-  scale: 1;
-  /* Transicionamos SOLO la escala */
-  transition: scale 0.15s ease-out, opacity 0.3s ease;
-  z-index: 99999;
-  opacity: 1;
-  will-change: translate, scale;
-  mix-blend-mode: difference;
+  display: none;
 }
 
-.custom-cursor.hovering {
-  scale: 2; /* El cursor crece al doble de su tamaño */
+@media (hover: hover) and (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important;
+  }
+
+  .custom-cursor {
+    display: block;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    /* Inverso matemático de #ede411 para que bajo mix-blend-mode se vea amarillo brillante sobre fondos claros */
+    background: #121BEE;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    translate: -1000px -1000px; /* Posición inicial fuera de pantalla */
+    scale: 1;
+    /* Transicionamos SOLO la escala */
+    transition: scale 0.15s ease-out, opacity 0.3s ease;
+    z-index: 99999;
+    opacity: 1;
+    will-change: translate, scale;
+    mix-blend-mode: difference;
+  }
+
+  .custom-cursor.hovering {
+    scale: 2; /* El cursor crece al doble de su tamaño */
+  }
 }
 
 /* Mobile Carousel for Services Grid */
