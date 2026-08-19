@@ -4,6 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sello Los Amigos | Centro Terapéutico</title>
+  <meta name="description" content="Nuestra filosofía en Los Amigos es crear un ecosistema para el desarrollo de terapeutas excepcionales. Descubre nuestra propuesta para profesionales." />
+  <link rel="canonical" href="https://losamigos.cl/sello.html" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://losamigos.cl/sello.html" />
+  <meta property="og:title" content="Sello Los Amigos | Centro Terapéutico" />
+  <meta property="og:description" content="Nuestra filosofía: ecosistema para el desarrollo de terapeutas excepcionales." />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:url" content="https://losamigos.cl/sello.html" />
+  <meta property="twitter:title" content="Sello Los Amigos | Centro Terapéutico" />
+  <meta property="twitter:description" content="Ecosistema para el desarrollo de terapeutas excepcionales." />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Centro Terapéutico Los Amigos",
+    "url": "https://losamigos.cl/sello.html",
+    "telephone": "+56912345678",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Eusebio Lillo 147",
+      "addressLocality": "Castro",
+      "addressRegion": "Los Lagos",
+      "addressCountry": "CL"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -11,15 +44,8 @@
   <style>
     body { opacity: 0; transition: opacity 0.3s; }
   </style>
-  <style>
-    :root {
-      --radius-sm: 8px;
-      --radius-md: 12px;
-      --radius-lg: 24px;
-    }
-  </style>
 </head>
-<body onload="document.body.style.opacity='1'">
+<body class="rounded-cards" onload="document.body.style.opacity='1'">
   <nav class="navbar" aria-label="Navegación Principal">
     <!-- Cabecera Móvil (Oculta en escritorio) -->
     <div class="mobile-nav-header">
@@ -197,7 +223,7 @@
       
       <!-- Left: Contact Info -->
       <div class="footer-contact" style="font-size: 0.95rem;">
-        <h4 style="color: var(--primary-dark); margin-bottom: var(--spacing-3); font-size: 1.2rem;">Contacto</h4>
+        <h3 style="color: var(--primary-dark); margin-bottom: var(--spacing-3); font-size: 1.2rem;">Contacto</h3>
         <p style="margin-bottom: var(--spacing-2);"><strong>Ubicación:</strong><br>Eusebio Lillo 147, Castro, Chile</p>
         <p style="margin-bottom: var(--spacing-2);"><strong>Teléfono:</strong><br><a href="tel:+56912345678" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='inherit'">+56 9 1234 5678</a></p>
         <p><strong>Correo:</strong><br><a href="mailto:contacto@losamigos.cl" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='inherit'">contacto@losamigos.cl</a></p>
