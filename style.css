@@ -1094,3 +1094,50 @@ body.rounded-cards {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(32, 170, 115, 0.2);
 }
+
+
+/* =========================================
+   Estilos Especialidades Cards
+   ========================================= */
+.esp-card {
+  padding: var(--spacing-6);
+}
+.esp-card-content {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: var(--spacing-6); 
+  align-items: center;
+}
+.esp-card-left, .esp-card-right {
+  flex: 1; 
+  min-width: 300px;
+}
+.esp-card-left {
+  display: flex;
+  flex-direction: column;
+}
+/* Aumentamos el gap entre los elementos para que no esten tan juntos verticalmente */
+.esp-card-left .mb-3 { margin-bottom: var(--spacing-4) !important; }
+.esp-card-left .mb-4 { margin-bottom: var(--spacing-5) !important; }
+.esp-card-left .mt-2 { margin-top: var(--spacing-3) !important; align-self: flex-start; }
+
+.esp-card-right {
+  background: rgba(255, 255, 255, 0.6); 
+  padding: var(--spacing-5); 
+  border-radius: var(--radius-lg);
+}
+
+@media (max-width: 768px) {
+  .esp-card {
+    padding: var(--spacing-4);
+  }
+  .esp-card-content {
+    gap: var(--spacing-4);
+  }
+  .esp-card-left, .esp-card-right {
+    min-width: 100%;
+  }
+  .esp-card-right {
+    padding: var(--spacing-4);
+  }
+}
