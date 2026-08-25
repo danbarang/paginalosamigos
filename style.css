@@ -72,8 +72,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
+  font-family: var(--font-heading);
+  font-weight: 700;
   line-height: 1.15;
   margin-bottom: var(--spacing-2);
   color: var(--text-color);
@@ -141,7 +141,7 @@ a {
   border-radius: var(--radius-full);
   font-weight: 700;
   font-size: 1.1rem;
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-heading);
   cursor: pointer;
   border: none;
   transition: all var(--transition-fast);
@@ -332,7 +332,7 @@ a {
   position: relative;
   padding: var(--spacing-1) 0;
   transition: color var(--transition-fast);
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .nav-link:hover {
@@ -1034,7 +1034,7 @@ a {
 }
 
 .double-grid__content h3 {
-  font-family: 'Nunito', sans-serif;
+  font-family: var(--font-heading);
   font-weight: 800;
   color: var(--primary-dark);
   font-size: 2rem;
