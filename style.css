@@ -138,7 +138,7 @@ a {
   justify-content: center;
   gap: var(--spacing-1);
   padding: calc(var(--spacing-2) * 1.2) var(--spacing-4);
-  border-radius: var(--radius-full);
+  border-radius: 0;
   font-weight: 700;
   font-size: 1.1rem;
   font-family: var(--font-heading);
@@ -159,6 +159,7 @@ a {
 .btn-primary {
   background-color: var(--primary-dark);
   color: var(--white);
+  border-radius: 0;
   box-shadow: 0 4px 14px rgba(43, 95, 72, 0.4);
 }
 
@@ -171,6 +172,7 @@ a {
 .btn-accent {
   background-color: var(--accent-yellow);
   color: #1D4232; /* Oscurecido para mejorar contraste WCAG sobre el amarillo */
+  border-radius: 0;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15); /* Sombreado oscuro en lugar de luz/glow */
 }
 
@@ -178,6 +180,21 @@ a {
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   background-color: var(--white);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-dark);
+  border: 2px solid var(--primary-dark);
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(43, 95, 72, 0.3);
 }
 
 /* Cards (Playful and Organic) */
