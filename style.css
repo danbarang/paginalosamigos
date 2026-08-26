@@ -324,6 +324,9 @@ a {
 }
 
 .logo img {
+  height: 68px;
+  width: auto;
+  display: block;
   transition: height var(--transition-normal);
 }
 
@@ -335,7 +338,7 @@ a {
 }
 
 .navbar-scrolled .logo img {
-  height: 40px !important;
+  height: 52px !important;
 }
 
 .nav-links {
@@ -779,7 +782,7 @@ a {
   }
 
   .mobile-only-logo img {
-    height: 38px !important;
+    height: 46px !important;
     transition: transform 0.3s ease;
   }
 
