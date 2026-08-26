@@ -152,17 +152,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Navbar Shrink on Scroll (Optimized with requestAnimationFrame)
+  // Navbar Shrink on Scroll (Optimized with requestAnimationFrame and hysteresis)
   const navbar = document.querySelector('.navbar');
   if (navbar) {
     let ticking = false;
+    let isScrolled = false;
     window.addEventListener('scroll', () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          if (window.scrollY > 40) {
+          const scrollY = window.scrollY;
+          if (scrollY > 50 && !isScrolled) {
             navbar.classList.add('navbar-scrolled');
-          } else {
+            isScrolled = true;
+          } else if (scrollY < 20 && isScrolled) {
             navbar.classList.remove('navbar-scrolled');
+            isScrolled = false;
           }
           ticking = false;
         });
