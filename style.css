@@ -31,6 +31,7 @@
   --radius-sm: 0px;
   --radius-md: 0px;
   --radius-lg: 0px;
+  --radius-btn: 8px;
   --radius-full: 9999px;
 
   /* Shadows (Depth) */
@@ -138,7 +139,7 @@ a {
   justify-content: center;
   gap: var(--spacing-1);
   padding: calc(var(--spacing-2) * 1.2) var(--spacing-4);
-  border-radius: 0;
+  border-radius: var(--radius-btn, 8px);
   font-weight: 700;
   font-size: 1.1rem;
   font-family: var(--font-heading);
@@ -159,7 +160,7 @@ a {
 .btn-primary {
   background-color: var(--primary-dark);
   color: var(--white);
-  border-radius: 0;
+  border-radius: var(--radius-btn, 8px);
   box-shadow: 0 4px 14px rgba(43, 95, 72, 0.4);
 }
 
@@ -172,7 +173,7 @@ a {
 .btn-accent {
   background-color: var(--accent-yellow);
   color: #1D4232; /* Oscurecido para mejorar contraste WCAG sobre el amarillo */
-  border-radius: 0;
+  border-radius: var(--radius-btn, 8px);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15); /* Sombreado oscuro en lugar de luz/glow */
 }
 
@@ -186,7 +187,7 @@ a {
   background-color: transparent;
   color: var(--primary-dark);
   border: 2px solid var(--primary-dark);
-  border-radius: 0;
+  border-radius: var(--radius-btn, 8px);
   box-shadow: none;
 }
 
