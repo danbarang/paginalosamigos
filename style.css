@@ -920,14 +920,15 @@ a {
 /* 2. Hero Section Typography & Flow */
 @media (max-width: 768px) {
   /* Recalibrate typography density for small screens */
-  .text-hero {
-    font-size: clamp(2.2rem, 8vw, 3rem);
+  h1, .text-hero {
+    font-size: clamp(2.6rem, 8.5vw, 3.6rem) !important;
+    line-height: 1.15;
     text-align: center;
   }
   
   .text-subtitle {
     text-align: center;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
   }
   
   /* Force flex items to full width to avoid awkward wrapping */
