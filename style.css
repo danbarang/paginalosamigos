@@ -747,34 +747,40 @@ a {
   /* Ocultar logo de escritorio */
   .desktop-logo { display: none !important; }
 
-  /* Contenedor principal estilo "Píldora de Cristal" en móvil */
+  /* Contenedor principal estático estilo Píldora en móvil */
   .navbar {
-    top: 12px;
-    width: 92%;
-    max-width: 480px;
+    position: fixed;
+    top: 14px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 92% !important;
+    max-width: 520px !important;
     display: flex;
     flex-direction: column;
     padding: 0 !important;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.96) !important;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
-    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    border-radius: 28px !important;
     overflow: hidden;
-    transform: translate3d(-50%, 0, 0);
-    will-change: transform, background-color, box-shadow;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, border-radius 0.3s ease;
+    transition: none !important; /* Estático: sin animación de scroll */
   }
 
-  /* Estado al hacer scroll en móvil: SIN saltos de top ni cambios bruscos de padding */
+  /* Estado al hacer scroll en móvil: IDÉNTICO, 100% estático */
   .navbar.navbar-scrolled {
-    top: 12px !important;
+    top: 14px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 92% !important;
+    max-width: 520px !important;
     padding: 0 !important;
-    background: rgba(255, 255, 255, 0.95) !important;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1) !important;
-    border-color: rgba(255, 255, 255, 1) !important;
-    border-radius: 24px !important;
+    background: rgba(255, 255, 255, 0.96) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 28px !important;
+    transition: none !important;
   }
 
   /* Cabecera siempre visible (Logo + Menú) */
@@ -783,7 +789,8 @@ a {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 8px 16px;
+    min-height: 64px;
+    padding: 10px 18px;
     position: relative;
     z-index: 10;
   }
@@ -795,39 +802,33 @@ a {
   }
 
   .mobile-only-logo img {
-    height: 44px !important;
+    height: 50px !important;
     width: auto;
     display: block;
-    transition: opacity 0.2s ease;
   }
 
-  .mobile-only-logo:active img {
-    opacity: 0.8;
-  }
-
-  /* Botón Hamburguesa Premium */
+  /* Botón Hamburguesa */
   .mobile-menu-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: none;
+    transition: background-color 0.2s ease;
     padding: 0;
     -webkit-tap-highlight-color: transparent;
   }
 
   .mobile-menu-btn:hover, .mobile-menu-btn:active {
-    background: rgba(255, 255, 255, 1);
-    transform: scale(0.96);
+    background: rgba(0, 0, 0, 0.08);
   }
 
-  /* Animación del Icono Hamburguesa */
+  /* Icono Hamburguesa */
   .hamburger {
     width: 18px;
     height: 12px;
@@ -843,38 +844,26 @@ a {
     height: 2px;
     background-color: var(--primary-dark);
     border-radius: 2px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    transition: transform 0.25s ease, opacity 0.25s ease;
     transform-origin: center;
   }
 
   /* Contenedores de Enlaces */
   .nav-links {
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100%;
     text-align: center;
     gap: 0;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-    pointer-events: none;
-    transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+    padding: 0;
   }
 
   /* Estado Abierto (Menú desplegado) */
-  .navbar.menu-open {
-    background: rgba(255, 255, 255, 0.98) !important;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
-    border-radius: 24px !important;
-  }
-
   .navbar.menu-open .nav-links {
-    max-height: 260px;
-    opacity: 1;
-    pointer-events: auto;
+    display: flex;
   }
 
-  .navbar.menu-open .nav-left { padding-top: 8px; }
+  .navbar.menu-open .nav-left { padding-top: 6px; }
   .navbar.menu-open .nav-right { padding-bottom: 16px; }
 
   /* Transformar hamburguesa en "X" */
