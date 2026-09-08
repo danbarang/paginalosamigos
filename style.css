@@ -306,9 +306,9 @@ a {
   width: 95%;
   max-width: 1200px;
   border-radius: 50px;
-  padding: var(--spacing-2) var(--spacing-4);
+  padding: var(--spacing-2) var(--spacing-5);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
@@ -319,13 +319,13 @@ a {
 }
 
 .logo {
-  margin: 0 clamp(var(--spacing-2), 4vw, var(--spacing-8));
+  margin: 0;
   display: flex;
   align-items: center;
 }
 
 .logo img {
-  height: 64px;
+  height: 52px;
   width: auto;
   display: block;
   transition: height 0.45s cubic-bezier(0.16, 1, 0.3, 1);
@@ -334,12 +334,12 @@ a {
 /* Navbar Shrink on Scroll */
 .navbar-scrolled {
   top: 10px;
-  padding: calc(var(--spacing-1) * 1.2) var(--spacing-4);
+  padding: calc(var(--spacing-1) * 1.2) var(--spacing-5);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); /* Sombreado más concentrado al bajar */
 }
 
 .navbar-scrolled .logo img {
-  height: 50px;
+  height: 42px;
 }
 
 .nav-links {
@@ -877,10 +877,9 @@ a {
   .navbar.menu-open .nav-links {
     display: flex;
     background: #ffffff;
+    padding-top: 6px;
+    padding-bottom: 16px;
   }
-
-  .navbar.menu-open .nav-left { padding-top: 6px; }
-  .navbar.menu-open .nav-right { padding-bottom: 16px; }
 
   /* Transformar hamburguesa en "X" */
   .navbar.menu-open .hamburger .line-1 {
