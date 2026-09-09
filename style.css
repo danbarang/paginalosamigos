@@ -301,8 +301,10 @@ a {
 .navbar {
   position: fixed;
   top: 15px;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 95%;
   max-width: 1200px;
   border-radius: 50px;
@@ -328,6 +330,10 @@ a {
   height: 52px;
   width: auto;
   display: block;
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   transition: height 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -381,6 +387,13 @@ a {
 .footer {
   padding: var(--spacing-8) 0 var(--spacing-4);
   position: relative;
+}
+
+.footer-brand img {
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 /* Helpers */
@@ -751,8 +764,10 @@ a {
   .navbar {
     position: fixed;
     top: 14px;
-    left: 50%;
-    transform: translate3d(-50%, 0, 0);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     width: 92%;
     max-width: 500px;
     display: flex;
@@ -802,6 +817,10 @@ a {
     height: 48px;
     width: auto;
     display: block;
+    image-rendering: -webkit-optimize-contrast;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     transition: height 0.45s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
