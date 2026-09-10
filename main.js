@@ -348,3 +348,63 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // ==========================================================================
+  // SECCIÓN: AGENDAR CON ESPECIALISTAS (Pestañas Desktop + Acordeón Móvil)
+  // ==========================================================================
+  function initSpecialistsTabs() {
+    const tabButtons = document.querySelectorAll('.specialist-tab-btn');
+    const accordionItems = document.querySelectorAll('.specialist-accordion-item');
+
+    if (!tabButtons.length || !accordionItems.length) return;
+
+    function setActiveSpecialty(targetSpecialty) {
+      // 1. Actualizar botones de pestañas en escritorio
+      tabButtons.forEach(btn => {
+        const isMatch = btn.getAttribute('data-target') === targetSpecialty;
+        btn.classList.toggle('active', isMatch);
+        btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+      });
+
+      // 2. Actualizar paneles / acordeón en móvil (modo exclusivo)
+      accordionItems.forEach(item => {
+        const isMatch = item.getAttribute('data-specialty') === targetSpecialty;
+        item.classList.toggle('active', isMatch);
+        const trigger = item.querySelector('.accordion-trigger');
+        if (trigger) {
+          trigger.setAttribute('aria-expanded', isMatch ? 'true' : 'false');
+        }
+      });
+    }
+
+    // Interacción de pestañas en escritorio
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = btn.getAttribute('data-target');
+        setActiveSpecialty(target);
+      });
+    });
+
+    // Interacción de acordeón en móvil (modo exclusivo)
+    accordionItems.forEach(item => {
+      const trigger = item.querySelector('.accordion-trigger');
+      if (trigger) {
+        trigger.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = item.getAttribute('data-specialty');
+          setActiveSpecialty(target);
+
+          // Desplazamiento suave para enfocar el encabezado si queda fuera de vista
+          setTimeout(() => {
+            const rect = trigger.getBoundingClientRect();
+            if (rect.top < 70 || rect.top > window.innerHeight - 150) {
+              trigger.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }, 180);
+        });
+      }
+    });
+  }
+
+  initSpecialistsTabs();
+
+

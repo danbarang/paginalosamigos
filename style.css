@@ -1189,3 +1189,409 @@ body.rounded-cards {
     padding: var(--spacing-4);
   }
 }
+
+/* ==========================================================================
+   SECCIÓN: AGENDAR CON ESPECIALISTAS (Reservas Tabs & Accordion)
+   ========================================================================== */
+.specialists-booking-section {
+  max-width: 980px;
+  margin: 0 auto var(--spacing-8);
+  text-align: left;
+}
+
+.specialists-tabs-card {
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(31, 77, 58, 0.07);
+  overflow: hidden;
+  border: 1px solid rgba(31, 77, 58, 0.08);
+  margin-bottom: var(--spacing-5);
+}
+
+/* Desktop Tabs Header */
+.specialists-tablist {
+  display: flex;
+  background: #EBF1EE;
+  border-bottom: 2px solid rgba(31, 77, 58, 0.1);
+  padding: 8px 8px 0;
+  gap: 4px;
+}
+
+.specialist-tab-btn {
+  flex: 1;
+  min-width: 140px;
+  padding: 14px 16px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #4A6356;
+  cursor: pointer;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.specialist-tab-btn:hover {
+  color: var(--primary-dark);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.specialist-tab-btn.active {
+  background: var(--white);
+  color: var(--primary-dark);
+  font-weight: 700;
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.04);
+  position: relative;
+  z-index: 2;
+  margin-bottom: -2px;
+  border-bottom: 2px solid var(--white);
+}
+
+.specialist-tab-btn .tab-icon {
+  font-size: 1.15rem;
+}
+
+/* Accordion Trigger (Oculto en desktop, visible en mobile) */
+.accordion-trigger {
+  display: none;
+}
+
+/* Tabpanels en Desktop */
+.specialists-panels .specialist-accordion-item:not(.active) .specialist-tabpanel {
+  display: none;
+}
+
+.specialists-panels .specialist-accordion-item.active .specialist-tabpanel {
+  display: block;
+  animation: fadeInPanel 0.35s ease-out forwards;
+}
+
+@keyframes fadeInPanel {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Specialist Profile Layout */
+.specialist-profile {
+  display: flex;
+  gap: var(--spacing-5);
+  align-items: center;
+  padding: 40px 44px;
+}
+
+.specialist-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 180px;
+  height: 180px;
+}
+
+.specialist-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--accent-green-light);
+  box-shadow: 0 8px 24px rgba(31, 77, 58, 0.12);
+  display: block;
+}
+
+.specialist-badge {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-dark);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.specialist-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.specialist-header {
+  border-bottom: 1px solid rgba(31, 77, 58, 0.1);
+  padding-bottom: 10px;
+}
+
+.specialist-name {
+  font-size: 1.65rem;
+  color: var(--primary-dark);
+  margin: 0 0 4px 0;
+  font-weight: 700;
+}
+
+.specialist-role {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.specialist-expertiz {
+  background: #F8FAF9;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.expertiz-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #556B60;
+  margin-bottom: 4px;
+}
+
+.expertiz-desc {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.specialist-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.specialist-tags .tag {
+  background: var(--accent-green-light);
+  color: var(--primary-dark);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.01em;
+}
+
+.specialist-action {
+  margin-top: 8px;
+}
+
+.btn-booking {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(31, 77, 58, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn-booking:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(31, 77, 58, 0.3);
+}
+
+/* Banner de Asistencia para Pacientes Indecisos */
+.undecided-support-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-left: 5px solid var(--accent-yellow);
+}
+
+.support-icon {
+  background: var(--accent-yellow-light);
+  color: #8A721C;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.support-text {
+  flex: 1;
+}
+
+.support-text h3 {
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+  margin-bottom: 4px;
+}
+
+.support-text p {
+  color: #4A5550;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.support-cta .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   RESPONSIVE MÓVIL: Transformación en Acordeón Exclusivo (< 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Ocultar barra de pestañas horizontales de escritorio */
+  .specialists-tablist {
+    display: none;
+  }
+
+  /* Mostrar disparador del acordeón */
+  .accordion-trigger {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 20px;
+    background: var(--white);
+    border: none;
+    border-bottom: 1px solid rgba(31, 77, 58, 0.08);
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    text-align: left;
+    transition: background 0.25s ease, color 0.25s ease;
+  }
+
+  .accordion-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .accordion-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Estado Activo del Item en Móvil */
+  .specialist-accordion-item.active .accordion-trigger {
+    background: #F4F8F5;
+    color: var(--primary-dark);
+    border-bottom-color: rgba(31, 77, 58, 0.15);
+  }
+
+  .specialist-accordion-item.active .accordion-arrow {
+    transform: rotate(180deg);
+  }
+
+  /* Contenedor colapsable del acordeón */
+  .specialists-panels .specialist-accordion-item .specialist-tabpanel {
+    display: block !important;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0 20px;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, padding 0.3s ease;
+  }
+
+  .specialists-panels .specialist-accordion-item.active .specialist-tabpanel {
+    max-height: 1200px;
+    opacity: 1;
+    padding: 24px 20px;
+    border-bottom: 1px solid rgba(31, 77, 58, 0.08);
+    background: #FAFBFB;
+  }
+
+  /* Disposición vertical del perfil en móvil */
+  .specialist-profile {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .specialist-avatar-wrap {
+    width: 140px;
+    height: 140px;
+  }
+
+  .specialist-info {
+    text-align: center;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .specialist-header {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .specialist-name {
+    font-size: 1.4rem;
+  }
+
+  .specialist-expertiz {
+    text-align: left;
+    width: 100%;
+  }
+
+  .specialist-tags {
+    justify-content: center;
+  }
+
+  .btn-booking {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+
+  /* Banner de soporte en móvil */
+  .undecided-support-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 24px 20px;
+    gap: 18px;
+  }
+
+  .support-cta {
+    width: 100%;
+  }
+
+  .support-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
