@@ -1592,3 +1592,348 @@ body.rounded-cards {
     justify-content: center;
   }
 }
+
+/* ==========================================================================
+   PÁGINA: PROGRAMAS Y SERVICIOS
+   ========================================================================== */
+
+/* Sub-navegación rápida (Anchor Pills) */
+.services-anchor-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 auto clamp(2.5rem, 5vw, 3.5rem);
+  max-width: 900px;
+}
+
+.anchor-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  background: var(--white);
+  color: var(--primary-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(31, 77, 58, 0.12);
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.anchor-pill:hover {
+  background: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(43, 95, 72, 0.2);
+}
+
+/* Encabezados de Sección con Badge */
+.section-header-wrap {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.section-badge-lead {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 6px 16px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.badge-lead-colab {
+  background: rgba(43, 95, 72, 0.1);
+  color: var(--primary-dark);
+}
+
+.badge-lead-diag {
+  background: rgba(255, 233, 92, 0.35);
+  color: #725D00;
+}
+
+.badge-lead-indiv {
+  background: rgba(43, 95, 72, 0.08);
+  color: var(--primary-dark);
+}
+
+/* Tarjetas de Evaluaciones Diagnósticas */
+.diagnostics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+  margin-bottom: clamp(4rem, 7vw, 5.5rem);
+  text-align: left;
+}
+
+.diagnostic-card {
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid rgba(31, 77, 58, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.diagnostic-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(43, 95, 72, 0.1);
+  border-color: rgba(43, 95, 72, 0.3);
+}
+
+.diagnostic-card-header {
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.diagnostic-card-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--accent-green-light);
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.diagnostic-acronym {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin: 0 0 4px 0;
+  font-family: var(--font-heading);
+  letter-spacing: -0.02em;
+}
+
+.diagnostic-full-name {
+  font-size: 0.95rem;
+  color: #55605A;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.diagnostic-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #3D4A43;
+  margin-bottom: 20px;
+}
+
+.diagnostic-section-block {
+  background: #F9FAF9;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+  border: 1px solid rgba(31, 77, 58, 0.06);
+}
+
+.diagnostic-block-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--primary-dark);
+  margin-bottom: 8px;
+}
+
+.diagnostic-block-title svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.diagnostic-block-content {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #4A5550;
+  margin: 0;
+}
+
+.diagnostic-steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.diagnostic-steps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: #4A5550;
+}
+
+.diagnostic-step-num {
+  font-weight: 700;
+  color: var(--primary-color);
+  background: var(--white);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+  border: 1px solid rgba(43, 95, 72, 0.2);
+}
+
+.diagnostic-card-action {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+/* Tarjetas de Atención Individualizada 1 a 1 */
+.individual-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+  margin-bottom: clamp(4rem, 7vw, 5.5rem);
+  text-align: left;
+}
+
+.individual-card {
+  background: var(--white);
+  border-radius: 20px;
+  border: 1px solid rgba(31, 77, 58, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.individual-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(43, 95, 72, 0.1);
+  border-color: rgba(43, 95, 72, 0.3);
+}
+
+.individual-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.individual-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--accent-green-light);
+  color: var(--primary-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.individual-card-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin: 0 0 4px 0;
+  font-family: var(--font-heading);
+}
+
+.individual-card-subtitle {
+  font-size: 0.88rem;
+  color: #607067;
+  margin: 0;
+  font-weight: 500;
+}
+
+.individual-qa-box {
+  margin-bottom: 18px;
+}
+
+.qa-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 10px;
+}
+
+.qa-header svg {
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.qa-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.qa-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #3D4A43;
+}
+
+.qa-list li span.bullet {
+  color: var(--primary-color);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.individual-card-action {
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+/* Responsive queries para Programas y Servicios */
+@media (max-width: 768px) {
+  .services-anchor-nav {
+    gap: 8px;
+  }
+
+  .anchor-pill {
+    padding: 8px 16px;
+    font-size: 0.88rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .diagnostics-grid,
+  .individual-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .diagnostic-card,
+  .individual-card {
+    padding: 24px 20px;
+  }
+}
