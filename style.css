@@ -1641,6 +1641,7 @@ body.rounded-cards {
 .diagnostics-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  align-items: start;
   gap: 28px;
   margin-bottom: clamp(4rem, 7vw, 5.5rem);
   text-align: left;
@@ -1655,7 +1656,6 @@ body.rounded-cards {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  position: relative;
 }
 
 .diagnostic-card:hover {
@@ -1665,8 +1665,8 @@ body.rounded-cards {
 }
 
 .diagnostic-card-header {
-  margin-bottom: 18px;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -1760,6 +1760,7 @@ body.rounded-cards {
 .individual-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  align-items: start;
   gap: 28px;
   margin-bottom: clamp(4rem, 7vw, 5.5rem);
   text-align: left;
@@ -1783,8 +1784,8 @@ body.rounded-cards {
 }
 
 .individual-card-header {
-  margin-bottom: 20px;
-  padding-bottom: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
@@ -1844,6 +1845,75 @@ body.rounded-cards {
 .individual-card-action {
   margin-top: auto;
   padding-top: 18px;
+}
+
+/* ==========================================================================
+   ACORDEÓN DESPLEGABLE (Evaluaciones y Especialidades)
+   ========================================================================== */
+.card-collapsible-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+
+.card-collapsible-inner {
+  overflow: hidden;
+}
+
+/* Estado Expandido */
+.diagnostic-card.is-expanded .card-collapsible-wrapper,
+.individual-card.is-expanded .card-collapsible-wrapper {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+/* Botón disparador del acordeón */
+.btn-card-toggle {
+  background: rgba(43, 95, 72, 0.05);
+  border: 1px solid rgba(43, 95, 72, 0.12);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 14px;
+  margin-top: 10px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--primary-dark);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-card-toggle:hover {
+  background: rgba(43, 95, 72, 0.12);
+  color: var(--primary-dark);
+  border-color: rgba(43, 95, 72, 0.25);
+}
+
+.btn-card-toggle:active {
+  transform: scale(0.985);
+}
+
+.btn-card-toggle:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.toggle-arrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.diagnostic-card.is-expanded .toggle-arrow,
+.individual-card.is-expanded .toggle-arrow {
+  transform: rotate(180deg);
 }
 
 /* Responsive queries para Programas y Servicios */

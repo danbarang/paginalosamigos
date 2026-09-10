@@ -407,4 +407,65 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initSpecialistsTabs();
 
+  // ==========================================================================
+  // SECCIÓN: ACORDEONES DESPLEGABLES (Programas y Servicios)
+  // ==========================================================================
+  function initProgramAccordions() {
+    const sections = ['#evaluaciones-diagnosticas', '#terapia-tradicional'];
+
+    sections.forEach(sectionId => {
+      const section = document.querySelector(sectionId);
+      if (!section) return;
+
+      const cards = section.querySelectorAll('.diagnostic-card, .individual-card');
+
+      cards.forEach(card => {
+        const toggleBtn = card.querySelector('.btn-card-toggle');
+        if (!toggleBtn) return;
+
+        toggleBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const isCurrentlyExpanded = card.classList.contains('is-expanded');
+
+          // Modo exclusivo: Colapsar las demás tarjetas de la misma sección
+          cards.forEach(otherCard => {
+            if (otherCard !== card && otherCard.classList.contains('is-expanded')) {
+              otherCard.classList.remove('is-expanded');
+              const otherBtn = otherCard.querySelector('.btn-card-toggle');
+              if (otherBtn) {
+                otherBtn.setAttribute('aria-expanded', 'false');
+                const otherText = otherBtn.querySelector('.toggle-text');
+                if (otherText) otherText.textContent = 'Ver información clínica';
+              }
+            }
+          });
+
+          // Alternar estado de la tarjeta clickeada
+          if (isCurrentlyExpanded) {
+            card.classList.remove('is-expanded');
+            toggleBtn.setAttribute('aria-expanded', 'false');
+            const toggleText = toggleBtn.querySelector('.toggle-text');
+            if (toggleText) toggleText.textContent = 'Ver información clínica';
+          } else {
+            card.classList.add('is-expanded');
+            toggleBtn.setAttribute('aria-expanded', 'true');
+            const toggleText = toggleBtn.querySelector('.toggle-text');
+            if (toggleText) toggleText.textContent = 'Ocultar información clínica';
+
+            // Auto-scroll suave si la tarjeta queda fuera de vista
+            setTimeout(() => {
+              const rect = card.getBoundingClientRect();
+              if (rect.top < 90 || rect.bottom > window.innerHeight) {
+                card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              }
+            }, 180);
+          }
+        });
+      });
+    });
+  }
+
+  initProgramAccordions();
+
+
 
