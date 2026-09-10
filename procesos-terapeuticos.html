@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Procesos terapéuticos | Los Amigos - Terapia y Rehabilitación en Castro</title>
+  <meta name="description" content="Conoce las etapas de un proceso terapéutico en Los Amigos Castro: desde la detección temprana hasta el alta funcional. Guía educativa para familias, prevención y consejos prácticos." />
+  <link rel="canonical" href="https://losamigos.cl/procesos-terapeuticos.html" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://losamigos.cl/procesos-terapeuticos.html" />
+  <meta property="og:title" content="Procesos terapéuticos | Los Amigos - Terapia y Rehabilitación" />
+  <meta property="og:description" content="Ruta clínica paso a paso para familias: desde la primera consulta hasta la autonomía y el alta terapéutica en Castro, Chiloé." />
+  <meta property="og:image" content="https://losamigos.cl/hero.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://losamigos.cl/procesos-terapeuticos.html" />
+  <meta property="twitter:title" content="Procesos terapéuticos | Los Amigos" />
+  <meta property="twitter:description" content="Ruta clínica paso a paso para familias en Castro, Chiloé." />
+
+  <!-- JSON-LD Schema: MedicalWebPage & BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalWebPage",
+        "name": "Procesos Terapéuticos y Fases Clínicas en Los Amigos",
+        "url": "https://losamigos.cl/procesos-terapeuticos.html",
+        "description": "Educación integral y algoritmo del proceso terapéutico estándar desde la detección temprana hasta el alta funcional en Chiloé.",
+        "publisher": {
+          "@type": "MedicalClinic",
+          "name": "Los Amigos - Terapia y Rehabilitación",
+          "telephone": "+56912345678",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Eusebio Lillo 147",
+            "addressLocality": "Castro",
+            "addressRegion": "Los Lagos",
+            "addressCountry": "CL"
+          }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://losamigos.cl/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "El centro",
+            "item": "https://losamigos.cl/centro.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Procesos terapéuticos",
+            "item": "https://losamigos.cl/procesos-terapeuticos.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { opacity: 0; transition: opacity 0.3s; }
+    
+    /* Línea de Tiempo del Proceso Terapéutico */
+    .timeline-container {
+      position: relative;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 0;
+      text-align: left;
+    }
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 36px;
+      width: 4px;
+      background: rgba(43, 95, 72, 0.15);
+      border-radius: 999px;
+    }
+    .timeline-step {
+      position: relative;
+      margin-bottom: 40px;
+      padding-left: 90px;
+    }
+    .timeline-step:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-node {
+      position: absolute;
+      left: 14px;
+      top: 0;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.1rem;
+      box-shadow: 0 0 0 8px #FAF8F5, 0 4px 14px rgba(43, 95, 72, 0.3);
+      z-index: 2;
+    }
+    .timeline-content {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 28px 32px;
+      border: 1px solid rgba(31, 77, 58, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .timeline-content:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 28px rgba(43, 95, 72, 0.1);
+    }
+    .timeline-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--primary-color);
+      margin-bottom: 6px;
+    }
+    .timeline-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin: 0 0 10px 0;
+      font-family: var(--font-heading);
+    }
+    .timeline-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: #4A5550;
+      margin: 0 0 14px 0;
+    }
+    .timeline-points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .timeline-points li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 0.9rem;
+      color: #3D4A43;
+      line-height: 1.5;
+    }
+    .timeline-points li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    
+    /* Responsive timeline */
+    @media (max-width: 600px) {
+      .timeline-container::before {
+        left: 20px;
+      }
+      .timeline-node {
+        left: 0;
+        width: 42px;
+        height: 42px;
+        font-size: 0.95rem;
+      }
+      .timeline-step {
+        padding-left: 60px;
+      }
+      .timeline-content {
+        padding: 22px 18px;
+      }
+    }
+
+    /* Grillas educativas */
+    .edu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      text-align: left;
+    }
+    .edu-card {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 28px 24px;
+      border: 1px solid rgba(31, 77, 58, 0.08);
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+    }
+  </style>
+</head>
+<body class="rounded-cards" onload="document.body.style.opacity='1'">
+  <nav class="navbar" aria-label="Navegación Principal">
+    <!-- Cabecera Móvil -->
+    <div class="mobile-nav-header">
+      <div class="logo mobile-only-logo">
+        <a href="index.html" aria-label="Inicio">
+          <img src="/logo-v4.svg" alt="Los Amigos - Terapia y Rehabilitación" />
+        </a>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Abrir menú" onclick="document.querySelector('.navbar').classList.toggle('menu-open')">
+        <div class="hamburger">
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Desktop Logo -->
+    <div class="logo desktop-logo">
+      <a href="index.html" aria-label="Inicio">
+        <img src="/logo-v4.svg" alt="Los Amigos - Terapia y Rehabilitación" />
+      </a>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <div class="nav-item-dropdown">
+        <div class="nav-dropdown-trigger-wrap">
+          <a href="centro.html" class="nav-link nav-dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
+            El centro
+            <svg class="dropdown-chevron desktop-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <button type="button" class="btn-mobile-dropdown-toggle" aria-label="Desplegar submenú El centro">
+            <svg class="dropdown-chevron mobile-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="nav-dropdown-menu" role="menu" aria-label="Submenú El centro">
+          <a href="procesos-terapeuticos.html" class="dropdown-item" role="menuitem" style="color: var(--primary-color); font-weight: 700;">Procesos terapéuticos</a>
+          <a href="profesionales.html" class="dropdown-item" role="menuitem">Nuestros profesionales</a>
+          <a href="recinto.html" class="dropdown-item" role="menuitem">El recinto</a>
+          <a href="colaboraciones.html" class="dropdown-item" role="menuitem">Colaboraciones</a>
+        </div>
+      </div>
+      <a href="especialidades.html" class="nav-link">Especialidades</a>
+      <a href="programas.html" class="nav-link">Programas y servicios</a>
+      <a href="terapias.html" class="nav-link">Terapias</a>
+      <a href="reservas.html" class="nav-link">Reservas</a>
+    </div>
+  </nav>
+
+  <main style="padding-top: 180px;">
+    <div class="container text-center mb-6">
+      <nav aria-label="Migas de pan" style="margin-bottom: var(--spacing-3);">
+        <p style="font-size: 0.85rem; color: #55605A; margin: 0;">
+          <a href="index.html" style="color: inherit; text-decoration: none;">Inicio</a> / <a href="centro.html" style="color: inherit; text-decoration: none;">El centro</a> / <span style="color: var(--primary-color); font-weight: 600;">Procesos terapéuticos</span>
+        </p>
+      </nav>
+
+      <h1 class="text-hero mb-3 animate-on-scroll">Procesos terapéuticos: de la duda a la recuperación</h1>
+      <p class="text-subtitle animate-on-scroll mb-6" style="max-width: 860px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+        Iniciar terapia con un hijo o familiar no debe ser un laberinto incierto. Aquí te explicamos paso a paso el algoritmo clínico que seguimos en Los Amigos: un camino estructurado, medible y transparente desde la primera señal de alerta hasta la autonomía funcional.
+      </p>
+
+      <!-- ===================================================================
+           LÍNEA DE TIEMPO / ALGORITMO CLÍNICO
+           =================================================================== -->
+      <section class="mb-6 animate-on-scroll">
+        <h2 class="text-title mb-2" style="font-size: 1.9rem; color: var(--primary-dark);">Ruta clínica estándar paso a paso</h2>
+        <p style="color: #4A5550; max-width: 740px; margin: 0 auto 30px; font-size: 1rem;">
+          Un proceso terapéutico exitoso combina rigor profesional con objetivos realistas compartidos con la familia.
+        </p>
+
+        <div class="timeline-container">
+          
+          <!-- Paso 1 -->
+          <div class="timeline-step">
+            <div class="timeline-node">01</div>
+            <div class="timeline-content">
+              <span class="timeline-tag">Etapa Inicial</span>
+              <h3 class="timeline-title">Detección y primer contacto</h3>
+              <p class="timeline-desc">
+                La familia, el colegio o el pediatra identifican dificultades o retrasos en el lenguaje, la marcha, la modulación sensorial o la conducta. Nos contactas y recopilamos los antecedentes iniciales.
+              </p>
+              <ul class="timeline-points">
+                <li>Escucha activa sin prejuicios ni etiquetas precipitadas.</li>
+                <li>Orientación sobre la especialidad médica o terapéutica idónea de ingreso.</li>
+                <li>Coordinación de la primera sesión de evaluación diagnóstica.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Paso 2 -->
+          <div class="timeline-step">
+            <div class="timeline-node">02</div>
+            <div class="timeline-content">
+              <span class="timeline-tag">Diagnóstico y Evidencia</span>
+              <h3 class="timeline-title">Evaluación clínica interdisciplinaria</h3>
+              <p class="timeline-desc">
+                Se aplican pruebas estandarizadas (como ADOS-2, ADI-R, Perfil Sensorial, WISC-V o CELF-5) y observaciones clínicas estructuradas para levantar el perfil basal del paciente.
+              </p>
+              <ul class="timeline-points">
+                <li>Medición objetiva y baremos normativos validados.</li>
+                <li>Identificación clara de fortalezas y áreas prioritarias de apoyo.</li>
+                <li>Entrega de informe clínico estructurado con reunión de devolución explicativa a los padres.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Paso 3 -->
+          <div class="timeline-step">
+            <div class="timeline-node">03</div>
+            <div class="timeline-content">
+              <span class="timeline-tag">Estrategia</span>
+              <h3 class="timeline-title">Diseño del plan terapéutico individual o colaborativo</h3>
+              <p class="timeline-desc">
+                Definición consensuada de objetivos clínicos claros y alcanzables. Se determina la frecuencia semanal y la modalidad más eficaz: terapia tradicional o programas terapéuticos colaborativos.
+              </p>
+              <ul class="timeline-points">
+                <li>Metas funcionales orientadas a la vida cotidiana (colegio, juego, hogar).</li>
+                <li>Articulación entre terapeutas (kinesiólogo, fonoaudiólogo, terapeuta ocupacional, psicólogo).</li>
+                <li>Establecimiento de indicadores de avance medibles a corto y mediano plazo.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Paso 4 -->
+          <div class="timeline-step">
+            <div class="timeline-node">04</div>
+            <div class="timeline-content">
+              <span class="timeline-tag">Intervención Activa</span>
+              <h3 class="timeline-title">Terapia intensiva y triangulación escuela-familia</h3>
+              <p class="timeline-desc">
+                Desarrollo continuo de las sesiones en salas terapéuticas especializadas. El avance real se consolida cuando lo aprendido en la sesión se transfiere al aula escolar y al hogar.
+              </p>
+              <ul class="timeline-points">
+                <li>Pautas prácticas y sencillas para que los cuidadores apliquen en casa.</li>
+                <li>Coordinación documentada con educadoras y equipos PIE del colegio.</li>
+                <li>Ajustes periódicos de la estrategia según la respuesta del paciente.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Paso 5 -->
+          <div class="timeline-step">
+            <div class="timeline-node">05</div>
+            <div class="timeline-content">
+              <span class="timeline-tag">Consolidación</span>
+              <h3 class="timeline-title">Reevaluación, autonomía y alta funcional</h3>
+              <p class="timeline-desc">
+                La meta final de la rehabilitación es que el paciente ya no necesite la terapia. Al cumplirse los objetivos clínicos y consolidarse la autonomía funcional, se planifica el alta y seguimiento.
+              </p>
+              <ul class="timeline-points">
+                <li>Reevaluación formal comparativa contra la línea base inicial.</li>
+                <li>Espaciamiento paulatino de las sesiones para comprobar la estabilidad de los logros.</li>
+                <li>Cierre clínico, entrega de informe final y celebración del avance junto a la familia.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===================================================================
+           CONSEJOS PARA EL HOGAR Y PREVENCIÓN
+           =================================================================== -->
+      <section class="section bg-cream mb-6" style="padding-top: var(--spacing-8); padding-bottom: var(--spacing-8); border-radius: 28px;">
+        <div class="container text-center" style="max-width: 900px;">
+          <h2 class="text-title mb-3" style="font-size: 1.85rem; color: var(--primary-dark);">Consejos prácticos: cómo ayudar y mejorar en el hogar</h2>
+          <p style="color: #4A5550; font-size: 1rem; margin-bottom: 36px;">
+            La terapia dura algunas horas por semana; el entorno familiar acompaña toda la vida. Pequeños hábitos cotidianos marcan una gran diferencia.
+          </p>
+
+          <div class="edu-grid">
+            <div class="edu-card">
+              <h3 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 8px;">1. Rutinas visuales y predecibles</h3>
+              <p style="font-size: 0.92rem; line-height: 1.6; color: #4A5550; margin: 0;">
+                Anticipar los cambios de actividad reduce la ansiedad y los desbordes emocionales. Un horario gráfico con fotos o dibujos otorga seguridad a niños neurodivergentes.
+              </p>
+            </div>
+
+            <div class="edu-card">
+              <h3 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 8px;">2. Celebrar el esfuerzo, no la perfección</h3>
+              <p style="font-size: 0.92rem; line-height: 1.6; color: #4A5550; margin: 0;">
+                Fomentar la perseverancia refuerza la autoestima. Reconoce cada intento de comunicarse, modular su frustración o atarse los zapatos por sí mismo.
+              </p>
+            </div>
+
+            <div class="edu-card">
+              <h3 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 8px;">3. Comunicación cara a cara</h3>
+              <p style="font-size: 0.92rem; line-height: 1.6; color: #4A5550; margin: 0;">
+                Ponte a su altura visual al hablarle, dale tiempo para responder sin interrumpirlo y utiliza frases claras y afectuosas en lugar de instrucciones complejas.
+              </p>
+            </div>
+
+            <div class="edu-card">
+              <h3 style="font-size: 1.2rem; color: var(--primary-dark); margin-bottom: 8px;">4. Detectar a tiempo: neuroplasticidad</h3>
+              <p style="font-size: 0.92rem; line-height: 1.6; color: #4A5550; margin: 0;">
+                El cerebro en los primeros años tiene su mayor capacidad de adaptación. Consultar oportunamente ante dudas no es alarmismo; es prevención activa.
+              </p>
+            </div>
+          </div>
+
+          <div style="margin-top: 40px;">
+            <a href="reservas.html" class="btn btn-primary">Iniciar proceso con una evaluación</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer bg-cream" style="padding-top: var(--spacing-8); padding-bottom: var(--spacing-4);">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-6); align-items: center; text-align: left;">
+      <div class="footer-contact" style="font-size: 0.95rem;">
+        <h3 style="color: var(--primary-dark); margin-bottom: var(--spacing-3); font-size: 1.2rem;">Contacto</h3>
+        <p style="margin-bottom: var(--spacing-2);"><strong>Ubicación:</strong><br>Eusebio Lillo 147, Castro, Chile</p>
+        <p style="margin-bottom: var(--spacing-2);"><strong>Teléfono:</strong><br><a href="tel:+56912345678" style="color: inherit; text-decoration: none;">+56 9 1234 5678</a></p>
+        <p><strong>Correo:</strong><br><a href="mailto:contacto@losamigos.cl" style="color: inherit; text-decoration: none;">contacto@losamigos.cl</a></p>
+      </div>
+
+      <div class="footer-brand" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <a href="index.html" aria-label="Inicio">
+          <img src="/logo-cuadrado-v3.svg" alt="Los Amigos - Terapia y Rehabilitación" style="height: 110px; width: auto; display: block;" />
+        </a>
+      </div>
+
+      <div class="footer-map" style="border-radius: var(--radius-lg); overflow: hidden; height: 200px; box-shadow: var(--shadow-sm);">
+        <iframe src="https://maps.google.com/maps?q=Eusebio%20Lillo%20147,%20Castro,%20Chile&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    
+    <div class="container text-center" style="margin-top: var(--spacing-6); padding-top: var(--spacing-4); border-top: 1px solid rgba(0,0,0,0.05);">
+      <p style="font-size: 0.85rem; opacity: 0.6; margin: 0;">&copy; 2026 Los Amigos - Terapia y Rehabilitación. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

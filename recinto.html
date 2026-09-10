@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El recinto | Los Amigos - Terapia y Rehabilitación en Castro</title>
+  <meta name="description" content="Conoce las instalaciones terapéuticas de Los Amigos en Eusebio Lillo 147, Castro, Chiloé: sala de integración sensorial, boxes clínicos, gimnasio motor y cómo llegar." />
+  <link rel="canonical" href="https://losamigos.cl/recinto.html" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://losamigos.cl/recinto.html" />
+  <meta property="og:title" content="El recinto | Los Amigos - Terapia y Rehabilitación" />
+  <meta property="og:description" content="Espacios diseñados para la seguridad sensorial, la rehabilitación motora y el confort familiar en Castro, Chiloé." />
+  <meta property="og:image" content="https://losamigos.cl/hero.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://losamigos.cl/recinto.html" />
+  <meta property="twitter:title" content="El recinto | Los Amigos" />
+  <meta property="twitter:description" content="Instalaciones terapéuticas especializadas en Eusebio Lillo 147, Castro." />
+
+  <!-- JSON-LD Schema: MedicalClinic / Place / Map & Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://losamigos.cl/#clinic",
+        "name": "Los Amigos - Terapia y Rehabilitación",
+        "url": "https://losamigos.cl/recinto.html",
+        "telephone": "+56912345678",
+        "hasMap": "https://maps.google.com/maps?q=Eusebio+Lillo+147,+Castro,+Chile",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Eusebio Lillo 147",
+          "addressLocality": "Castro",
+          "addressRegion": "Los Lagos",
+          "postalCode": "5700000",
+          "addressCountry": "CL"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -42.4827,
+          "longitude": -73.7712
+        },
+        "amenityFeature": [
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Accesibilidad universal en planta baja",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Sala de integración sensorial equipada",
+            "value": true
+          },
+          {
+            "@type": "LocationFeatureSpecification",
+            "name": "Aislamiento acústico en boxes clínicos",
+            "value": true
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://losamigos.cl/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "El centro",
+            "item": "https://losamigos.cl/centro.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "El recinto",
+            "item": "https://losamigos.cl/recinto.html"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { opacity: 0; transition: opacity 0.3s; }
+    
+    .spaces-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: var(--spacing-5);
+      text-align: left;
+    }
+
+    .space-card {
+      background: var(--white);
+      border-radius: 20px;
+      border: 1px solid rgba(31, 77, 58, 0.1);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      position: relative;
+    }
+
+    .space-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(43, 95, 72, 0.12);
+      border-color: rgba(43, 95, 72, 0.25);
+    }
+
+    .space-icon-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .space-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: rgba(43, 95, 72, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-color);
+      flex-shrink: 0;
+    }
+
+    .space-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 4px;
+      font-family: var(--font-heading);
+    }
+
+    .space-subtitle {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .space-desc {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: #4A5550;
+      margin-bottom: 20px;
+    }
+
+    .space-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .space-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      color: #38423D;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .space-feature-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      margin-top: 7px;
+      flex-shrink: 0;
+    }
+
+    /* Sección Cómo Llegar */
+    .directions-section {
+      background: var(--white);
+      border-radius: 24px;
+      border: 1px solid rgba(43, 95, 72, 0.12);
+      padding: 40px 36px;
+      margin-top: var(--spacing-8);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+      text-align: left;
+    }
+
+    .directions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-6);
+      margin-top: 28px;
+    }
+
+    @media (max-width: 900px) {
+      .directions-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .access-card {
+      background: #F9FBF9;
+      border: 1px solid rgba(43, 95, 72, 0.08);
+      border-radius: 16px;
+      padding: 22px 24px;
+      margin-bottom: 16px;
+    }
+
+    .access-card h3 {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .access-card p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: #4A5550;
+      margin: 0;
+    }
+
+    .map-frame-wrap {
+      border-radius: 18px;
+      overflow: hidden;
+      height: 100%;
+      min-height: 380px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(43, 95, 72, 0.15);
+    }
+  </style>
+</head>
+<body class="rounded-cards" onload="document.body.style.opacity='1'">
+  <nav class="navbar" aria-label="Navegación Principal">
+    <!-- Cabecera Móvil (Oculta en escritorio) -->
+    <div class="mobile-nav-header">
+      <div class="logo mobile-only-logo">
+        <a href="index.html" aria-label="Inicio">
+          <img src="/logo-v4.svg" alt="Los Amigos - Terapia y Rehabilitación" />
+        </a>
+      </div>
+      
+      <!-- Botón Hamburguesa Premium -->
+      <button class="mobile-menu-btn" aria-label="Abrir menú" onclick="document.querySelector('.navbar').classList.toggle('menu-open')">
+        <div class="hamburger">
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Left Links -->
+    <!-- Desktop Logo (A la izquierda) -->
+    <div class="logo desktop-logo">
+      <a href="index.html" aria-label="Inicio">
+        <img src="/logo-v4.svg" alt="Los Amigos - Terapia y Rehabilitación" />
+      </a>
+    </div>
+
+    <!-- Navigation Links (A la derecha) -->
+    <div class="nav-links">
+      <a href="index.html" class="nav-link">Inicio</a>
+      <div class="nav-item-dropdown">
+        <div class="nav-dropdown-trigger-wrap">
+          <a href="centro.html" class="nav-link nav-dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
+            El centro
+            <svg class="dropdown-chevron desktop-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <button type="button" class="btn-mobile-dropdown-toggle" aria-label="Desplegar submenú El centro">
+            <svg class="dropdown-chevron mobile-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="nav-dropdown-menu" role="menu" aria-label="Submenú El centro">
+          <a href="procesos-terapeuticos.html" class="dropdown-item" role="menuitem">Procesos terapéuticos</a>
+          <a href="profesionales.html" class="dropdown-item" role="menuitem">Nuestros profesionales</a>
+          <a href="recinto.html" class="dropdown-item" role="menuitem">El recinto</a>
+          <a href="colaboraciones.html" class="dropdown-item" role="menuitem">Colaboraciones</a>
+        </div>
+      </div>
+      <a href="especialidades.html" class="nav-link">Especialidades</a>
+      <a href="programas.html" class="nav-link">Programas y servicios</a>
+      <a href="terapias.html" class="nav-link">Terapias</a>
+      <a href="reservas.html" class="nav-link">Reservas</a>
+    </div>
+  </nav>
+
+  <main style="padding-top: 180px;">
+    <!-- Hero Section -->
+    <div class="container text-center mb-6">
+      <nav aria-label="Migas de pan" style="margin-bottom: var(--spacing-3);">
+        <p style="font-size: 0.85rem; color: #55605A; margin: 0;">
+          <a href="index.html" style="color: inherit; text-decoration: none;">Inicio</a> / 
+          <a href="centro.html" style="color: inherit; text-decoration: none;">El centro</a> / 
+          <span style="color: var(--primary-color); font-weight: 600;">El recinto</span>
+        </p>
+      </nav>
+      <h1 class="text-hero mb-3 animate-on-scroll">El recinto: un espacio diseñado para la seguridad y el neurodesarrollo</h1>
+      <p class="text-subtitle animate-on-scroll mb-5" style="max-width: 860px; margin-left: auto; margin-right: auto; line-height: 1.7;">
+        Ubicado en Eusebio Lillo 147 en el corazón de Castro, nuestro centro cuenta con infraestructura especialmente adaptada para la regulación sensorial, la psicomotricidad y la atención interdisciplinaria con calidez y confort.
+      </p>
+
+      <!-- Grilla de Espacios Terapéuticos -->
+      <div class="spaces-grid animate-on-scroll mb-6">
+        
+        <!-- Espacio 1: Sala de Integración Sensorial -->
+        <article class="space-card">
+          <div class="space-icon-header">
+            <div class="space-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 12a4 4 0 0 1 8 0"></path>
+                <line x1="12" y1="2" x2="12" y2="4"></line>
+              </svg>
+            </div>
+            <div>
+              <span class="space-subtitle">Terapia ocupacional</span>
+              <h2 class="space-title">Gimnasio sensorial de integración</h2>
+            </div>
+          </div>
+          <p class="space-desc">
+            Espacio amplio y acolchado de estándar clínico para el procesamiento sensorial, equipado con sistemas de suspensión certificados que permiten trabajar equilibrio, propiocepción y regulación motriz.
+          </p>
+          <ul class="space-features">
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Columpios vestibulares y hamacas multipunto para modulación vestibular.</span>
+            </li>
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Piscina de estimulación táctil y colchonetas de amortiguación de alto impacto.</span>
+            </li>
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Muro de trepa y rampas para planificación motriz y praxis.</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Espacio 2: Boxes de Fonoaudiología -->
+        <article class="space-card">
+          <div class="space-icon-header">
+            <div class="space-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                <line x1="12" y1="19" x2="12" y2="23"></line>
+                <line x1="8" y1="23" x2="16" y2="23"></line>
+              </svg>
+            </div>
+            <div>
+              <span class="space-subtitle">Fonoaudiología y habla</span>
+              <h2 class="space-title">Boxes de comunicación y lenguaje</h2>
+            </div>
+          </div>
+          <p class="space-desc">
+            Ambientes con atenuación acústica diseñada para evitar distracciones sonoras del exterior, facilitando la concentración y el modelado vocal de niños y adultos.
+          </p>
+          <ul class="space-features">
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Aislamiento acústico perimetral para discriminación auditiva precisa.</span>
+            </li>
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Espejos fonoaudiológicos graduados para retroalimentación buco-articulatoria.</span>
+            </li>
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Mobiliario ergonómico adaptado para infantes y dispositivos SAAC.</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Espacio 3: Sala de Psicología y Vínculo -->
+        <article class="space-card">
+          <div class="space-icon-header">
+            <div class="space-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <div>
+              <span class="space-subtitle">Psicología clínica</span>
+              <h2 class="space-title">Espacio de contención y juego terapéutico</h2>
+            </div>
+          </div>
+          <p class="space-desc">
+            Un ambiente acogedor con iluminación cálida no invasiva y materiales proyectivos, pensado para que niños, niñas, jóvenes y familias se sientan en total confianza.
+          </p>
+          <ul class="space-features">
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Iluminación indirecta regulable para niños con hipersensibilidad visual.</span>
+            </li>
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Rincón lúdico con materiales para terapia de juego y evaluación diagnóstica.</span>
+            </li>
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Privacidad y confidencialidad garantizada para entrevistas parentales.</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Espacio 4: Gimnasio de Kinesiología y Neurodesarrollo -->
+        <article class="space-card">
+          <div class="space-icon-header">
+            <div class="space-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                <line x1="6" y1="1" x2="6" y2="4"></line>
+                <line x1="10" y1="1" x2="10" y2="4"></line>
+                <line x1="14" y1="1" x2="14" y2="4"></line>
+              </svg>
+            </div>
+            <div>
+              <span class="space-subtitle">Kinesiología</span>
+              <h2 class="space-title">Área motriz y neurokinesiológica</h2>
+            </div>
+          </div>
+          <p class="space-desc">
+            Diseñada para la rehabilitación física, reeducación de la marcha, control postural y estimulación del desarrollo psicomotor en todas las etapas.
+          </p>
+          <ul class="space-features">
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Espalderas de madera y barras paralelas regulables para reeducación de marcha.</span>
+            </li>
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Balones de Bobath, rodillos propioceptivos y plataformas inestables.</span>
+            </li>
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Pisos de alto tráfico antideslizantes con amortiguación articular.</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Espacio 5: Box Médico y Consulta Integral -->
+        <article class="space-card">
+          <div class="space-icon-header">
+            <div class="space-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+              </svg>
+            </div>
+            <div>
+              <span class="space-subtitle">Medicina</span>
+              <h2 class="space-title">Box de atención médica integral</h2>
+            </div>
+          </div>
+          <p class="space-desc">
+            Equipado con instrumental clínico completo para la evaluación física, somatometría, examen pediátrico y seguimiento clínico en un entorno cálido y libre de estrés de bata blanca.
+          </p>
+          <ul class="space-features">
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Camilla de examen pediátrico y antropometría precisa.</span>
+            </li>
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Instrumental de chequeo otoscópico, cardiovascular y neurológico.</span>
+            </li>
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Ambiente clínico humanizado que minimiza la aprehensión médica.</span>
+            </li>
+          </ul>
+        </article>
+
+        <!-- Espacio 6: Sala de Espera y Accesibilidad -->
+        <article class="space-card">
+          <div class="space-icon-header">
+            <div class="space-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
+            <div>
+              <span class="space-subtitle">Confort familiar</span>
+              <h2 class="space-title">Recepción serena y accesibilidad</h2>
+            </div>
+          </div>
+          <p class="space-desc">
+            Pensada para que el tiempo de espera sea una transición tranquila. Todo el centro cuenta con accesibilidad universal en planta baja sin desniveles pronunciados.
+          </p>
+          <ul class="space-features">
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Acceso universal a nivel de calle apto para sillas de ruedas y coches.</span>
+            </li>
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Zona de espera tranquila con libros y juegos didácticos calmantes.</span>
+            </li>
+            <li class="space-feature-item">
+              <span class="space-feature-dot"></span>
+              <span>Baños adaptados y calefacción confortable permanente para el clima austral.</span>
+            </li>
+          </ul>
+        </article>
+
+      </div>
+
+      <!-- Sección Inmediaciones y Cómo Llegar -->
+      <section class="directions-section animate-on-scroll">
+        <h2 style="font-size: 1.6rem; color: var(--primary-dark); font-family: var(--font-heading); margin-bottom: 8px;">
+          Inmediaciones e indicaciones para llegar
+        </h2>
+        <p style="font-size: 0.98rem; color: #4A5550; line-height: 1.65; max-width: 900px;">
+          Estamos ubicados en <strong>Eusebio Lillo 147, Castro</strong>, a pasos del centro cívico y comercial de la ciudad, en una zona segura y con excelente conectividad para familias de toda la Isla Grande de Chiloé.
+        </p>
+
+        <div class="directions-grid">
+          <!-- Detalles de Transporte y Accesos -->
+          <div>
+            <div class="access-card">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                En locomoción colectiva local
+              </h3>
+              <p>
+                Las principales líneas de taxis colectivos de Castro (Líneas 1, 2 y 4) y microbuses urbanos transitan por calle Eusebio Lillo y las inmediaciones de calle San Martín y O'Higgins, dejándote a menos de dos minutos a pie.
+              </p>
+            </div>
+
+            <div class="access-card">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Desde comunas vecinas (Dalcahue, Chonchi, Quellón, Ancud)
+              </h3>
+              <p>
+                Si viajas en buses interurbanos o rurales, el Terminal de Buses de Castro se encuentra a solo 5-7 minutos en taxi o 12 minutos caminando. La cercanía a las avenidas principales agiliza el traslado de familias de toda la provincia.
+              </p>
+            </div>
+
+            <div class="access-card">
+              <h3>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 18H3c-.6 0-1-.4-1-1V9c0-.6.4-1 1-1h2m14 10h2c.6 0 1-.4 1-1V9c0-.6-.4-1-1-1h-2M5 8h14v10H5V8z"/></svg>
+                En vehículo particular y estacionamiento
+              </h3>
+              <p>
+                Hay opciones de detención momentánea para descenso seguro de niños y familiares en la entrada, además de zonas de estacionamiento tarifado y seguro en calles aledañas (Lillo, Thompson y Blanco Encalada).
+              </p>
+            </div>
+
+            <div style="margin-top: 24px;">
+              <a href="https://maps.google.com/maps?q=Eusebio+Lillo+147,+Castro,+Chile" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Abrir en Google Maps
+              </a>
+            </div>
+          </div>
+
+          <!-- Mapa Integrado -->
+          <div class="map-frame-wrap">
+            <iframe src="https://maps.google.com/maps?q=Eusebio%20Lillo%20147,%20Castro,%20Chile&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0; min-height: 380px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación Los Amigos Eusebio Lillo 147, Castro"></iframe>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(43, 95, 72, 0.1);">
+          <p style="font-size: 1.05rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 16px;">
+            ¿Te gustaría conocer nuestras salas antes de tu primera consulta?
+          </p>
+          <a href="reservas.html" class="btn btn-primary">Reservar hora de atención</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="footer bg-cream" style="padding-top: var(--spacing-8); padding-bottom: var(--spacing-4);">
+    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-6); align-items: center; text-align: left;">
+      <div class="footer-contact" style="font-size: 0.95rem;">
+        <h3 style="color: var(--primary-dark); margin-bottom: var(--spacing-3); font-size: 1.2rem;">Contacto</h3>
+        <p style="margin-bottom: var(--spacing-2);"><strong>Ubicación:</strong><br>Eusebio Lillo 147, Castro, Chile</p>
+        <p style="margin-bottom: var(--spacing-2);"><strong>Teléfono:</strong><br><a href="tel:+56912345678" style="color: inherit; text-decoration: none;">+56 9 1234 5678</a></p>
+        <p><strong>Correo:</strong><br><a href="mailto:contacto@losamigos.cl" style="color: inherit; text-decoration: none;">contacto@losamigos.cl</a></p>
+      </div>
+
+      <div class="footer-brand" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <a href="index.html" aria-label="Inicio">
+          <img src="/logo-cuadrado-v3.svg" alt="Los Amigos - Terapia y Rehabilitación" style="height: 110px; width: auto; display: block;" />
+        </a>
+      </div>
+
+      <div class="footer-map" style="border-radius: var(--radius-lg); overflow: hidden; height: 200px; box-shadow: var(--shadow-sm);">
+        <iframe src="https://maps.google.com/maps?q=Eusebio%20Lillo%20147,%20Castro,%20Chile&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    
+    <div class="container text-center" style="margin-top: var(--spacing-6); padding-top: var(--spacing-4); border-top: 1px solid rgba(0,0,0,0.05);">
+      <p style="font-size: 0.85rem; opacity: 0.6; margin: 0;">&copy; 2026 Los Amigos - Terapia y Rehabilitación. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

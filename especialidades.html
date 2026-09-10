@@ -82,7 +82,23 @@
     <!-- Navigation Links (A la derecha) -->
     <div class="nav-links">
       <a href="index.html" class="nav-link">Inicio</a>
-      <a href="sello.html" class="nav-link">Nuestro sello</a>
+      <div class="nav-item-dropdown">
+        <div class="nav-dropdown-trigger-wrap">
+          <a href="centro.html" class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            El centro
+            <svg class="dropdown-chevron desktop-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <button type="button" class="btn-mobile-dropdown-toggle" aria-label="Desplegar submenú El centro">
+            <svg class="dropdown-chevron mobile-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="nav-dropdown-menu" role="menu" aria-label="Submenú El centro">
+          <a href="procesos-terapeuticos.html" class="dropdown-item" role="menuitem">Procesos terapéuticos</a>
+          <a href="profesionales.html" class="dropdown-item" role="menuitem">Nuestros profesionales</a>
+          <a href="recinto.html" class="dropdown-item" role="menuitem">El recinto</a>
+          <a href="colaboraciones.html" class="dropdown-item" role="menuitem">Colaboraciones</a>
+        </div>
+      </div>
       <a href="especialidades.html" class="nav-link">Especialidades</a>
       <a href="programas.html" class="nav-link">Programas y servicios</a>
       <a href="terapias.html" class="nav-link">Terapias</a>

@@ -128,10 +128,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (indicator && navLinks.length > 0) {
     // Find active link
-    let activeLink = Array.from(navLinks).find(link => 
-      window.location.pathname.includes(link.getAttribute('href')) ||
-      (window.location.pathname === '/' && link.getAttribute('href') === 'index.html')
-    );
+    const isCentroSubpage = [
+      'centro.html',
+      'procesos-terapeuticos.html',
+      'profesionales.html',
+      'recinto.html',
+      'colaboraciones.html',
+      'sello.html'
+    ].some(page => window.location.pathname.includes(page));
+
+    let activeLink;
+    if (isCentroSubpage) {
+      activeLink = document.querySelector('.nav-dropdown-trigger') || navLinks[1] || navLinks[0];
+    } else {
+      activeLink = Array.from(navLinks).find(link => 
+        window.location.pathname.includes(link.getAttribute('href')) ||
+        (window.location.pathname === '/' && link.getAttribute('href') === 'index.html')
+      );
+    }
 
     if (!activeLink) activeLink = navLinks[0];
 
@@ -466,6 +480,56 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initProgramAccordions();
+
+  // ==========================================================================
+  // NAVBAR: MENÚ DESPLEGABLE "EL CENTRO" (Móvil y Accesibilidad)
+  // ==========================================================================
+  function initNavDropdown() {
+    const dropdown = document.querySelector('.nav-item-dropdown');
+    if (!dropdown) return;
+
+    const toggleBtn = dropdown.querySelector('.btn-mobile-dropdown-toggle');
+    const triggerLink = dropdown.querySelector('.nav-dropdown-trigger');
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const isOpen = dropdown.classList.toggle('dropdown-open');
+        toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
+
+    // En dispositivos móviles o táctiles, si el submenú está cerrado, el primer toque en el trigger abre el submenú
+    if (triggerLink) {
+      triggerLink.addEventListener('click', (e) => {
+        const isMobile = window.innerWidth <= 768;
+        if (isMobile && !dropdown.classList.contains('dropdown-open')) {
+          e.preventDefault();
+          dropdown.classList.add('dropdown-open');
+          if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+
+    // Cerrar al hacer clic fuera
+    document.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('dropdown-open');
+        if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Cerrar con Escape
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        dropdown.classList.remove('dropdown-open');
+        if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  initNavDropdown();
 
 
 
