@@ -435,7 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
               if (otherBtn) {
                 otherBtn.setAttribute('aria-expanded', 'false');
                 const otherText = otherBtn.querySelector('.toggle-text');
-                if (otherText) otherText.textContent = 'Ver información clínica';
+                if (otherText) otherText.textContent = 'Más información';
               }
             }
           });
@@ -445,12 +445,12 @@ document.addEventListener('DOMContentLoaded', () => {
             card.classList.remove('is-expanded');
             toggleBtn.setAttribute('aria-expanded', 'false');
             const toggleText = toggleBtn.querySelector('.toggle-text');
-            if (toggleText) toggleText.textContent = 'Ver información clínica';
+            if (toggleText) toggleText.textContent = 'Más información';
           } else {
             card.classList.add('is-expanded');
             toggleBtn.setAttribute('aria-expanded', 'true');
             const toggleText = toggleBtn.querySelector('.toggle-text');
-            if (toggleText) toggleText.textContent = 'Ocultar información clínica';
+            if (toggleText) toggleText.textContent = 'Menos información';
 
             // Auto-scroll suave si la tarjeta queda fuera de vista
             setTimeout(() => {
