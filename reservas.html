@@ -94,18 +94,59 @@
         <div class="specialists-tabs-card">
           <!-- Desktop Tabs Navigation (role="tablist") -->
           <div class="specialists-tablist" role="tablist" aria-label="Especialidades">
-            <button class="specialist-tab-btn active" role="tab" id="tab-fonoaudiologia" aria-selected="true" aria-controls="panel-fonoaudiologia" data-target="fonoaudiologia">Fonoaudiología</button>
+            <button class="specialist-tab-btn active" role="tab" id="tab-medicina" aria-selected="true" aria-controls="panel-medicina" data-target="medicina">Medicina</button>
+            <button class="specialist-tab-btn" role="tab" id="tab-fonoaudiologia" aria-selected="false" aria-controls="panel-fonoaudiologia" data-target="fonoaudiologia">Fonoaudiología</button>
             <button class="specialist-tab-btn" role="tab" id="tab-kinesiologia" aria-selected="false" aria-controls="panel-kinesiologia" data-target="kinesiologia">Kinesiología</button>
             <button class="specialist-tab-btn" role="tab" id="tab-terapia-ocupacional" aria-selected="false" aria-controls="panel-terapia-ocupacional" data-target="terapia-ocupacional">Terapia Ocupacional</button>
             <button class="specialist-tab-btn" role="tab" id="tab-psicologia" aria-selected="false" aria-controls="panel-psicologia" data-target="psicologia">Psicología</button>
-            <button class="specialist-tab-btn" role="tab" id="tab-medicina" aria-selected="false" aria-controls="panel-medicina" data-target="medicina">Medicina</button>
           </div>
 
           <!-- Panels / Mobile Accordion Items -->
           <div class="specialists-panels">
-            <!-- Item 1: Fonoaudiología -->
-            <div class="specialist-accordion-item active" id="item-fonoaudiologia" data-specialty="fonoaudiologia">
-              <button class="accordion-trigger" aria-expanded="true" aria-controls="panel-fonoaudiologia">
+            <!-- Item 1: Medicina (Principal / Más buscado) -->
+            <div class="specialist-accordion-item active" id="item-medicina" data-specialty="medicina">
+              <button class="accordion-trigger" aria-expanded="true" aria-controls="panel-medicina">
+                <span class="accordion-title">Medicina</span>
+                <span class="accordion-arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </button>
+
+              <div class="specialist-tabpanel" role="tabpanel" id="panel-medicina" aria-labelledby="tab-medicina">
+                <div class="specialist-profile">
+                  <div class="specialist-avatar-wrap">
+                    <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=400&q=80" alt="Dr. Matías Valenzuela" class="specialist-avatar" loading="lazy" />
+                    <span class="specialist-badge">Medicina General</span>
+                  </div>
+                  <div class="specialist-info">
+                    <div class="specialist-header">
+                      <h3 class="specialist-name">Dr. Matías Valenzuela</h3>
+                      <p class="specialist-role">Médico Cirujano · Enfoque en Salud Integral</p>
+                    </div>
+                    <div class="specialist-expertiz">
+                      <span class="expertiz-label">Áreas de Expertiz Clínica:</span>
+                      <p class="expertiz-desc">Consulta médica integral, evaluación clínica preventiva, control y seguimiento de patologías crónicas, derivación e interconsulta con el equipo terapéutico y prescripción responsable.</p>
+                    </div>
+                    <div class="specialist-tags">
+                      <span class="tag">Medicina General</span>
+                      <span class="tag">Control Crónico</span>
+                      <span class="tag">Chequeo Preventivo</span>
+                      <span class="tag">Interconsulta Clínica</span>
+                    </div>
+                    <div class="specialist-action">
+                      <a href="https://losamigos.setmore.com/medicina" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        AGENDAR POR CALENDARIO
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2: Fonoaudiología -->
+            <div class="specialist-accordion-item" id="item-fonoaudiologia" data-specialty="fonoaudiologia">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-fonoaudiologia">
                 <span class="accordion-title">Fonoaudiología</span>
                 <span class="accordion-arrow">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -144,7 +185,7 @@
               </div>
             </div>
 
-            <!-- Item 2: Kinesiología -->
+            <!-- Item 3: Kinesiología -->
             <div class="specialist-accordion-item" id="item-kinesiologia" data-specialty="kinesiologia">
               <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-kinesiologia">
                 <span class="accordion-title">Kinesiología</span>
@@ -185,7 +226,7 @@
               </div>
             </div>
 
-            <!-- Item 3: Terapia Ocupacional -->
+            <!-- Item 4: Terapia Ocupacional -->
             <div class="specialist-accordion-item" id="item-terapia-ocupacional" data-specialty="terapia-ocupacional">
               <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-terapia-ocupacional">
                 <span class="accordion-title">Terapia Ocupacional</span>
@@ -226,7 +267,7 @@
               </div>
             </div>
 
-            <!-- Item 4: Psicología -->
+            <!-- Item 5: Psicología -->
             <div class="specialist-accordion-item" id="item-psicologia" data-specialty="psicologia">
               <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-psicologia">
                 <span class="accordion-title">Psicología</span>
@@ -258,47 +299,6 @@
                     </div>
                     <div class="specialist-action">
                       <a href="https://losamigos.setmore.com/psicologia" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                        AGENDAR POR CALENDARIO
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Item 5: Medicina -->
-            <div class="specialist-accordion-item" id="item-medicina" data-specialty="medicina">
-              <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-medicina">
-                <span class="accordion-title">Medicina</span>
-                <span class="accordion-arrow">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
-                </span>
-              </button>
-
-              <div class="specialist-tabpanel" role="tabpanel" id="panel-medicina" aria-labelledby="tab-medicina">
-                <div class="specialist-profile">
-                  <div class="specialist-avatar-wrap">
-                    <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=400&q=80" alt="Dr. Matías Valenzuela" class="specialist-avatar" loading="lazy" />
-                    <span class="specialist-badge">Medicina General</span>
-                  </div>
-                  <div class="specialist-info">
-                    <div class="specialist-header">
-                      <h3 class="specialist-name">Dr. Matías Valenzuela</h3>
-                      <p class="specialist-role">Médico Cirujano · Enfoque en Salud Integral</p>
-                    </div>
-                    <div class="specialist-expertiz">
-                      <span class="expertiz-label">Áreas de Expertiz Clínica:</span>
-                      <p class="expertiz-desc">Consulta médica integral, evaluación clínica preventiva, control y seguimiento de patologías crónicas, derivación e interconsulta con el equipo terapéutico y prescripción responsable.</p>
-                    </div>
-                    <div class="specialist-tags">
-                      <span class="tag">Medicina General</span>
-                      <span class="tag">Control Crónico</span>
-                      <span class="tag">Chequeo Preventivo</span>
-                      <span class="tag">Interconsulta Clínica</span>
-                    </div>
-                    <div class="specialist-action">
-                      <a href="https://losamigos.setmore.com/medicina" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                         AGENDAR POR CALENDARIO
                       </a>
