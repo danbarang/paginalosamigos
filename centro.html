@@ -156,7 +156,24 @@
 
     <!-- Navigation Links (A la derecha) -->
     <div class="nav-links">
-      <a href="index.html" class="nav-link">Inicio</a>
+      <div class="nav-item-dropdown">
+        <div class="nav-dropdown-trigger-wrap">
+          <a href="educacion.html" class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Educación
+            <svg class="dropdown-chevron desktop-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </a>
+          <button type="button" class="btn-mobile-dropdown-toggle" aria-label="Desplegar submenú Educación">
+            <svg class="dropdown-chevron mobile-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+        <div class="nav-dropdown-menu" role="menu" aria-label="Submenú Educación">
+          <a href="inclusion-diversidad.html" class="dropdown-item" role="menuitem">Inclusión y diversidad</a>
+          <a href="proceso-terapeutico.html" class="dropdown-item" role="menuitem">El proceso terapéutico</a>
+          <a href="prevencion-calidad-de-vida.html" class="dropdown-item" role="menuitem">Prevención y calidad de vida</a>
+          <a href="pautas-de-trabajo.html" class="dropdown-item" role="menuitem">Pautas de trabajo</a>
+          <a href="recomendaciones-acompanar.html" class="dropdown-item" role="menuitem">Recomendaciones para acompañar</a>
+        </div>
+      </div>
       <div class="nav-item-dropdown">
         <div class="nav-dropdown-trigger-wrap">
           <a href="centro.html" class="nav-link nav-dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
@@ -168,7 +185,6 @@
           </button>
         </div>
         <div class="nav-dropdown-menu" role="menu" aria-label="Submenú El centro">
-          <a href="procesos-terapeuticos.html" class="dropdown-item" role="menuitem">Procesos terapéuticos</a>
           <a href="profesionales.html" class="dropdown-item" role="menuitem">Nuestros profesionales</a>
           <a href="recinto.html" class="dropdown-item" role="menuitem">El recinto</a>
           <a href="colaboraciones.html" class="dropdown-item" role="menuitem">Colaboraciones</a>
@@ -191,48 +207,38 @@
       </nav>
       <h1 class="text-hero mb-3 animate-on-scroll">El centro: compromiso, calidez y rigor clínico</h1>
       <p class="text-subtitle animate-on-scroll mb-5" style="max-width: 860px; margin-left: auto; margin-right: auto; line-height: 1.7;">
-        En Castro y Chiloé, creamos un espacio de salud interdisciplinario pensado para brindar a niños, niñas, adolescentes y adultos una atención humana, cercana y basada en evidencia. Conoce nuestras cuatro dimensiones fundamentales.
+        En Castro y Chiloé, creamos un espacio de salud interdisciplinario pensado para brindar a niños, niñas, adolescentes y adultos una atención humana, cercana y basada en evidencia. Conoce nuestras tres dimensiones institucionales fundamentales.
       </p>
 
-      <!-- 4 Pilares de El Centro -->
+      <!-- 3 Pilares de El Centro -->
       <div class="hub-grid animate-on-scroll mb-6">
         
-        <!-- Pilar 1: Procesos Terapéuticos -->
+        <!-- Pilar 1: Nuestros Profesionales -->
         <article class="hub-card">
           <span class="hub-card-num">Pilar 01</span>
-          <h2 class="hub-card-title">Procesos terapéuticos</h2>
-          <p class="hub-card-desc">
-            Educación clara para familias sobre las etapas de intervención: desde la evaluación inicial y el diseño del plan, hasta el trabajo coordinado y el alta clínica con autonomía.
-          </p>
-          <a href="procesos-terapeuticos.html" class="hub-card-link">Explorar procesos terapéuticos →</a>
-        </article>
-
-        <!-- Pilar 2: Nuestros Profesionales -->
-        <article class="hub-card">
-          <span class="hub-card-num">Pilar 02</span>
           <h2 class="hub-card-title">Nuestros profesionales</h2>
           <p class="hub-card-desc">
-            Equipo multidisciplinario especializado en fonoaudiología, kinesiología, terapia ocupacional, psicología y medicina general, comprometidos con la actualización continua.
+            Equipo multidisciplinario especializado en fonoaudiología, kinesiología, terapia ocupacional, psicología y medicina general, con acreditación universitaria y formación continua.
           </p>
           <a href="profesionales.html" class="hub-card-link">Conocer al equipo clínico →</a>
         </article>
 
-        <!-- Pilar 3: El Recinto -->
+        <!-- Pilar 2: El Recinto -->
         <article class="hub-card">
-          <span class="hub-card-num">Pilar 03</span>
+          <span class="hub-card-num">Pilar 02</span>
           <h2 class="hub-card-title">El recinto</h2>
           <p class="hub-card-desc">
-            Salas de integración sensorial, boxes terapéuticos individuales y espacios diseñados para la comodidad y seguridad de tu familia en Eusebio Lillo 147, Castro.
+            Salas de integración sensorial, boxes terapéuticos individuales acústicamente acondicionados y espacios de bienestar en Eusebio Lillo 147, Castro.
           </p>
           <a href="recinto.html" class="hub-card-link">Ver instalaciones y cómo llegar →</a>
         </article>
 
-        <!-- Pilar 4: Colaboraciones -->
+        <!-- Pilar 3: Colaboraciones -->
         <article class="hub-card">
-          <span class="hub-card-num">Pilar 04</span>
+          <span class="hub-card-num">Pilar 03</span>
           <h2 class="hub-card-title">Colaboraciones</h2>
           <p class="hub-card-desc">
-            Vinculación activa con la comunidad, articulación con colegios y equipos PIE de Chiloé, convenios institucionales y redes de interconsulta médica especializada.
+            Vinculación activa con la comunidad, articulación con colegios y programas PIE de Chiloé, convenios institucionales y redes de interconsulta médica.
           </p>
           <a href="colaboraciones.html" class="hub-card-link">Ver convenios y vinculación →</a>
         </article>

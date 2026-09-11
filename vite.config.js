@@ -16,7 +16,13 @@ export default defineConfig({
         procesos: resolve(__dirname, 'procesos-terapeuticos.html'),
         profesionales: resolve(__dirname, 'profesionales.html'),
         recinto: resolve(__dirname, 'recinto.html'),
-        colaboraciones: resolve(__dirname, 'colaboraciones.html')
+        colaboraciones: resolve(__dirname, 'colaboraciones.html'),
+        educacion: resolve(__dirname, 'educacion.html'),
+        inclusion: resolve(__dirname, 'inclusion-diversidad.html'),
+        proceso: resolve(__dirname, 'proceso-terapeutico.html'),
+        prevencion: resolve(__dirname, 'prevencion-calidad-de-vida.html'),
+        pautas: resolve(__dirname, 'pautas-de-trabajo.html'),
+        acompanar: resolve(__dirname, 'recomendaciones-acompanar.html')
       }
     }
   }
