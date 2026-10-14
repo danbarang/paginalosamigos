@@ -6,8 +6,7 @@ import { readFileSync } from 'fs';
 // cambia SITE_URL por el dominio (por ejemplo https://losamigoscastro.cl),
 // BASE por '/' y agrega public/CNAME con el dominio.
 const SITE_URL = 'https://danbarang.github.io/paginalosamigos';
-// Netlify (vistas previas de los PR) sirve el sitio desde la raíz.
-const BASE = process.env.NETLIFY ? '/' : '/paginalosamigos/';
+const BASE = '/paginalosamigos/';
 
 // Páginas publicadas. La clave es el nombre de entrada de Vite.
 const PAGES = {
