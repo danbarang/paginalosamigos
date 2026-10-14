@@ -2419,8 +2419,20 @@ body.rounded-cards {
   border-top: 1px solid rgba(32, 77, 57, 0.15);
 }
 .esp-more-amigo { width: 48px; height: 60px; flex-shrink: 0; }
-.esp-more .btn { gap: 8px; flex: 0 1 auto; white-space: nowrap; }
-@media (max-width: 400px) { .esp-more .btn { white-space: normal; } }
+.esp-more-link {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary-dark);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.esp-more-link span { transition: transform 0.2s ease; }
+.esp-more-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.esp-more-link:hover span { transform: translateX(4px); }
+.esp-more-link:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 4px; }
 @media (max-width: 768px) {
   .sp-page { padding-top: 110px; }
   .sp-block { padding: var(--spacing-3); }
