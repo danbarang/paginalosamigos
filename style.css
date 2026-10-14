@@ -2395,8 +2395,12 @@ body.rounded-cards {
 .sp-header { margin-bottom: var(--spacing-5); }
 .sp-header p { line-height: 1.7; margin-bottom: var(--spacing-3); max-width: 65ch; }
 .sp-lead { font-size: 1.15rem; }
+.sp-sub { font-family: var(--font-body); font-size: 1.2rem; font-weight: 600; color: var(--primary-color); margin-top: calc(-1 * var(--spacing-2)); }
+.sp-source { margin-top: var(--spacing-3); font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; overflow-wrap: anywhere; }
+.sp-source a { color: var(--primary-color); text-decoration: underline; }
 .sp-block { background: var(--white); padding: var(--spacing-4); margin-bottom: var(--spacing-4); box-shadow: var(--shadow-sm); }
 .sp-block > p { line-height: 1.7; max-width: 65ch; }
+.sp-block > p + p, .sp-block > p + .sp-list { margin-top: var(--spacing-2); }
 .sp-block .text-title { margin-bottom: var(--spacing-3); font-size: clamp(1.5rem, 3vw, 2rem); }
 .sp-list { list-style: none; padding: 0; display: grid; gap: var(--spacing-2); }
 .sp-list li { padding-left: 1.4em; position: relative; line-height: 1.6; }

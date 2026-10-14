@@ -29,7 +29,10 @@ const PAGES = {
   kine: 'kinesiologia-castro.html',
   to: 'terapia-ocupacional-castro.html',
   psico: 'psicologia-castro.html',
-  nutri: 'nutricion-castro.html'
+  nutri: 'nutricion-castro.html',
+  acv: 'rehabilitacion-acv-castro.html',
+  tea: 'autismo-tea-castro.html',
+  lenguaje: 'lenguaje-infantil-castro.html'
 };
 
 // Sección del menú que se marca como activa en cada página.
@@ -52,6 +55,9 @@ const NAV_SECTION = {
   'nutricion-castro.html': 'especialidades.html',
   'programas.html': 'programas.html',
   'terapias.html': 'terapias.html',
+  'rehabilitacion-acv-castro.html': 'terapias.html',
+  'autismo-tea-castro.html': 'terapias.html',
+  'lenguaje-infantil-castro.html': 'terapias.html',
   'reservas.html': 'reservas.html'
 };
 
