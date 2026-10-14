@@ -2418,7 +2418,7 @@ body.rounded-cards {
   padding-top: var(--spacing-3);
   border-top: 1px solid rgba(32, 77, 57, 0.15);
 }
-.esp-more-amigo { width: 70px; height: 60px; flex-shrink: 0; }
+.esp-more-amigo { width: 48px; height: 60px; flex-shrink: 0; }
 .esp-more .btn { gap: 8px; flex: 0 1 auto; white-space: nowrap; }
 @media (max-width: 400px) { .esp-more .btn { white-space: normal; } }
 @media (max-width: 768px) {
