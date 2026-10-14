@@ -5,20 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>El recinto | Los Amigos - Terapia y Rehabilitación en Castro</title>
   <meta name="description" content="Conoce las instalaciones terapéuticas de Los Amigos en Eusebio Lillo 147, Castro, Chiloé: sala de integración sensorial, boxes clínicos, gimnasio motor y cómo llegar." />
-  <link rel="canonical" href="https://losamigos.cl/recinto.html" />
+  <link rel="canonical" href="%SITE_URL%/recinto.html" />
   
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://losamigos.cl/recinto.html" />
+  <meta property="og:image" content="%SITE_URL%/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="%SITE_URL%/recinto.html" />
   <meta property="og:title" content="El recinto | Los Amigos - Terapia y Rehabilitación" />
   <meta property="og:description" content="Espacios diseñados para la seguridad sensorial, la rehabilitación motora y el confort familiar en Castro, Chiloé." />
-  <meta property="og:image" content="https://losamigos.cl/hero.jpg" />
+  
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://losamigos.cl/recinto.html" />
-  <meta property="twitter:title" content="El recinto | Los Amigos" />
-  <meta property="twitter:description" content="Instalaciones terapéuticas especializadas en Eusebio Lillo 147, Castro." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="El recinto | Los Amigos" />
+  <meta name="twitter:description" content="Instalaciones terapéuticas especializadas en Eusebio Lillo 147, Castro." />
 
   <!-- JSON-LD Schema: MedicalClinic / Place / Map & Breadcrumbs -->
   <script type="application/ld+json">
@@ -27,11 +29,10 @@
     "@graph": [
       {
         "@type": "MedicalClinic",
-        "@id": "https://losamigos.cl/#clinic",
-        "name": "Los Amigos - Terapia y Rehabilitación",
-        "url": "https://losamigos.cl/recinto.html",
-        "telephone": "+56912345678",
-        "hasMap": "https://maps.google.com/maps?q=Eusebio+Lillo+147,+Castro,+Chile",
+        "@id": "%SITE_URL%/#clinic",
+        "name": "Los Amigos, centro terapéutico y de rehabilitación",
+        "url": "%SITE_URL%/",
+        "hasMap": "https://www.google.com/maps?q=Eusebio+Lillo+147,+Castro,+Chile",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Eusebio Lillo 147",
@@ -70,32 +71,26 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Inicio",
-            "item": "https://losamigos.cl/index.html"
+            "item": "%SITE_URL%/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "El centro",
-            "item": "https://losamigos.cl/centro.html"
+            "item": "%SITE_URL%/centro.html"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "El recinto",
-            "item": "https://losamigos.cl/recinto.html"
+            "item": "%SITE_URL%/recinto.html"
           }
         ]
       }
     ]
   }
   </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <style>
-    body { opacity: 0; transition: opacity 0.3s; }
     
     .spaces-grid {
       display: grid;
@@ -107,7 +102,7 @@
     .space-card {
       background: var(--white);
       border-radius: 20px;
-      border: 1px solid rgba(31, 77, 58, 0.1);
+      border: 1px solid rgba(32, 77, 57, 0.1);
       padding: 32px 28px;
       display: flex;
       flex-direction: column;
@@ -118,8 +113,8 @@
 
     .space-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 14px 32px rgba(43, 95, 72, 0.12);
-      border-color: rgba(43, 95, 72, 0.25);
+      box-shadow: 0 14px 32px rgba(32, 77, 57, 0.12);
+      border-color: rgba(32, 77, 57, 0.25);
     }
 
     .space-icon-header {
@@ -133,7 +128,7 @@
       width: 52px;
       height: 52px;
       border-radius: 14px;
-      background: rgba(43, 95, 72, 0.08);
+      background: rgba(32, 77, 57, 0.08);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -160,7 +155,7 @@
     .space-desc {
       font-size: 0.95rem;
       line-height: 1.65;
-      color: #4A5550;
+      color: #5b5f62;
       margin-bottom: 20px;
     }
 
@@ -175,7 +170,7 @@
       align-items: flex-start;
       gap: 10px;
       font-size: 0.88rem;
-      color: #38423D;
+      color: #2b2e30;
       margin-bottom: 10px;
       line-height: 1.5;
     }
@@ -193,7 +188,7 @@
     .directions-section {
       background: var(--white);
       border-radius: 24px;
-      border: 1px solid rgba(43, 95, 72, 0.12);
+      border: 1px solid rgba(32, 77, 57, 0.12);
       padding: 40px 36px;
       margin-top: var(--spacing-8);
       box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
@@ -214,8 +209,8 @@
     }
 
     .access-card {
-      background: #F9FBF9;
-      border: 1px solid rgba(43, 95, 72, 0.08);
+      background: #faf6ee;
+      border: 1px solid rgba(32, 77, 57, 0.08);
       border-radius: 16px;
       padding: 22px 24px;
       margin-bottom: 16px;
@@ -234,7 +229,7 @@
     .access-card p {
       font-size: 0.92rem;
       line-height: 1.6;
-      color: #4A5550;
+      color: #5b5f62;
       margin: 0;
     }
 
@@ -244,85 +239,18 @@
       height: 100%;
       min-height: 380px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      border: 1px solid rgba(43, 95, 72, 0.15);
+      border: 1px solid rgba(32, 77, 57, 0.15);
     }
   </style>
 </head>
-<body class="rounded-cards" onload="document.body.style.opacity='1'">
-  <nav class="navbar" aria-label="Navegación Principal">
-    <!-- Cabecera Móvil (Oculta en escritorio) -->
-    <div class="mobile-nav-header">
-      <div class="logo mobile-only-logo">
-        <a href="index.html" aria-label="Inicio">
-          <img src="/logo-v4.svg" alt="Los Amigos - Terapia y Rehabilitación" />
-        </a>
-      </div>
-      
-      <!-- Botón Hamburguesa Premium -->
-      <button class="mobile-menu-btn" aria-label="Abrir menú" onclick="document.querySelector('.navbar').classList.toggle('menu-open')">
-        <div class="hamburger">
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-        </div>
-      </button>
-    </div>
-
-    <!-- Left Links -->
-    <!-- Desktop Logo (A la izquierda) -->
-    <div class="logo desktop-logo">
-      <a href="index.html" aria-label="Inicio">
-        <img src="/logo-v4.svg" alt="Los Amigos - Terapia y Rehabilitación" />
-      </a>
-    </div>
-
-    <!-- Navigation Links (A la derecha) -->
-    <div class="nav-links">
-      <div class="nav-item-dropdown">
-        <div class="nav-dropdown-trigger-wrap">
-          <a href="educacion.html" class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-            Educación
-            <svg class="dropdown-chevron desktop-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </a>
-          <button type="button" class="btn-mobile-dropdown-toggle" aria-label="Desplegar submenú Educación">
-            <svg class="dropdown-chevron mobile-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-        </div>
-        <div class="nav-dropdown-menu" role="menu" aria-label="Submenú Educación">
-          <a href="inclusion-diversidad.html" class="dropdown-item" role="menuitem">Inclusión y diversidad</a>
-          <a href="proceso-terapeutico.html" class="dropdown-item" role="menuitem">El proceso terapéutico</a>
-          <a href="prevencion-calidad-de-vida.html" class="dropdown-item" role="menuitem">Prevención y calidad de vida</a>
-          <a href="pautas-de-trabajo.html" class="dropdown-item" role="menuitem">Pautas de trabajo</a>
-          <a href="recomendaciones-acompanar.html" class="dropdown-item" role="menuitem">Recomendaciones para acompañar</a>
-        </div>
-      </div>
-      <div class="nav-item-dropdown">
-        <div class="nav-dropdown-trigger-wrap">
-          <a href="centro.html" class="nav-link nav-dropdown-trigger active" aria-haspopup="true" aria-expanded="false">
-            El centro
-            <svg class="dropdown-chevron desktop-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </a>
-          <button type="button" class="btn-mobile-dropdown-toggle" aria-label="Desplegar submenú El centro">
-            <svg class="dropdown-chevron mobile-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-        </div>
-        <div class="nav-dropdown-menu" role="menu" aria-label="Submenú El centro">
-          <a href="profesionales.html" class="dropdown-item" role="menuitem">Nuestros profesionales</a>
-          <a href="recinto.html" class="dropdown-item" role="menuitem">El recinto</a>
-          <a href="colaboraciones.html" class="dropdown-item" role="menuitem">Colaboraciones</a>
-        </div>
-      </div>
-      <a href="especialidades.html" class="nav-link">Especialidades</a>
-      <a href="programas.html" class="nav-link">Programas y servicios</a>
-      <a href="terapias.html" class="nav-link">Terapias</a>
-      <a href="reservas.html" class="nav-link">Reservas</a>
-    </div>
-  </nav>
+<body class="rounded-cards">
+  <!-- @nav -->
 
   <main style="padding-top: 180px;">
     <!-- Hero Section -->
     <div class="container text-center mb-6">
       <nav aria-label="Migas de pan" style="margin-bottom: var(--spacing-3);">
-        <p style="font-size: 0.85rem; color: #55605A; margin: 0;">
+        <p style="font-size: 0.85rem; color: #5b5f62; margin: 0;">
           <a href="index.html" style="color: inherit; text-decoration: none;">Inicio</a> / 
           <a href="centro.html" style="color: inherit; text-decoration: none;">El centro</a> / 
           <span style="color: var(--primary-color); font-weight: 600;">El recinto</span>
@@ -545,7 +473,7 @@
         <h2 style="font-size: 1.6rem; color: var(--primary-dark); font-family: var(--font-heading); margin-bottom: 8px;">
           Inmediaciones e indicaciones para llegar
         </h2>
-        <p style="font-size: 0.98rem; color: #4A5550; line-height: 1.65; max-width: 900px;">
+        <p style="font-size: 0.98rem; color: #5b5f62; line-height: 1.65; max-width: 900px;">
           Estamos ubicados en <strong>Eusebio Lillo 147, Castro</strong>, a pasos del centro cívico y comercial de la ciudad, en una zona segura y con excelente conectividad para familias de toda la Isla Grande de Chiloé.
         </p>
 
@@ -583,7 +511,7 @@
             </div>
 
             <div style="margin-top: 24px;">
-              <a href="https://maps.google.com/maps?q=Eusebio+Lillo+147,+Castro,+Chile" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+              <a href="https://www.google.com/maps?q=Eusebio+Lillo+147,+Castro,+Chile" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
                 Abrir en Google Maps
               </a>
@@ -596,7 +524,7 @@
           </div>
         </div>
 
-        <div style="text-align: center; margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(43, 95, 72, 0.1);">
+        <div style="text-align: center; margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(32, 77, 57, 0.1);">
           <p style="font-size: 1.05rem; font-weight: 600; color: var(--primary-dark); margin-bottom: 16px;">
             ¿Te gustaría conocer nuestras salas antes de tu primera consulta?
           </p>
@@ -607,30 +535,7 @@
     </div>
   </main>
 
-  <footer class="footer bg-cream" style="padding-top: var(--spacing-8); padding-bottom: var(--spacing-4);">
-    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-6); align-items: center; text-align: left;">
-      <div class="footer-contact" style="font-size: 0.95rem;">
-        <h3 style="color: var(--primary-dark); margin-bottom: var(--spacing-3); font-size: 1.2rem;">Contacto</h3>
-        <p style="margin-bottom: var(--spacing-2);"><strong>Ubicación:</strong><br>Eusebio Lillo 147, Castro, Chile</p>
-        <p style="margin-bottom: var(--spacing-2);"><strong>Teléfono:</strong><br><a href="tel:+56912345678" style="color: inherit; text-decoration: none;">+56 9 1234 5678</a></p>
-        <p><strong>Correo:</strong><br><a href="mailto:contacto@losamigos.cl" style="color: inherit; text-decoration: none;">contacto@losamigos.cl</a></p>
-      </div>
-
-      <div class="footer-brand" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <a href="index.html" aria-label="Inicio">
-          <img src="/logo-cuadrado-v3.svg" alt="Los Amigos - Terapia y Rehabilitación" style="height: 110px; width: auto; display: block;" />
-        </a>
-      </div>
-
-      <div class="footer-map" style="border-radius: var(--radius-lg); overflow: hidden; height: 200px; box-shadow: var(--shadow-sm);">
-        <iframe src="https://maps.google.com/maps?q=Eusebio%20Lillo%20147,%20Castro,%20Chile&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-    
-    <div class="container text-center" style="margin-top: var(--spacing-6); padding-top: var(--spacing-4); border-top: 1px solid rgba(0,0,0,0.05);">
-      <p style="font-size: 0.85rem; opacity: 0.6; margin: 0;">&copy; 2026 Los Amigos - Terapia y Rehabilitación. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+  <!-- @footer -->
 
   <script type="module" src="/main.js"></script>
 </body>

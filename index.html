@@ -3,35 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Los Amigos | Centro Terapéutico</title>
-  <meta name="description" content="Terapia y Rehabilitación Los Amigos en Castro, Chile. Servicios especializados en kinesiología, fonoaudiología, psicología, nutrición y terapia ocupacional." />
-  <link rel="canonical" href="https://losamigos.cl/index.html" />
-  
+  <title>Centro de terapia y rehabilitación en Castro, Chiloé | Los Amigos</title>
+  <meta name="description" content="Centro terapéutico y de rehabilitación en Castro, Chiloé. Fonoaudiología, kinesiología, terapia ocupacional, psicología y nutrición para niños, adultos y personas mayores. Abrimos en enero de 2027." />
+  <link rel="canonical" href="%SITE_URL%/" />
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://losamigos.cl/" />
-  <meta property="og:title" content="Los Amigos | Centro Terapéutico" />
-  <meta property="og:description" content="Terapia y Rehabilitación Los Amigos en Castro, Chile. Servicios de kinesiología, fonoaudiología, psicología y más." />
-  <meta property="og:image" content="https://losamigos.cl/hero.jpg" />
+  <meta property="og:image" content="%SITE_URL%/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="%SITE_URL%/" />
+  <meta property="og:title" content="Los Amigos, centro terapéutico y de rehabilitación en Castro" />
+  <meta property="og:description" content="Fonoaudiología, kinesiología, terapia ocupacional, psicología y nutrición en Castro, Chiloé. Sigue avanzando, que nosotros te acompañamos." />
 
   <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://losamigos.cl/" />
-  <meta property="twitter:title" content="Los Amigos | Centro Terapéutico" />
-  <meta property="twitter:description" content="Terapia y Rehabilitación Los Amigos en Castro, Chile. Servicios de kinesiología, fonoaudiología, psicología y más." />
-  <meta property="twitter:image" content="https://losamigos.cl/hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Los Amigos, centro terapéutico y de rehabilitación en Castro" />
+  <meta name="twitter:description" content="Fonoaudiología, kinesiología, terapia ocupacional, psicología y nutrición en Castro, Chiloé." />
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MedicalClinic",
-    "name": "Los Amigos - Terapia y Rehabilitación",
-    "url": "https://losamigos.cl",
-    "logo": "https://losamigos.cl/logo.png",
-    "image": "https://losamigos.cl/hero.jpg",
-    "description": "Terapia y Rehabilitación en Castro, Chile. Acompañamos a las familias en cada paso con equipo multidisciplinario.",
-    "telephone": "+56912345678",
+    "@id": "%SITE_URL%/#clinic",
+    "name": "Los Amigos, centro terapéutico y de rehabilitación",
+    "url": "%SITE_URL%/",
+    "logo": "%SITE_URL%/logo-cuadrado.svg",
+    "image": "%SITE_URL%/og-image.jpg",
+    "description": "Centro terapéutico y de rehabilitación en Castro, Chiloé. Acompañamos a niños, adultos, personas mayores y sus familias con un equipo multidisciplinario.",
+    "slogan": "Sigue avanzando, que nosotros te acompañamos.",
+    "email": "centrolosamigoscastro@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Eusebio Lillo 147",
@@ -39,99 +41,29 @@
       "addressRegion": "Los Lagos",
       "addressCountry": "CL"
     },
+    "areaServed": [
+      { "@type": "City", "name": "Castro" },
+      { "@type": "AdministrativeArea", "name": "Chiloé" }
+    ],
     "medicalSpecialty": [
-      "PhysicalTherapy",
       "SpeechPathology",
-      "OccupationalTherapy",
-      "Psychiatric"
+      "Physiotherapy",
+      "DietNutrition",
+      "Neurologic",
+      "Pediatric"
+    ],
+    "availableService": [
+      { "@type": "MedicalTherapy", "name": "Fonoaudiología" },
+      { "@type": "MedicalTherapy", "name": "Kinesiología" },
+      { "@type": "MedicalTherapy", "name": "Terapia ocupacional" },
+      { "@type": "MedicalTherapy", "name": "Psicología" },
+      { "@type": "MedicalTherapy", "name": "Nutrición" }
     ]
   }
   </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    body { opacity: 0; transition: opacity 0.3s; }
-    @keyframes blob-morph {
-      0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: rotate(0deg) scale(1); }
-      50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; transform: rotate(180deg) scale(1.05); }
-      100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; transform: rotate(360deg) scale(1); }
-    }
-    .blob-animate {
-      animation: blob-morph 12s ease-in-out infinite alternate;
-    }
-  </style>
 </head>
-<body onload="document.body.style.opacity='1'">
-  <nav class="navbar" aria-label="Navegación Principal">
-    <!-- Cabecera Móvil (Oculta en escritorio) -->
-    <div class="mobile-nav-header">
-      <div class="logo mobile-only-logo">
-        <a href="index.html" aria-label="Inicio">
-          <img src="/logo-v4.svg" alt="Los Amigos - Terapia y Rehabilitación" />
-        </a>
-      </div>
-      
-      <!-- Botón Hamburguesa Premium -->
-      <button class="mobile-menu-btn" aria-label="Abrir menú" onclick="document.querySelector('.navbar').classList.toggle('menu-open')">
-        <div class="hamburger">
-          <span class="line line-1"></span>
-          <span class="line line-2"></span>
-        </div>
-      </button>
-    </div>
-
-    <!-- Left Links -->
-    <!-- Desktop Logo (A la izquierda) -->
-    <div class="logo desktop-logo">
-      <a href="index.html" aria-label="Inicio">
-        <img src="/logo-v4.svg" alt="Los Amigos - Terapia y Rehabilitación" />
-      </a>
-    </div>
-
-    <!-- Navigation Links (A la derecha) -->
-    <div class="nav-links">
-      <div class="nav-item-dropdown">
-        <div class="nav-dropdown-trigger-wrap">
-          <a href="educacion.html" class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-            Educación
-            <svg class="dropdown-chevron desktop-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </a>
-          <button type="button" class="btn-mobile-dropdown-toggle" aria-label="Desplegar submenú Educación">
-            <svg class="dropdown-chevron mobile-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-        </div>
-        <div class="nav-dropdown-menu" role="menu" aria-label="Submenú Educación">
-          <a href="inclusion-diversidad.html" class="dropdown-item" role="menuitem">Inclusión y diversidad</a>
-          <a href="proceso-terapeutico.html" class="dropdown-item" role="menuitem">El proceso terapéutico</a>
-          <a href="prevencion-calidad-de-vida.html" class="dropdown-item" role="menuitem">Prevención y calidad de vida</a>
-          <a href="pautas-de-trabajo.html" class="dropdown-item" role="menuitem">Pautas de trabajo</a>
-          <a href="recomendaciones-acompanar.html" class="dropdown-item" role="menuitem">Recomendaciones para acompañar</a>
-        </div>
-      </div>
-      <div class="nav-item-dropdown">
-        <div class="nav-dropdown-trigger-wrap">
-          <a href="centro.html" class="nav-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-            El centro
-            <svg class="dropdown-chevron desktop-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </a>
-          <button type="button" class="btn-mobile-dropdown-toggle" aria-label="Desplegar submenú El centro">
-            <svg class="dropdown-chevron mobile-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
-          </button>
-        </div>
-        <div class="nav-dropdown-menu" role="menu" aria-label="Submenú El centro">
-          <a href="profesionales.html" class="dropdown-item" role="menuitem">Nuestros profesionales</a>
-          <a href="recinto.html" class="dropdown-item" role="menuitem">El recinto</a>
-          <a href="colaboraciones.html" class="dropdown-item" role="menuitem">Colaboraciones</a>
-        </div>
-      </div>
-      <a href="especialidades.html" class="nav-link">Especialidades</a>
-      <a href="programas.html" class="nav-link">Programas y servicios</a>
-      <a href="terapias.html" class="nav-link">Terapias</a>
-      <a href="reservas.html" class="nav-link">Reservas</a>
-    </div>
-  </nav>
+<body>
+  <!-- @nav -->
 
   <main style="padding-top: 80px;">
     <!-- Hero Section (Cream bg) -->
@@ -150,7 +82,7 @@
           </div>
         </div>
         <div style="flex: 1; min-width: 300px; position: relative;" class="animate-on-scroll">
-          <img src="/hero.jpg" alt="Niños jugando felices en el centro terapéutico" class="img-organic" width="600" height="400" loading="eager" fetchpriority="high" />
+          <img src="/hero.webp" alt="Tres niños juegan con bloques de madera en una sala luminosa" class="img-organic" width="600" height="400" loading="eager" fetchpriority="high" />
         </div>
       </div>
 
@@ -161,24 +93,24 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </button>
           <div class="mobile-carousel" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-3);">
-            <a href="especialidades.html" class="card" style="padding: var(--spacing-3); border-radius: var(--radius-lg); background: var(--white); box-shadow: var(--shadow-sm); text-align: center; --card-color: var(--accent-yellow); border-bottom: 4px solid var(--card-color); text-decoration: none; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-              <img src="/icon-kinesiologia.jpg" alt="Icono Kinesiología" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; mix-blend-mode: multiply;" />
+            <a href="especialidades.html#kinesiologia" class="card" style="padding: var(--spacing-3); border-radius: var(--radius-lg); background: var(--white); box-shadow: var(--shadow-sm); text-align: center; --card-color: var(--accent-yellow); border-bottom: 4px solid var(--card-color); text-decoration: none; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+              <img src="/iconos/rehabilitacion-fisica-duo.svg" alt="" width="60" height="60" style="width: 60px; height: 60px;" />
               <h4 style="color: var(--primary-dark); font-size: 1.1rem; margin: 0;">Kinesiología</h4>
             </a>
-            <a href="reservas.html" class="card" style="padding: var(--spacing-3); border-radius: var(--radius-lg); background: var(--white); box-shadow: var(--shadow-sm); text-align: center; --card-color: var(--accent-purple); border-bottom: 4px solid var(--card-color); text-decoration: none; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-              <img src="/icon-nutricion.jpg" alt="Icono Nutrición" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; mix-blend-mode: multiply;" />
+            <a href="terapias.html#rehabilitacion-cardiometabolica" class="card" style="padding: var(--spacing-3); border-radius: var(--radius-lg); background: var(--white); box-shadow: var(--shadow-sm); text-align: center; --card-color: var(--accent-purple); border-bottom: 4px solid var(--card-color); text-decoration: none; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+              <img src="/iconos/objetivo-duo.svg" alt="" width="60" height="60" style="width: 60px; height: 60px;" />
               <h4 style="color: var(--primary-dark); font-size: 1.1rem; margin: 0;">Nutrición</h4>
             </a>
             <a href="especialidades.html#fonoaudiologia" class="card" style="padding: var(--spacing-3); border-radius: var(--radius-lg); background: var(--white); box-shadow: var(--shadow-sm); text-align: center; --card-color: var(--accent-orange); border-bottom: 4px solid var(--card-color); text-decoration: none; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-              <img src="/icon-fonoaudiologia.jpg" alt="Icono Fonoaudiología" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; mix-blend-mode: multiply;" />
+              <img src="/iconos/fonoaudiologia-duo.svg" alt="" width="60" height="60" style="width: 60px; height: 60px;" />
               <h4 style="color: var(--primary-dark); font-size: 1.1rem; margin: 0;">Fonoaudiología</h4>
             </a>
             <a href="especialidades.html#terapia-ocupacional" class="card" style="padding: var(--spacing-3); border-radius: var(--radius-lg); background: var(--white); box-shadow: var(--shadow-sm); text-align: center; --card-color: var(--primary-color); border-bottom: 4px solid var(--card-color); text-decoration: none; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-              <img src="/icon-terapia-ocupacional.jpg" alt="Icono Terapia ocupacional" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; mix-blend-mode: multiply;" />
+              <img src="/iconos/a-tu-altura-duo.svg" alt="" width="60" height="60" style="width: 60px; height: 60px;" />
               <h4 style="color: var(--primary-dark); font-size: 1.1rem; margin: 0;">Terapia ocupacional</h4>
             </a>
             <a href="especialidades.html#psicologia" class="card" style="padding: var(--spacing-3); border-radius: var(--radius-lg); background: var(--white); box-shadow: var(--shadow-sm); text-align: center; --card-color: var(--accent-blue); border-bottom: 4px solid var(--card-color); text-decoration: none; transition: transform 0.3s ease; display: flex; flex-direction: column; align-items: center; gap: 10px;">
-              <img src="/icon-psicologia.jpg" alt="Icono Psicología" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; mix-blend-mode: multiply;" />
+              <img src="/iconos/contencion-duo.svg" alt="" width="60" height="60" style="width: 60px; height: 60px;" />
               <h4 style="color: var(--primary-dark); font-size: 1.1rem; margin: 0;">Psicología</h4>
             </a>
           </div>
@@ -204,7 +136,7 @@
             <!-- Item 1 -->
             <a href="terapias.html#integracion-sensorial" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
               <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-1@2x.png" alt="Icono Integración sensorial" aria-label="icon" style="width: 50%;" loading="lazy" width="40" height="40" />
+                <img src="/iconos/integracion-sensorial-duo.svg" alt="" loading="lazy" width="48" height="48" />
               </span>
               <h3 class="heading hie mb-2" style="font-family: var(--font-heading); font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Terapia de integración sensorial</h3>
               <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Intervención para procesar y organizar la información sensorial del entorno, mejorando la respuesta adaptativa.</p>
@@ -213,7 +145,7 @@
             <!-- Item 2 -->
             <a href="terapias.html#ansiedad" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
               <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-2@2x.png" alt="Icono Ansiedad" aria-label="icon" style="width: 50%;" loading="lazy" width="40" height="40" />
+                <img src="/iconos/contencion-duo.svg" alt="" loading="lazy" width="48" height="48" />
               </span>
               <h3 class="heading hie mb-2" style="font-family: var(--font-heading); font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Terapia para ansiedad</h3>
               <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Estrategias y herramientas psicológicas para el manejo del estrés y la regulación emocional.</p>
@@ -222,7 +154,7 @@
             <!-- Item 3 -->
             <a href="terapias.html#rehabilitacion-cardiometabolica" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
               <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                <img src="https://www.hopebridge.com/wp-content/uploads/2023/10/HPB-Icon-3@2x.png" alt="Icono Rehabilitación cardiometabólica" aria-label="icon" style="width: 50%;" loading="lazy" width="40" height="40" />
+                <img src="/iconos/progreso-duo.svg" alt="" loading="lazy" width="48" height="48" />
               </span>
               <h3 class="heading hie mb-2" style="font-family: var(--font-heading); font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Rehabilitación cardiometabólica</h3>
               <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Programas de ejercicios y pautas nutricionales para mejorar la salud cardiovascular y metabólica.</p>
@@ -231,7 +163,7 @@
             <!-- Item 4 -->
             <a href="terapias.html#deglucion-atipica" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
               <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-4@2x.png" alt="Icono Deglución atípica" aria-label="icon" style="width: 50%;" loading="lazy" width="40" height="40" />
+                <img src="/iconos/deglucion-duo.svg" alt="" loading="lazy" width="48" height="48" />
               </span>
               <h3 class="heading hie mb-2" style="font-family: var(--font-heading); font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Deglución atípica</h3>
               <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Rehabilitación de los patrones de masticación y deglución para evitar problemas funcionales y estructurales.</p>
@@ -240,7 +172,7 @@
             <!-- Item 5 -->
             <a href="terapias.html#terapia-alimentacion" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
               <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-5@2x.png" alt="Icono Terapia de Alimentación" aria-label="icon" style="width: 50%;" loading="lazy" width="40" height="40" />
+                <img src="/iconos/familia-duo.svg" alt="" loading="lazy" width="48" height="48" />
               </span>
               <h3 class="heading hie mb-2" style="font-family: var(--font-heading); font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Terapia de Alimentación</h3>
               <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Apoyo especializado para superar dificultades en la ingesta, ampliando la aceptación de alimentos.</p>
@@ -249,7 +181,7 @@
             <!-- Item 6 -->
             <a href="terapias.html#apraxia-infantil" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
               <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-6@2x.png" alt="Icono Apraxia infantil" aria-label="icon" style="width: 50%;" loading="lazy" width="40" height="40" />
+                <img src="/iconos/lenguaje-duo.svg" alt="" loading="lazy" width="48" height="48" />
               </span>
               <h3 class="heading hie mb-2" style="font-family: var(--font-heading); font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Apraxia del habla infantil</h3>
               <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Tratamiento para mejorar la planificación motora del habla, facilitando una comunicación clara.</p>
@@ -258,7 +190,7 @@
             <!-- Item 7 -->
             <a href="terapias.html#neurorehabilitacion" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
               <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-7@2x.png" alt="Icono Neurorehabilitación" aria-label="icon" style="width: 50%;" loading="lazy" width="40" height="40" />
+                <img src="/iconos/rehabilitacion-fisica-duo.svg" alt="" loading="lazy" width="48" height="48" />
               </span>
               <h3 class="heading hie mb-2" style="font-family: var(--font-heading); font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Neurorehabilitación</h3>
               <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Atención integral para recuperar funciones motoras y cognitivas tras alteraciones neurológicas.</p>
@@ -267,7 +199,7 @@
             <!-- Item 8 -->
             <a href="terapias.html#espectro-autista" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
               <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                <img src="https://www.hopebridge.com/wp-content/uploads/2023/09/HPB-Icon-8@2x.png" alt="Icono Espectro autista" aria-label="icon" style="width: 50%;" loading="lazy" width="40" height="40" />
+                <img src="/iconos/a-tu-altura-duo.svg" alt="" loading="lazy" width="48" height="48" />
               </span>
               <h3 class="heading hie mb-2" style="font-family: var(--font-heading); font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Condición del espectro autista</h3>
               <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Abordaje terapéutico multidisciplinario para favorecer el desarrollo y la integración social.</p>
@@ -276,7 +208,7 @@
             <!-- Item 9 -->
             <a href="terapias.html#voz-habla" class="service-col animate-on-scroll" style="display: flex; flex-direction: column; align-items: center; text-align: center; text-decoration: none;">
               <span class="icon mb-4" style="background: var(--white); border-radius: var(--radius-full); width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(0,0,0,0.15);">
-                <img src="https://www.hopebridge.com/wp-content/uploads/2023/10/HPB-Icon-9@2x.png" alt="Icono Terapia voz y habla" aria-label="icon" style="width: 50%;" loading="lazy" width="40" height="40" />
+                <img src="/iconos/voz-duo.svg" alt="" loading="lazy" width="48" height="48" />
               </span>
               <h3 class="heading hie mb-2" style="font-family: var(--font-heading); font-weight: 800; color: var(--primary-dark); font-size: 1.4rem;">Terapia de la voz y el habla</h3>
               <p style="color: var(--text-color); font-size: 0.95rem; margin: 0; line-height: 1.4; padding: 0 10px; flex-grow: 1;">Tratamiento para corregir alteraciones vocales y mejorar la articulación y fluidez verbal.</p>
@@ -294,7 +226,7 @@
         <div class="blob-animate" style="position: absolute; width: 100px; height: 100px; background: var(--accent-green-light); bottom: -30px; left: -30px; opacity: 1; z-index: 0; animation-delay: -5s; animation-duration: 15s;"></div>
         
         <h2 class="text-title mb-5" style="color: var(--primary-dark); font-size: 2.5rem; position: relative; z-index: 1;">¿Listo para dar el primer paso?</h2>
-        <p class="text-subtitle mb-5" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;">Nuestro equipo de especialistas está preparado para diseñar un plan de rehabilitación personalizado para ti o tu familiar.</p>
+        <p class="text-subtitle mb-5" style="position: relative; z-index: 1;">Nuestro equipo de especialistas está preparado para diseñar un plan de rehabilitación personalizado para ti o tu familiar.</p>
         <a href="reservas.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 15px 40px; position: relative; z-index: 1;">Agendar evaluación</a>
       </div>
     </section>
@@ -302,10 +234,10 @@
     <!-- Recursos y Testimonios Slider -->
     <section class="section">
       <div class="container" style="position: relative;">
-        <h2 class="text-title text-center mb-6" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;">Testimonios de pacientes</h2>
+        <h2 class="text-title text-center mb-4" style="color: var(--primary-dark);">Nuestro equipo y las familias</h2>
         
         <div class="carousel-wrapper marquee-wrapper animate-on-scroll">
-          <button class="carousel-btn carousel-prev" aria-label="Anterior" style="left: -10px;">
+          <button class="carousel-btn carousel-prev" aria-label="Ver anteriores" style="left: -10px;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
           </button>
           <div class="marquee-track">
@@ -316,86 +248,7 @@
               <div class="resource-card profile-card">
                 <div class="card-img" style="background-image:url(https://randomuser.me/api/portraits/women/44.jpg);"></div>
                 <div class="card-content">
-                  <h3 class="heading hie mb-1" style="font-size: 1.3rem;">Dra. Camila Soto</h3>
-                  <p class="mb-4" style="color: var(--primary-color); font-weight: 700; font-size: 0.9rem;">Terapeuta Ocupacional</p>
-                  <a href="reservas.html" class="btn btn-outline" style="margin-top: auto; width: 100%;">Reservar hora</a>
-                </div>
-              </div>
-
-              <!-- Testimonio 1 -->
-              <div class="resource-card quote-card">
-                <div class="card-content">
-                  <blockquote>
-                    Ha sido un cambio radical. Desde que iniciamos la terapia, Martín es mucho más independiente y feliz en casa.
-                  </blockquote>
-                </div>
-              </div>
-
-              <!-- Prof 2: Kinesiólogo -->
-              <div class="resource-card profile-card">
-                <div class="card-img" style="background-image:url(https://randomuser.me/api/portraits/men/32.jpg);"></div>
-                <div class="card-content">
-                  <h3 class="heading hie mb-1" style="font-size: 1.3rem;">Lic. Andrés Vargas</h3>
-                  <p class="mb-4" style="color: var(--primary-color); font-weight: 700; font-size: 0.9rem;">Kinesiólogo</p>
-                  <a href="reservas.html" class="btn btn-outline" style="margin-top: auto; width: 100%;">Reservar hora</a>
-                </div>
-              </div>
-
-              <!-- Testimonio 2 -->
-              <div class="resource-card quote-card">
-                <div class="card-content">
-                  <blockquote>
-                    El profesionalismo del equipo nos dio mucha seguridad. Su desarrollo motor mejoró en tiempo récord.
-                  </blockquote>
-                </div>
-              </div>
-
-              <!-- Prof 3: Psicólogo Clínico -->
-              <div class="resource-card profile-card">
-                <div class="card-img" style="background-image:url(https://randomuser.me/api/portraits/women/68.jpg);"></div>
-                <div class="card-content">
-                  <h3 class="heading hie mb-1" style="font-size: 1.3rem;">Ps. Laura Méndez</h3>
-                  <p class="mb-4" style="color: var(--primary-color); font-weight: 700; font-size: 0.9rem;">Psicóloga Clínica</p>
-                  <a href="reservas.html" class="btn btn-outline" style="margin-top: auto; width: 100%;">Reservar hora</a>
-                </div>
-              </div>
-
-              <!-- Testimonio 3 -->
-              <div class="resource-card quote-card">
-                <div class="card-content">
-                  <blockquote>
-                    Esta alianza entre los terapeutas y nosotros los padres ha sido increíblemente empoderadora.
-                  </blockquote>
-                </div>
-              </div>
-
-              <!-- Prof 4: Fonoaudiólogo -->
-              <div class="resource-card profile-card">
-                <div class="card-img" style="background-image:url(https://randomuser.me/api/portraits/men/46.jpg);"></div>
-                <div class="card-content">
-                  <h3 class="heading hie mb-1" style="font-size: 1.3rem;">Flgo. Diego Torres</h3>
-                  <p class="mb-4" style="color: var(--primary-color); font-weight: 700; font-size: 0.9rem;">Fonoaudiólogo</p>
-                  <a href="reservas.html" class="btn btn-outline" style="margin-top: auto; width: 100%;">Reservar hora</a>
-                </div>
-              </div>
-
-              <!-- Testimonio 4 -->
-              <div class="resource-card quote-card">
-                <div class="card-content">
-                  <blockquote>
-                    El lenguaje explotó, los berrinches bajaron al nivel típico de su edad, y su comunicación es estupenda.
-                  </blockquote>
-                </div>
-              </div>
-            </div>
-
-            <!-- Bloque Duplicado (para el loop infinito continuo) -->
-            <div class="marquee-content" aria-hidden="true">
-              <!-- Prof 1: Terapeuta Ocupacional -->
-              <div class="resource-card profile-card">
-                <div class="card-img" style="background-image:url(https://randomuser.me/api/portraits/women/44.jpg);"></div>
-                <div class="card-content">
-                  <h3 class="heading hie mb-1" style="font-size: 1.3rem;">Dra. Camila Soto</h3>
+                  <h3 class="heading hie mb-1" style="font-size: 1.3rem;">T.O. Camila Soto</h3>
                   <p class="mb-4" style="color: var(--primary-color); font-weight: 700; font-size: 0.9rem;">Terapeuta Ocupacional</p>
                   <a href="reservas.html" class="btn btn-outline" style="margin-top: auto; width: 100%;">Reservar hora</a>
                 </div>
@@ -468,7 +321,7 @@
               </div>
             </div>
           </div>
-          <button class="carousel-btn carousel-next" aria-label="Siguiente" style="right: -10px;">
+          <button class="carousel-btn carousel-next" aria-label="Ver siguientes" style="right: -10px;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
           </button>
         </div>
@@ -480,15 +333,15 @@
 
     <!-- Programas Terapéuticos Preview (Dark bg) -->
     <section class="section bg-dark">
-      <div class="bg-shape" style="background: rgba(255, 233, 92, 0.1); width: 500px; height: 500px; border-radius: var(--blob-3); top: 0; left: -100px;"></div>
+      <div class="bg-shape" style="background: rgba(211, 154, 47, 0.1); width: 500px; height: 500px; border-radius: var(--blob-3); top: 0; left: -100px;"></div>
       <div class="container" style="display: flex; flex-wrap: wrap; align-items: center; gap: var(--spacing-4);">
         <div style="flex: 1; min-width: 300px; order: 2;" class="animate-on-scroll">
-          <img src="/therapist.jpg" alt="Terapeuta ayudando a un niño" class="img-organic" width="600" height="450" style="box-shadow: 0 20px 60px rgba(0,0,0,0.3);" loading="lazy" />
+          <img src="/therapist.webp" alt="Terapeuta ayudando a un niño" class="img-organic" width="600" height="450" style="box-shadow: 0 20px 60px rgba(0,0,0,0.3);" loading="lazy" />
         </div>
         <div style="flex: 1; min-width: 300px; order: 1;">
-          <h2 class="text-title animate-on-scroll mb-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.2;">¿Acceder a terapias intensivas es muy costoso?</h2>
+          <h2 class="text-title animate-on-scroll mb-4" style="font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.2;">Terapia intensiva, en compañía</h2>
           <p class="animate-on-scroll mb-5 text-subtitle" style="color: var(--white); opacity: 0.9; line-height: 1.6;">
-            Si necesitas resultados rápidos, accede a nuestros <strong>Programas Terapéuticos Colaborativos</strong> que hacen realidad la terapia intensiva que hasta el momento era solo un mito: <strong>3 a 5 sesiones por semana ahora a un costo razonable.</strong>
+            Nuestros <strong>programas terapéuticos colaborativos</strong> hacen posible la terapia intensiva: <strong>de 3 a 5 sesiones por semana</strong>, en grupos pequeños y con un plan compartido con tu familia.
           </p>
           <div class="animate-on-scroll">
             <a href="programas.html" class="btn btn-accent">Descubre los programas</a>
@@ -510,39 +363,7 @@
     </section>
   </main>
 
-      <footer class="footer bg-cream" style="padding-top: var(--spacing-8); padding-bottom: var(--spacing-4);">
-    <div class="container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-6); align-items: center; text-align: left;">
-      
-      <!-- Left: Contact Info -->
-      <div class="footer-contact" style="font-size: 0.95rem;">
-        <h3 style="color: var(--primary-dark); margin-bottom: var(--spacing-3); font-size: 1.2rem;">Contacto</h3>
-        <p style="margin-bottom: var(--spacing-2);"><strong>Ubicación:</strong><br>Eusebio Lillo 147, Castro, Chile</p>
-        <p style="margin-bottom: var(--spacing-2);"><strong>Teléfono:</strong><br><a href="tel:+56912345678" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='inherit'">+56 9 1234 5678</a></p>
-        <p><strong>Correo:</strong><br><a href="mailto:contacto@losamigos.cl" style="color: inherit; text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='inherit'">contacto@losamigos.cl</a></p>
-      </div>
-
-      <!-- Middle: Brand -->
-      <div class="footer-brand" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <a href="index.html" aria-label="Inicio">
-          <img src="/logo-cuadrado-v3.svg" alt="Los Amigos - Terapia y Rehabilitación" style="height: 110px; width: auto; display: block;" />
-        </a>
-      </div>
-
-      <!-- Right: Map -->
-      <div class="footer-map" style="border-radius: var(--radius-lg); overflow: hidden; height: 200px; box-shadow: var(--shadow-sm);">
-        <iframe src="https://maps.google.com/maps?q=Eusebio%20Lillo%20147,%20Castro,%20Chile&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-
-    </div>
-    
-    <!-- Bottom: Copyright -->
-    <div class="container text-center" style="margin-top: var(--spacing-6); padding-top: var(--spacing-4); border-top: 1px solid rgba(0,0,0,0.05);">
-      <p style="font-size: 0.85rem; opacity: 0.6; margin: 0;">&copy; 2026 Los Amigos - Terapia y Rehabilitación. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-  <!-- Global Custom Cursor -->
-  <div class="custom-cursor"></div>
+  <!-- @footer -->
   
   <script type="module" src="/main.js"></script>
 </body>
