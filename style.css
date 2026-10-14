@@ -181,8 +181,8 @@ a {
 }
 
 .btn-accent {
-  background-color: var(--accent-yellow);
-  color: var(--primary-dark); /* Máximo contraste y elegancia con el pino oscuro */
+  background-color: var(--accent-coral); /* madera, con texto blanco: contraste 6:1 */
+  color: var(--white);
   border-radius: var(--radius-btn, 8px);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); /* Sombreado oscuro en lugar de luz/glow */
 }
@@ -190,7 +190,20 @@ a {
 .btn-accent:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  background-color: #6e4524; /* madera oscura */
+  color: var(--white);
+}
+
+/* Sobre fondos verde bosque: crema con texto verde (contraste 8:1) */
+.bg-dark .btn-accent,
+.btn-accent.btn-on-dark {
+  background-color: var(--accent-yellow-light);
+  color: var(--primary-dark);
+}
+.bg-dark .btn-accent:hover,
+.btn-accent.btn-on-dark:hover {
   background-color: var(--white);
+  color: var(--primary-dark);
 }
 
 .btn-outline {
