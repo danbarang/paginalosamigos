@@ -24,7 +24,12 @@ const PAGES = {
   proceso: 'proceso-terapeutico.html',
   prevencion: 'prevencion-calidad-de-vida.html',
   pautas: 'pautas-de-trabajo.html',
-  acompanar: 'recomendaciones-acompanar.html'
+  acompanar: 'recomendaciones-acompanar.html',
+  fono: 'fonoaudiologia-castro.html',
+  kine: 'kinesiologia-castro.html',
+  to: 'terapia-ocupacional-castro.html',
+  psico: 'psicologia-castro.html',
+  nutri: 'nutricion-castro.html'
 };
 
 // Sección del menú que se marca como activa en cada página.
@@ -40,6 +45,11 @@ const NAV_SECTION = {
   'recinto.html': 'centro.html',
   'colaboraciones.html': 'centro.html',
   'especialidades.html': 'especialidades.html',
+  'fonoaudiologia-castro.html': 'especialidades.html',
+  'kinesiologia-castro.html': 'especialidades.html',
+  'terapia-ocupacional-castro.html': 'especialidades.html',
+  'psicologia-castro.html': 'especialidades.html',
+  'nutricion-castro.html': 'especialidades.html',
   'programas.html': 'programas.html',
   'terapias.html': 'terapias.html',
   'reservas.html': 'reservas.html'
