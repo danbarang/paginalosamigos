@@ -5,7 +5,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 document.addEventListener('DOMContentLoaded', () => {
+  // Las animaciones solo agregan movimiento: el contenido es visible sin JavaScript
+  // y no se anima si la persona pidió reducir el movimiento.
+  if (prefersReducedMotion) return;
 
   // Scroll animations for elements with .animate-on-scroll
   const elements = document.querySelectorAll('.animate-on-scroll');
@@ -15,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollTrigger: {
         trigger: el,
         start: 'top 85%',
-        toggleActions: 'play none none reverse'
+        once: true
       },
       y: 50,
       opacity: 0,
@@ -32,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
           trigger: '.cards-grid',
           start: 'top 80%',
-          toggleActions: 'play none none reverse'
+          once: true
         },
         y: 0,
         opacity: 1,
@@ -51,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollTrigger: {
               trigger: card,
               start: 'top 85%',
-              toggleActions: 'play none none reverse'
+              once: true
             },
             y: 0,
             opacity: 1,
@@ -74,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         scrollTrigger: {
           trigger: '.services-grid',
           start: 'top 75%',
-          toggleActions: 'play none none reverse'
+          once: true
         },
         y: 0,
         opacity: 1,
@@ -85,10 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   }
 
-  // Floating background blobs (only if user prefers motion)
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  
-  if (!prefersReducedMotion && document.querySelector('.bg-shape')) {
+  // Floating background blobs
+  if (document.querySelector('.bg-shape')) {
     gsap.to('.bg-shape', {
       y: 'random(-20, 20)',
       x: 'random(-20, 20)',
@@ -121,58 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 500);
     }
   }
-
-  // Dynamic Navbar Indicator logic
-  const navLinks = document.querySelectorAll('.nav-link');
-  const indicator = document.querySelector('.nav-indicator');
-
-  if (indicator && navLinks.length > 0) {
-    // Find active link
-    const isEducacionSubpage = [
-      'educacion.html',
-      'inclusion-diversidad.html',
-      'proceso-terapeutico.html',
-      'prevencion-calidad-de-vida.html',
-      'pautas-de-trabajo.html',
-      'recomendaciones-acompanar.html'
-    ].some(page => window.location.pathname.includes(page));
-
-    const isCentroSubpage = [
-      'centro.html',
-      'profesionales.html',
-      'recinto.html',
-      'colaboraciones.html',
-      'sello.html'
-    ].some(page => window.location.pathname.includes(page));
-
-    let activeLink;
-    if (isEducacionSubpage) {
-      activeLink = document.querySelector('a[href="educacion.html"].nav-dropdown-trigger') || navLinks[0];
-    } else if (isCentroSubpage) {
-      activeLink = document.querySelector('a[href="centro.html"].nav-dropdown-trigger') || navLinks[1] || navLinks[0];
-    } else {
-      activeLink = Array.from(navLinks).find(link => 
-        window.location.pathname.includes(link.getAttribute('href')) ||
-        (window.location.pathname === '/' && link.getAttribute('href') === 'index.html')
-      );
-    }
-
-    if (!activeLink) activeLink = navLinks[0];
-
-    const updateIndicator = (link) => {
-      const rect = link.getBoundingClientRect();
-      const parentRect = link.closest('.nav-links').getBoundingClientRect();
-      
-      indicator.style.width = `${rect.width}px`;
-      indicator.style.transform = `translateX(${rect.left - parentRect.left}px)`;
-    };
-
-    // Initial position
-    setTimeout(() => updateIndicator(activeLink), 100);
-
-    // Update on resize
-    window.addEventListener('resize', () => updateIndicator(activeLink));
-  }
 });
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -199,156 +150,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   }
 
-  // Global Custom Cursor Logic
-  // Inject cursor element to ensure it works on all pages
-  let cursor = document.querySelector('.custom-cursor');
-  if (!cursor) {
-    cursor = document.createElement('div');
-    cursor.className = 'custom-cursor';
-    document.body.appendChild(cursor);
+  // Menú móvil
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  if (navbar && menuBtn) {
+    menuBtn.addEventListener('click', () => {
+      const isOpen = navbar.classList.toggle('menu-open');
+      menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+    });
   }
-
-  // Actualizar posición usando estilos en línea (evita recalcular el layout de toda la página)
-  document.addEventListener('mousemove', (e) => {
-    if (cursor) {
-      // 20px es la mitad del ancho del cursor (40px) para centrarlo perfectamente
-      cursor.style.translate = `${e.clientX - 20}px ${e.clientY - 20}px`;
-    }
-  });
-
-  // Hero Background Particles
-  const heroSection = document.getElementById('hero-section');
-  if (heroSection) {
-    const particlesContainer = document.createElement('div');
-    particlesContainer.className = 'hero-particles';
-    // Insertamos al principio para que quede al fondo
-    heroSection.insertBefore(particlesContainer, heroSection.firstChild);
-
-    const colors = ['var(--primary-color)', 'var(--accent-yellow)', 'var(--accent-green-light)', 'var(--white)'];
-    const numParticles = 25; // Cantidad de partículas
-
-    for (let i = 0; i < numParticles; i++) {
-      const particle = document.createElement('div');
-      particle.className = 'particle';
-      
-      const size = Math.random() * 40 + 10; // de 10px a 50px
-      const left = Math.random() * 100;
-      const top = Math.random() * 100;
-      const color = colors[Math.floor(Math.random() * colors.length)];
-      // Animaciones aleatorias intermedias
-      const delay = Math.random() * -15;
-      const duration = Math.random() * 6 + 8; // 8s a 14s (un poco más lento)
-      
-      const moveX = (Math.random() * 60 - 30) + 'vw';
-      const moveY = (Math.random() * 60 - 30) + 'vh';
-
-      particle.style.width = `${size}px`;
-      particle.style.height = `${size}px`;
-      particle.style.left = `${left}%`;
-      particle.style.top = `${top}%`;
-      particle.style.backgroundColor = color;
-      particle.style.animation = `floatParticle ${duration}s ease-in-out ${delay}s infinite alternate`;
-      particle.style.setProperty('--move-x', moveX);
-      particle.style.setProperty('--move-y', moveY);
-
-      particlesContainer.appendChild(particle);
-    }
-  }
-
-  // Detectar hover sobre elementos interactivos para el efecto Morph
-  document.addEventListener('mouseover', (e) => {
-    const cursor = document.querySelector('.custom-cursor');
-    if (cursor && e.target.closest('a, button, [role="button"], .card, .profile-card, .quote-card, .service-col')) {
-      cursor.classList.add('hovering');
-    }
-  });
-
-  document.addEventListener('mouseout', (e) => {
-    const cursor = document.querySelector('.custom-cursor');
-    if (cursor && e.target.closest('a, button, [role="button"], .card, .profile-card, .quote-card, .service-col')) {
-      cursor.classList.remove('hovering');
-    }
-  });
 });
 
 
-
-  // Mobile Stacking Cards (Peel off) for Services Grid
-  let mm = gsap.matchMedia();
-  
-  mm.add("(max-width: 768px)", () => {
-    const servicesGrid = document.querySelector('.services-grid');
-    if (servicesGrid) {
-      const cards = gsap.utils.toArray('.services-grid .service-col');
-      
-      // We set the grid to a fixed block to hold absolute children
-      gsap.set(servicesGrid, { 
-        display: 'block', 
-        position: 'relative', 
-        height: '400px', // Fixed height for mobile card
-        marginTop: '20px' 
-      });
-      
-      // Stack cards with z-index so first is on top
-      cards.forEach((card, i) => {
-        gsap.set(card, { 
-          position: 'absolute', 
-          top: 0, 
-          left: 0, 
-          width: '100%', 
-          height: '100%',
-          background: 'var(--white)', 
-          padding: 'var(--spacing-5)', 
-          borderRadius: 'var(--radius-lg)',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-          boxSizing: 'border-box',
-          border: '1px solid rgba(0,0,0,0.05)',
-          zIndex: cards.length - i,
-          // Remove default margin from grid children
-          margin: 0
-        });
-      });
-
-      // Pin the grid and animate peeling
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: servicesGrid,
-          start: 'top 25%',
-          end: '+=400%', // 4x viewport height for scrubbing
-          scrub: 1, // smooth scrub
-          pin: true,
-          // Optional: markers for debugging
-          // markers: true
-        }
-      });
-
-      // Stagger the peeling off of cards
-      cards.forEach((card, index) => {
-        if (index < cards.length - 1) {
-          // Add a subtle scale effect to the card *behind* it to make it pop when revealed
-          const nextCard = cards[index + 1];
-          if (nextCard) {
-            gsap.set(nextCard, { scale: 0.95, opacity: 0.8 });
-            tl.to(nextCard, { scale: 1, opacity: 1, duration: 0.5 }, index);
-          }
-          
-          // Peel away the current card
-          tl.to(card, {
-            yPercent: -120, // Move up
-            opacity: 0,     // Fade out
-            rotate: Math.random() * 5 - 2.5, // Slight random rotation for the "photo" feel
-            duration: 1
-          }, index);
-        }
-      });
-      
-      return () => {
-        // Cleanup if screen grows past 768px
-        gsap.set(servicesGrid, { clearProps: 'all' });
-        gsap.set(cards, { clearProps: 'all' });
-      };
-    }
-  });
 
   // Carousel Navigation Buttons Logic
   document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
@@ -551,3 +364,81 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
+  // ==========================================================================
+  // ACORDEONES DE TERAPIAS (details/summary con animación suave)
+  // ==========================================================================
+  function initTherapyAccordions() {
+    const accordions = document.querySelectorAll('details');
+
+    accordions.forEach(acc => {
+      const summary = acc.querySelector('summary');
+      const content = acc.querySelector('div');
+
+      summary.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Close all other open accordions smoothly
+        accordions.forEach(otherAcc => {
+          if (otherAcc !== acc && otherAcc.hasAttribute('open')) {
+            const otherContent = otherAcc.querySelector('div');
+            otherContent.style.overflow = 'hidden';
+
+            const startHeight = otherContent.offsetHeight;
+            const animation = otherContent.animate(
+              [
+                { height: startHeight + 'px', opacity: 1, transform: 'translateY(0)' },
+                { height: '0px', opacity: 0, transform: 'translateY(-10px)' }
+              ],
+              { duration: 350, easing: 'ease-in-out' }
+            );
+
+            animation.onfinish = () => {
+              otherAcc.removeAttribute('open');
+              otherContent.style.height = '';
+              otherContent.style.overflow = '';
+            };
+          }
+        });
+
+        // Toggle current accordion
+        if (acc.hasAttribute('open')) {
+          // Close it
+          content.style.overflow = 'hidden';
+          const startHeight = content.offsetHeight;
+          const animation = content.animate(
+            [
+              { height: startHeight + 'px', opacity: 1, transform: 'translateY(0)' },
+              { height: '0px', opacity: 0, transform: 'translateY(-10px)' }
+            ],
+            { duration: 350, easing: 'ease-in-out' }
+          );
+
+          animation.onfinish = () => {
+            acc.removeAttribute('open');
+            content.style.height = '';
+            content.style.overflow = '';
+          };
+        } else {
+          // Open it
+          acc.setAttribute('open', '');
+          content.style.overflow = 'hidden';
+          const targetHeight = content.offsetHeight;
+
+          content.animate(
+            [
+              { height: '0px', opacity: 0, transform: 'translateY(-10px)' },
+              { height: targetHeight + 'px', opacity: 1, transform: 'translateY(0)' }
+            ],
+            { duration: 350, easing: 'ease-in-out' }
+          ).onfinish = () => {
+             content.style.overflow = '';
+             content.style.height = '';
+          };
+        }
+      });
+    });
+  }
+
+  initTherapyAccordions();
