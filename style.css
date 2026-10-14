@@ -2362,3 +2362,10 @@ body.rounded-cards {
   .services-grid .service-col .icon { width: 64px !important; height: 64px !important; margin-bottom: var(--spacing-2) !important; }
   .services-grid .service-col h3 { font-size: 1.2rem !important; }
 }
+
+/* Títulos de las tarjetas de acceso rápido en tipografía sin serif */
+.mobile-carousel h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  letter-spacing: 0;
+}
