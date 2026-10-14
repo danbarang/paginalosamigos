@@ -2430,7 +2430,8 @@ body.rounded-cards {
   gap: 8px;
 }
 .esp-more-link span { transition: transform 0.2s ease; }
-.esp-more-link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.esp-more-link { transform-origin: left center; transition: transform 0.2s ease; }
+.esp-more-link:hover { text-decoration: none; transform: scale(1.04); }
 .esp-more-link:hover span { transform: translateX(4px); }
 .esp-more-link:focus-visible { outline: 2px solid var(--primary-color); outline-offset: 4px; }
 @media (max-width: 768px) {
