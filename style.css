@@ -2410,7 +2410,17 @@ body.rounded-cards {
 .sp-related ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: var(--spacing-2); }
 .sp-related a { display: inline-block; padding: 8px 14px; border: 1px solid var(--primary-color); border-radius: var(--radius-btn); color: var(--primary-color); font-family: var(--font-body); font-weight: 600; }
 .sp-related a:hover { background: var(--primary-color); color: var(--white); }
-.esp-more { display: inline-block; margin-left: var(--spacing-2); color: var(--primary-color); text-decoration: underline; font-weight: 600; }
+.esp-more {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  margin-top: var(--spacing-5);
+  padding-top: var(--spacing-3);
+  border-top: 1px solid rgba(32, 77, 57, 0.15);
+}
+.esp-more-amigo { width: 70px; height: 60px; flex-shrink: 0; }
+.esp-more .btn { gap: 8px; flex: 0 1 auto; white-space: nowrap; }
+@media (max-width: 400px) { .esp-more .btn { white-space: normal; } }
 @media (max-width: 768px) {
   .sp-page { padding-top: 110px; }
   .sp-block { padding: var(--spacing-3); }
