@@ -32,7 +32,21 @@ const PAGES = {
   nutri: 'nutricion-castro.html',
   acv: 'rehabilitacion-acv-castro.html',
   tea: 'autismo-tea-castro.html',
-  lenguaje: 'lenguaje-infantil-castro.html'
+  lenguaje: 'lenguaje-infantil-castro.html',
+  c0: 'trastornos-habla-lenguaje-castro.html',
+  c1: 'deglucion-atipica-castro.html',
+  c2: 'respiracion-oral-castro.html',
+  c3: 'terapia-voz-castro.html',
+  c4: 'disfagia-castro.html',
+  c5: 'dolor-lumbar-castro.html',
+  c6: 'prevencion-caidas-castro.html',
+  c7: 'desarrollo-motor-infantil-castro.html',
+  c8: 'integracion-sensorial-castro.html',
+  c9: 'motricidad-fina-castro.html',
+  c10: 'autonomia-personas-mayores-castro.html',
+  c11: 'ansiedad-castro.html',
+  c12: 'depresion-castro.html',
+  c13: 'tdah-castro.html'
 };
 
 // Sección del menú que se marca como activa en cada página.
@@ -58,6 +72,20 @@ const NAV_SECTION = {
   'rehabilitacion-acv-castro.html': 'terapias.html',
   'autismo-tea-castro.html': 'terapias.html',
   'lenguaje-infantil-castro.html': 'terapias.html',
+  'trastornos-habla-lenguaje-castro.html': 'terapias.html',
+  'deglucion-atipica-castro.html': 'terapias.html',
+  'respiracion-oral-castro.html': 'terapias.html',
+  'terapia-voz-castro.html': 'terapias.html',
+  'disfagia-castro.html': 'terapias.html',
+  'dolor-lumbar-castro.html': 'terapias.html',
+  'prevencion-caidas-castro.html': 'terapias.html',
+  'desarrollo-motor-infantil-castro.html': 'terapias.html',
+  'integracion-sensorial-castro.html': 'terapias.html',
+  'motricidad-fina-castro.html': 'terapias.html',
+  'autonomia-personas-mayores-castro.html': 'terapias.html',
+  'ansiedad-castro.html': 'terapias.html',
+  'depresion-castro.html': 'terapias.html',
+  'tdah-castro.html': 'terapias.html',
   'reservas.html': 'reservas.html'
 };
 

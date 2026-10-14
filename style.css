@@ -2443,3 +2443,13 @@ body.rounded-cards {
   .sp-block { padding: var(--spacing-3); }
 }
 .footer-specialties { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--spacing-1) var(--spacing-3); padding-top: var(--spacing-3); padding-bottom: var(--spacing-2); font-size: 0.95rem; }
+
+/* Guías por condición (Terapias) */
+.cond-guides { padding-top: var(--spacing-5); padding-bottom: var(--spacing-2); }
+.cond-guides .text-subtitle { margin-bottom: var(--spacing-4); }
+.cond-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--spacing-3); }
+.cond-group { background: var(--white); padding: var(--spacing-3); box-shadow: var(--shadow-sm); border-top: 4px solid var(--accent-green, #84b5a2); }
+.cond-group h3 { font-family: var(--font-body); font-size: 1.05rem; font-weight: 700; color: var(--primary-dark); margin-bottom: var(--spacing-2); }
+.cond-group ul { list-style: none; padding: 0; display: grid; gap: 8px; }
+.cond-group a { color: var(--primary-color); text-decoration: underline; text-underline-offset: 3px; }
+.cond-group a:hover { color: var(--primary-dark); }
