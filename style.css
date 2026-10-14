@@ -2320,6 +2320,10 @@ body.rounded-cards {
 }
 .marquee-content::-webkit-scrollbar { display: none; }
 .marquee-content .resource-card { scroll-snap-align: start; }
+/* Flechas laterales visibles en todos los tamaños: indican que hay más tarjetas */
+.marquee-wrapper .carousel-btn { display: flex !important; }
+.marquee-wrapper .carousel-prev { left: 8px !important; }
+.marquee-wrapper .carousel-next { right: 8px !important; }
 
 /* Botón con leve elevación al pasar el mouse (reemplaza estilos en línea) */
 [data-lift] { transition: transform 0.3s ease, box-shadow 0.3s ease; }
