@@ -2547,10 +2547,10 @@ body.rounded-cards {
 .prog-destacado { margin: 0 0 16px; padding: 10px 14px; border-left: 4px solid var(--card-color); background: rgba(32,77,57,0.06); border-radius: 0; font-size: 0.9rem; line-height: 1.45; font-weight: 600; color: var(--primary-dark); }
 .prog-planes li > span:first-child small { display: block; font-size: 0.78rem; line-height: 1.3; font-weight: 600; color: var(--accent-coral); margin-top: 3px; }
 
-/* Programas: la tejuela de su especialidad cuelga bajo el cuadro (como las tarjetas de especialidad del inicio)
+/* Programas: la tejuela de su especialidad va dentro del cuadro, arriba, como forro de techo,
    y cambia de bosque a madera al pasar el cursor (Daniel, 16-10-2026). Se pinta con máscara para poder cambiar el color. */
-.prog-card--tejuela { margin-bottom: 24px; }
-.prog-card--tejuela > .chilota-tejuela { position: absolute; left: 0; right: 0; width: auto; top: 100%; height: 20px; background-image: none; background-color: var(--primary-dark); -webkit-mask-repeat: repeat-x; mask-repeat: repeat-x; -webkit-mask-position: left top; mask-position: left top; -webkit-mask-size: 80px 20px; mask-size: 80px 20px; transition: background-color var(--transition-normal); }
+.prog-card--tejuela { padding-top: 52px; }
+.prog-card--tejuela > .chilota-tejuela { position: absolute; left: 0; right: 0; width: auto; top: 0; height: 20px; background-image: none; background-color: var(--primary-dark); -webkit-mask-repeat: repeat-x; mask-repeat: repeat-x; -webkit-mask-position: left top; mask-position: left top; -webkit-mask-size: 80px 20px; mask-size: 80px 20px; transition: background-color var(--transition-normal); }
 .prog-card--tejuela > .chilota-tejuela--curva   { -webkit-mask-image: url('/chilota/tejuela-curva.svg');   mask-image: url('/chilota/tejuela-curva.svg'); }
 .prog-card--tejuela > .chilota-tejuela--punta   { -webkit-mask-image: url('/chilota/tejuela-punta.svg');   mask-image: url('/chilota/tejuela-punta.svg'); }
 .prog-card--tejuela > .chilota-tejuela--escalon { -webkit-mask-image: url('/chilota/tejuela-escalon.svg'); mask-image: url('/chilota/tejuela-escalon.svg'); }
