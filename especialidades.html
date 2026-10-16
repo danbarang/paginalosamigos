@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fonoaudiología, kinesiología y psicología en Castro, Chiloé | Los Amigos</title>
+  <title>Fonoaudiología, kinesiología y más en Castro | Los Amigos</title>
   <meta name="description" content="Especialidades en Castro, Chiloé: fonoaudiología, kinesiología, terapia ocupacional, psicología y nutrición para niños, adultos y personas mayores en Los Amigos." />
   <link rel="canonical" href="%SITE_URL%/especialidades.html" />
   
@@ -13,28 +13,40 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="%SITE_URL%/especialidades.html" />
-  <meta property="og:title" content="Fonoaudiología, kinesiología y psicología en Castro, Chiloé | Los Amigos" />
+  <meta property="og:title" content="Fonoaudiología, kinesiología y más en Castro | Los Amigos" />
   <meta property="og:description" content="Especialidades en Castro, Chiloé: fonoaudiología, kinesiología, terapia ocupacional, psicología y nutrición para niños, adultos y personas mayores en Los Amigos." />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Fonoaudiología, kinesiología y psicología en Castro, Chiloé | Los Amigos" />
+  <meta name="twitter:title" content="Fonoaudiología, kinesiología y más en Castro | Los Amigos" />
   <meta name="twitter:description" content="Especialidades en Castro, Chiloé: fonoaudiología, kinesiología, terapia ocupacional, psicología y nutrición para niños, adultos y personas mayores en Los Amigos." />
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "Los Amigos, centro terapéutico y de rehabilitación",
-    "url": "%SITE_URL%/",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Eusebio Lillo 147",
-      "addressLocality": "Castro",
-      "addressRegion": "Los Lagos",
-      "addressCountry": "CL"
-    }
+    "@graph": [
+      {
+        "@type": "MedicalClinic",
+        "@id": "%SITE_URL%/#clinic",
+        "name": "Los Amigos, centro terapéutico y de rehabilitación",
+        "url": "%SITE_URL%/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Eusebio Lillo 147",
+          "addressLocality": "Castro",
+          "addressRegion": "Los Lagos",
+          "addressCountry": "CL"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "%SITE_URL%/" },
+          { "@type": "ListItem", "position": 2, "name": "Especialidades", "item": "%SITE_URL%/especialidades.html" }
+        ]
+      }
+    ]
   }
   </script>
   <style>

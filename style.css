@@ -83,6 +83,9 @@ body {
   outline-offset: 2px;
 }
 
+/* Texto solo para lectores de pantalla y buscadores (estructura de encabezados). */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
@@ -2381,7 +2384,7 @@ body.rounded-cards {
 }
 
 /* Títulos de las tarjetas de acceso rápido en tipografía sin serif */
-.mobile-carousel h4 {
+.mobile-carousel h3 {
   font-family: var(--font-body);
   font-weight: 600;
   letter-spacing: 0;

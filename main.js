@@ -12,8 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // y no se anima si la persona pidió reducir el movimiento.
   if (prefersReducedMotion) return;
 
+  // Lo que ya se ve al cargar se queda tal como lo pintó el HTML: solo se anima
+  // lo que aparece al bajar, para que el primer contenido no espere al JavaScript.
+  const visibleAlCargar = (el) => el.getBoundingClientRect().top < window.innerHeight;
+  const bajoElPliegue = (selector) => gsap.utils.toArray(selector).filter((el) => !visibleAlCargar(el));
+
   // Scroll animations for elements with .animate-on-scroll
-  const elements = document.querySelectorAll('.animate-on-scroll');
+  const elements = bajoElPliegue('.animate-on-scroll');
   
   elements.forEach((el) => {
     gsap.from(el, {
@@ -31,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Stagger animation  // Group cards for staggered animation if they exist
   if (document.querySelector('.cards-grid')) {
-    gsap.fromTo('.card', 
+    gsap.fromTo(bajoElPliegue('.card'), 
       { y: 50, opacity: 0 },
       {
         scrollTrigger: {
@@ -48,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
     );
   } else {
     // Fallback if cards exist but not in a grid container
-    gsap.utils.toArray('.card').forEach(card => {
+    bajoElPliegue('.card').forEach(card => {
       if (!card.classList.contains('animate-on-scroll')) {
         gsap.fromTo(card, 
           { y: 50, opacity: 0 },
@@ -73,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Remove animate-on-scroll to avoid duplicate animations
     document.querySelectorAll('.service-col').forEach(el => el.classList.remove('animate-on-scroll'));
     
-    gsap.fromTo('.service-col', 
+    gsap.fromTo(bajoElPliegue('.service-col'), 
       { y: 40, opacity: 0 },
       {
         scrollTrigger: {

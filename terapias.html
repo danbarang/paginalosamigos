@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terapias y rehabilitación en Castro, Chiloé | Los Amigos</title>
-  <meta name="description" content="Terapias en Castro, Chiloé: rehabilitación neurológica, ACV, Parkinson, TEA, voz, deglución y rehabilitación cardiometabólica con nutrición. Equipo multidisciplinario." />
+  <meta name="description" content="Terapias en Castro, Chiloé: rehabilitación neurológica, ACV, Parkinson, TEA, voz, deglución y rehabilitación cardiometabólica. Equipo multidisciplinario." />
   <link rel="canonical" href="%SITE_URL%/terapias.html" />
   
   <!-- Open Graph -->
@@ -14,27 +14,39 @@
   <meta property="og:image:height" content="630" />
   <meta property="og:url" content="%SITE_URL%/terapias.html" />
   <meta property="og:title" content="Terapias y rehabilitación en Castro, Chiloé | Los Amigos" />
-  <meta property="og:description" content="Terapias en Castro, Chiloé: rehabilitación neurológica, ACV, Parkinson, TEA, voz, deglución y rehabilitación cardiometabólica con nutrición. Equipo multidisciplinario." />
+  <meta property="og:description" content="Terapias en Castro, Chiloé: rehabilitación neurológica, ACV, Parkinson, TEA, voz, deglución y rehabilitación cardiometabólica. Equipo multidisciplinario." />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Terapias y rehabilitación en Castro, Chiloé | Los Amigos" />
-  <meta name="twitter:description" content="Terapias en Castro, Chiloé: rehabilitación neurológica, ACV, Parkinson, TEA, voz, deglución y rehabilitación cardiometabólica con nutrición. Equipo multidisciplinario." />
+  <meta name="twitter:description" content="Terapias en Castro, Chiloé: rehabilitación neurológica, ACV, Parkinson, TEA, voz, deglución y rehabilitación cardiometabólica. Equipo multidisciplinario." />
 
   <!-- JSON-LD Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "MedicalClinic",
-    "name": "Los Amigos, centro terapéutico y de rehabilitación",
-    "url": "%SITE_URL%/",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Eusebio Lillo 147",
-      "addressLocality": "Castro",
-      "addressRegion": "Los Lagos",
-      "addressCountry": "CL"
-    }
+    "@graph": [
+      {
+        "@type": "MedicalClinic",
+        "@id": "%SITE_URL%/#clinic",
+        "name": "Los Amigos, centro terapéutico y de rehabilitación",
+        "url": "%SITE_URL%/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Eusebio Lillo 147",
+          "addressLocality": "Castro",
+          "addressRegion": "Los Lagos",
+          "addressCountry": "CL"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "%SITE_URL%/" },
+          { "@type": "ListItem", "position": 2, "name": "Terapias", "item": "%SITE_URL%/terapias.html" }
+        ]
+      }
+    ]
   }
   </script>
   <style>
@@ -68,14 +80,14 @@
     <!-- Accordion Section restored from original -->
     <section style="padding-top: var(--spacing-6); padding-bottom: var(--spacing-6);">
       <div class="container text-center">
-      <h2 class="text-hero mb-2 animate-on-scroll" style="font-size: 2.5rem; line-height: 1.2;">Tratamiento para cada condición</h2>
+      <h1 class="text-hero mb-2 animate-on-scroll" style="font-size: 2.5rem; line-height: 1.2;">Tratamiento para cada condición en Castro</h1>
       <p class="text-subtitle mb-6 animate-on-scroll">Nuestro equipo multidisciplinario aborda cada caso desde una perspectiva integral. Descubre cómo podemos ayudarte.</p>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: var(--spacing-4); text-align: left; align-items: start;">
         
         <!-- Condition 1 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Secuelas ACV</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Secuelas ACV</h2>
           <details name="terapias" style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -89,7 +101,7 @@
 
         <!-- Condition 2 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Alzheimer</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Alzheimer</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -102,7 +114,7 @@
 
         <!-- Condition 3 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Parkinson</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Parkinson</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -115,7 +127,7 @@
 
         <!-- Condition 4 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Infarto al miocardio</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Infarto al miocardio</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -128,7 +140,7 @@
 
         <!-- Condition 5 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Condición del espectro autista</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Condición del espectro autista</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -142,7 +154,7 @@
 
         <!-- Condition 6 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Parálisis cerebral</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Parálisis cerebral</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -155,7 +167,7 @@
 
         <!-- Condition 7 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">TDAH</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">TDAH</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -168,7 +180,7 @@
 
         <!-- Condition 8 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Discapacidad intelectual</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Discapacidad intelectual</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -181,7 +193,7 @@
 
         <!-- Condition 9 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Síndrome de Down</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Síndrome de Down</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -194,7 +206,7 @@
 
         <!-- Condition 10 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Depresión</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Depresión</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -207,7 +219,7 @@
 
         <!-- Condition 11 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Ansiedad</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Ansiedad</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -220,7 +232,7 @@
 
         <!-- Condition 12 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Obesidad</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Obesidad</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -233,7 +245,7 @@
 
         <!-- Condition 13 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Secuelas TEC</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Secuelas TEC</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -246,7 +258,7 @@
 
         <!-- Condition 14 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Apraxia Infantil</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Apraxia Infantil</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -260,7 +272,7 @@
 
         <!-- Condition 15 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Deterioro cognitivo leve</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Deterioro cognitivo leve</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -273,7 +285,7 @@
 
         <!-- Condition 16 -->
         <article class="card animate-on-scroll" style="display: flex; flex-direction: column;">
-          <h3 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Trastornos del aprendizaje</h3>
+          <h2 class="mb-3" style="color: var(--primary-dark); font-size: 1.25rem;">Trastornos del aprendizaje</h2>
           <details style="margin-top: auto; border-top: 1px solid rgba(0,0,0,0.05); padding-top: var(--spacing-3);">
             <summary style="font-weight: 700; color: var(--primary-color); cursor: pointer; user-select: none; padding-bottom: var(--spacing-2);">Ver enfoques terapéuticos</summary>
             <div style="font-size: 0.9rem; line-height: 1.6; margin-top: var(--spacing-2);">
@@ -358,7 +370,7 @@
 
     <section class="section" style="padding-top: 60px; padding-bottom: 48px;">
       <div class="container text-center">
-        <h1 class="text-hero animate-on-scroll" style="margin-bottom: 24px;">Terapias y rehabilitación en Castro</h1>
+        <h2 class="text-hero animate-on-scroll" style="margin-bottom: 24px;">Terapias y rehabilitación en Castro</h2>
         <p class="text-subtitle animate-on-scroll" style="max-width: 800px; margin-left: auto; margin-right: auto; margin-bottom: 0; line-height: 1.7;">
           Brindamos intervenciones especializadas y personalizadas para potenciar el desarrollo integral. Descubre el enfoque de cada una de nuestras disciplinas.
         </p>
