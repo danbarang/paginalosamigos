@@ -454,6 +454,8 @@ function ajustarTejuelas() {
     const ideal = alto * 4; // un mosaico de 3 tejuelas mide 4 veces su alto visible
     const n = Math.max(1, Math.round(ancho / ideal));
     el.style.backgroundSize = `${ancho / n}px ${alto}px`;
+    // Las tejuelas pintadas con máscara (programas) usan el mismo tamaño de mosaico.
+    el.style.webkitMaskSize = el.style.maskSize = `${ancho / n}px ${alto}px`;
   });
 }
 document.addEventListener('DOMContentLoaded', () => {
