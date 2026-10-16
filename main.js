@@ -442,3 +442,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initTherapyAccordions();
+
+// Franjas de tejuela (DESIGN.md §5b): ajusta el mosaico para que siempre entre un número
+// entero de tejuelas en el ancho, sin piezas cortadas en los bordes.
+function ajustarTejuelas() {
+  document.querySelectorAll('.chilota-tejuela').forEach((el) => {
+    const ancho = el.getBoundingClientRect().width;
+    if (!ancho) return;
+    const alto = el.getBoundingClientRect().height;
+    const ideal = alto * 4; // un mosaico de 3 tejuelas mide 4 veces su alto visible
+    const n = Math.max(1, Math.round(ancho / ideal));
+    el.style.backgroundSize = `${ancho / n}px ${alto}px`;
+  });
+}
+document.addEventListener('DOMContentLoaded', ajustarTejuelas);
+window.addEventListener('resize', ajustarTejuelas);

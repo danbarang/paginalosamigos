@@ -2453,3 +2453,49 @@ body.rounded-cards {
 .cond-group ul { list-style: none; padding: 0; display: grid; gap: 8px; }
 .cond-group a { color: var(--primary-color); text-decoration: underline; text-underline-offset: 3px; }
 .cond-group a:hover { color: var(--primary-dark); }
+
+/* =====================================================================
+   Elementos chilotas (diseno/DESIGN.md §5b, aprobados 16-10-2026)
+   Tejuela = la persona y su avance · Telar = el equipo · Palafitos = Castro.
+   Un solo elemento protagonista por bloque y nunca detrás de texto.
+   SVG en public/chilota/ (se generan con kit-grafico/chilota/web/generar_web.py).
+   ===================================================================== */
+.chilota-tejuela,
+.chilota-telar,
+.chilota-palafitos { display: block; width: 100%; background-repeat: repeat-x; pointer-events: none; }
+
+/* Franja de tejuelas: primera hilada de una fachada. Mosaico de 3 tejuelas (216 × 54). */
+.chilota-tejuela { height: 27px; background-size: 108px 27px; background-position: left top; }
+.chilota-tejuela--curva   { background-image: url('/chilota/tejuela-curva.svg'); }
+.chilota-tejuela--punta   { background-image: url('/chilota/tejuela-punta.svg'); }
+.chilota-tejuela--escalon { background-image: url('/chilota/tejuela-escalon.svg'); }
+.chilota-tejuela--ojiva   { background-image: url('/chilota/tejuela-ojiva.svg'); }
+.chilota-tejuela--bisel   { background-image: url('/chilota/tejuela-bisel.svg'); }
+.chilota-tejuela--oscuro.chilota-tejuela--curva { background-image: url('/chilota/tejuela-curva-oscuro.svg'); }
+
+/* Borde inferior de tarjetas de especialidad: la tejuela de cada especialidad. */
+.card-tejuela { position: relative; overflow: hidden; padding-bottom: calc(var(--spacing-3) + 20px) !important; }
+.card-tejuela .chilota-tejuela { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; background-position: left top; }
+
+/* Banda de telar de punto dado con flecos. */
+.chilota-telar { height: 47px; background-size: 192px 47px; }
+.chilota-telar--bosque { background-image: url('/chilota/telar-dado-bosque.svg'); }
+.chilota-telar--noche  { background-image: url('/chilota/telar-dado-noche.svg'); }
+
+/* Franja de palafitos: costa de Castro al pie de la página. */
+.chilota-palafitos { height: 64px; background-repeat: no-repeat; background-position: center bottom; background-size: auto 64px; background-image: url('/chilota/palafitos.svg'); }
+.chilota-palafitos--separador { height: 32px; background-size: auto 32px; background-image: url('/chilota/palafitos-separador.svg'); margin: var(--spacing-6) auto; max-width: 960px; }
+.site-footer:has(> .chilota-palafitos) { padding-top: var(--spacing-5); }
+.site-footer > .chilota-palafitos { margin: 0 0 var(--spacing-5); }
+
+@media (max-width: 640px) {
+  .chilota-tejuela { height: 20px; background-size: 80px 20px; }
+  .chilota-palafitos { height: 48px; background-size: auto 48px; }
+}
+
+/* Bloques que abren con un elemento chilota pegado al borde superior. */
+.section-chilota { position: relative; padding-top: 0 !important; }
+.section-chilota > .chilota-tejuela,
+.section-chilota > .chilota-telar { margin-bottom: var(--spacing-6); }
+/* Páginas por especialidad: la tejuela de la especialidad corona el contenido. */
+.sp-tejuela { margin-bottom: var(--spacing-4); border-radius: 0; }
