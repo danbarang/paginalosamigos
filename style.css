@@ -2456,12 +2456,11 @@ body.rounded-cards {
 
 /* =====================================================================
    Elementos chilotas (diseno/DESIGN.md §5b, aprobados 16-10-2026)
-   Tejuela = la persona y su avance · Telar = el equipo · Palafitos = Castro.
+   Tejuela = la persona y su avance · Palafitos = Castro. El telar no va en la web (Daniel, 16-10-2026).
    Un solo elemento protagonista por bloque y nunca detrás de texto.
    SVG en public/chilota/ (se generan con kit-grafico/chilota/web/generar_web.py).
    ===================================================================== */
 .chilota-tejuela,
-.chilota-telar,
 .chilota-palafitos { display: block; width: 100%; background-repeat: repeat-x; pointer-events: none; }
 
 /* Franja de tejuelas: primera hilada de una fachada. Mosaico de 3 tejuelas (216 × 54). */
@@ -2478,10 +2477,6 @@ body.rounded-cards {
 .card-tejuela { overflow: visible; margin-bottom: 22px; }
 .card-tejuela .chilota-tejuela { position: absolute; left: -4px; right: -4px; width: auto; top: calc(100% + 4px); height: 20px; background-position: left top; }
 
-/* Paño de telar de punto dado, centrado, con flecos en las dos puntas. */
-.chilota-telar { width: min(680px, 100% - 32px); height: auto; aspect-ratio: 680 / 60; margin-inline: auto; background-repeat: no-repeat; background-size: 100% 100%; }
-.chilota-telar--bosque { background-image: url('/chilota/telar-pano-bosque.svg'); }
-
 /* Franja de palafitos: costa de Castro al pie de la página. */
 .chilota-palafitos { height: 64px; background-repeat: no-repeat; background-position: center bottom; background-size: auto 64px; background-image: url('/chilota/palafitos.svg'); }
 .chilota-palafitos--separador { height: 32px; background-size: auto 32px; background-image: url('/chilota/palafitos-separador.svg'); margin: var(--spacing-6) auto; max-width: 960px; }
@@ -2491,13 +2486,10 @@ body.rounded-cards {
 @media (max-width: 640px) {
   .chilota-tejuela { height: 20px; background-size: 80px 20px; }
   .chilota-palafitos { height: 48px; background-size: auto 48px; }
-  .chilota-telar { width: min(318px, 100% - 32px); aspect-ratio: 318 / 45; }
-  .chilota-telar--bosque { background-image: url('/chilota/telar-pano-bosque-movil.svg'); }
 }
 
 /* Bloques que abren con un elemento chilota pegado al borde superior. */
 .section-chilota { position: relative; padding-top: 0 !important; }
 .section-chilota > .chilota-tejuela { margin-bottom: var(--spacing-6); }
-.section-chilota > .chilota-telar { margin-bottom: var(--spacing-4); }
 /* Páginas por especialidad: la tejuela de la especialidad corona el contenido. */
 .sp-tejuela { margin-bottom: var(--spacing-4); border-radius: 0; }
