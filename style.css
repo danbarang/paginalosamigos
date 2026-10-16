@@ -2524,3 +2524,4 @@ body.rounded-cards {
 .diagnostic-link:hover { color: var(--primary-hover); }
 .diagnostics-cta { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: clamp(4rem, 7vw, 5.5rem); }
 .diagnostics-cta p { margin: 0; color: var(--text-muted); max-width: 560px; }
+.prog-grid > .prog-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
