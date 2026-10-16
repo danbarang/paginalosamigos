@@ -447,13 +447,22 @@ document.addEventListener('DOMContentLoaded', () => {
 // entero de tejuelas en el ancho, sin piezas cortadas en los bordes.
 function ajustarTejuelas() {
   document.querySelectorAll('.chilota-tejuela').forEach((el) => {
-    const ancho = el.getBoundingClientRect().width;
+    // offsetWidth mide el ancho real de diseño; getBoundingClientRect cambiaría con las animaciones de escala.
+    const ancho = el.offsetWidth;
     if (!ancho) return;
-    const alto = el.getBoundingClientRect().height;
+    const alto = el.offsetHeight;
     const ideal = alto * 4; // un mosaico de 3 tejuelas mide 4 veces su alto visible
     const n = Math.max(1, Math.round(ancho / ideal));
     el.style.backgroundSize = `${ancho / n}px ${alto}px`;
   });
 }
-document.addEventListener('DOMContentLoaded', ajustarTejuelas);
-window.addEventListener('resize', ajustarTejuelas);
+document.addEventListener('DOMContentLoaded', () => {
+  ajustarTejuelas();
+  // Las tarjetas cambian de ancho en el carrusel móvil y al cargar las fuentes.
+  if ('ResizeObserver' in window) {
+    const ro = new ResizeObserver(ajustarTejuelas);
+    document.querySelectorAll('.chilota-tejuela').forEach((el) => ro.observe(el));
+  } else {
+    window.addEventListener('resize', ajustarTejuelas);
+  }
+});

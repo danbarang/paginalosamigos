@@ -2473,9 +2473,10 @@ body.rounded-cards {
 .chilota-tejuela--bisel   { background-image: url('/chilota/tejuela-bisel.svg'); }
 .chilota-tejuela--oscuro.chilota-tejuela--curva { background-image: url('/chilota/tejuela-curva-oscuro.svg'); }
 
-/* Borde inferior de tarjetas de especialidad: la tejuela de cada especialidad. */
-.card-tejuela { position: relative; overflow: hidden; padding-bottom: calc(var(--spacing-3) + 20px) !important; }
-.card-tejuela .chilota-tejuela { position: absolute; left: 0; right: 0; bottom: 0; height: 18px; background-position: left top; }
+/* Borde inferior de tarjetas de especialidad: la tejuela de cada especialidad cuelga bajo el cuadro,
+   a escuadra con su borde exterior (la tarjeta tiene un borde de 4px que se compensa). */
+.card-tejuela { overflow: visible; margin-bottom: 22px; }
+.card-tejuela .chilota-tejuela { position: absolute; left: -4px; right: -4px; width: auto; top: calc(100% + 4px); height: 20px; background-position: left top; }
 
 /* Banda de telar de punto dado con flecos. */
 .chilota-telar { height: 47px; background-size: 192px 47px; }
