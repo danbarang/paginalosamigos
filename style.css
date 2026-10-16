@@ -1264,7 +1264,12 @@ a {
   }
   .double-grid__content {
     padding: var(--spacing-6) var(--spacing-4);
+    min-width: 0;
   }
+}
+@media (max-width: 480px) {
+  /* "Neurorehabilitación" no cabe a 2rem en celulares angostos y ensanchaba la página. */
+  .double-grid__content h3 { font-size: 1.6rem; overflow-wrap: break-word; hyphens: auto; }
 }
 
 /* Service col adjustments for solid bg */
@@ -1761,7 +1766,7 @@ body.rounded-cards {
 /* Tarjetas de Evaluaciones Diagnósticas */
 .diagnostics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
   align-items: start;
   gap: 28px;
   margin-bottom: clamp(4rem, 7vw, 5.5rem);
@@ -1880,7 +1885,7 @@ body.rounded-cards {
 /* Tarjetas de Terapia Tradicional por Especialidades */
 .individual-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
   align-items: start;
   gap: 28px;
   margin-bottom: clamp(4rem, 7vw, 5.5rem);
@@ -2056,7 +2061,7 @@ body.rounded-cards {
    ========================================================================== */
 .edu-trampolin-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: var(--spacing-5);
   text-align: left;
   margin-bottom: var(--spacing-8);
@@ -2475,10 +2480,17 @@ body.rounded-cards {
 .chilota-tejuela--bisel   { background-image: url('/chilota/tejuela-bisel.svg'); }
 .chilota-tejuela--oscuro.chilota-tejuela--curva { background-image: url('/chilota/tejuela-curva-oscuro.svg'); }
 
-/* Borde inferior de tarjetas de especialidad: la tejuela de cada especialidad cuelga bajo el cuadro,
-   a escuadra con su borde exterior (la tarjeta tiene un borde de 4px que se compensa). */
-.card-tejuela { overflow: visible; margin-bottom: 22px; }
-.card-tejuela .chilota-tejuela { position: absolute; left: -4px; right: -4px; width: auto; top: calc(100% + 4px); height: 20px; background-position: left top; }
+/* Tarjetas de especialidad del inicio: la tejuela de cada especialidad va dentro del cuadro, arriba,
+   como un techo (Daniel, 16-10-2026). Cubre el borde de 4px de la tarjeta para quedar al ras del canto. */
+.card-tejuela { overflow: visible; padding-top: calc(var(--spacing-3) + 20px) !important; }
+.card-tejuela .chilota-tejuela { position: absolute; left: -4px; right: -4px; width: auto; top: -4px; height: 20px; background-position: left top; }
+/* Página Especialidades: la misma tejuela de techo arriba de cada tarjeta grande (Daniel, 16-10-2026). */
+.esp-card--tejuela { overflow: visible; padding-top: calc(var(--spacing-6) + 27px); }
+.esp-card--tejuela > .chilota-tejuela { position: absolute; left: -4px; right: -4px; width: auto; top: -4px; background-position: left top; }
+@media (max-width: 768px) {
+  .esp-card--tejuela { padding-top: calc(var(--spacing-4) + 20px); }
+  .esp-card--tejuela > .chilota-tejuela { height: 20px; }
+}
 
 /* Franja de palafitos: costa de Castro al pie de la página. */
 .chilota-palafitos { height: 64px; background-repeat: no-repeat; background-position: center bottom; background-size: auto 64px; background-image: url('/chilota/palafitos.svg'); }
