@@ -186,6 +186,10 @@
       }
     }
 
+    /* El correo largo no debe ensanchar la página en el celular */
+    .alliance-grid > *, .contact-item-content { min-width: 0; }
+    .contact-item-content p { overflow-wrap: anywhere; }
+
     .contact-badge-list {
       display: flex;
       flex-direction: column;
