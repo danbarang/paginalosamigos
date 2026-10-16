@@ -2493,3 +2493,34 @@ body.rounded-cards {
 .section-chilota > .chilota-tejuela { margin-bottom: var(--spacing-6); }
 /* Páginas por especialidad: la tejuela de la especialidad corona el contenido. */
 .sp-tejuela { margin-bottom: var(--spacing-4); border-radius: 0; }
+
+/* =====================================================================
+   Programas terapéuticos colaborativos (programas.html)
+   Dos grupos (adultos y niños); cada tarjeta con sus planes y un solo botón.
+   ===================================================================== */
+.prog-grupo { margin-bottom: var(--spacing-5); text-align: left; }
+.prog-grupo-titulo { font-family: var(--font-heading); font-size: 1.5rem; color: var(--primary-dark); margin: 0 0 var(--spacing-3); padding-bottom: 10px; border-bottom: 1px solid rgba(32, 77, 57, 0.15); }
+.prog-grupo-titulo span { font-family: var(--font-body); font-size: 1rem; font-weight: 500; color: var(--text-muted); }
+.prog-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--spacing-3); }
+@media (max-width: 820px) { .prog-grid { grid-template-columns: 1fr; } }
+.prog-card { background: var(--white); border-radius: 20px; border: 1px solid rgba(32, 77, 57, 0.1); border-top: 6px solid var(--card-color); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04); padding: 26px 24px; display: flex; flex-direction: column; min-width: 0; }
+.prog-etiqueta { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-coral); margin: 0 0 6px; }
+.prog-titulo { font-family: var(--font-heading); font-size: 1.35rem; line-height: 1.2; color: var(--primary-dark); margin: 0 0 10px; }
+.prog-desc { color: var(--text-muted); font-size: 0.93rem; line-height: 1.55; margin: 0 0 12px; }
+.prog-puntos { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1; }
+.prog-puntos li { position: relative; padding-left: 20px; font-size: 0.88rem; color: var(--text-color); line-height: 1.45; }
+.prog-puntos li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-color); font-weight: 700; }
+.prog-planes { list-style: none; padding: 12px 14px; margin: 0 0 10px; background: var(--accent-yellow-light); border-radius: 12px; display: flex; flex-direction: column; gap: 8px; }
+.prog-planes li { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 0.88rem; color: var(--text-color); }
+.prog-planes strong { color: var(--primary-dark); font-size: 1rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.prog-nota { font-size: 0.82rem; color: var(--text-muted); margin: 0 0 14px; }
+.prog-cta { width: 100%; justify-content: center; margin-top: auto; }
+.prog-condiciones { max-width: 760px; margin: 0 auto; color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; }
+
+/* Evaluaciones: un solo control por tarjeta; la solicitud va en el detalle y al final de la sección. */
+#evaluaciones-diagnosticas .diagnostics-grid { margin-bottom: var(--spacing-4); }
+.diagnostic-card-action .btn-card-toggle { margin-top: 0; }
+.diagnostic-link { display: inline-flex; gap: 6px; margin-top: 4px; font-weight: 600; color: var(--primary-color); text-decoration: underline; text-underline-offset: 3px; }
+.diagnostic-link:hover { color: var(--primary-hover); }
+.diagnostics-cta { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: clamp(4rem, 7vw, 5.5rem); }
+.diagnostics-cta p { margin: 0; color: var(--text-muted); max-width: 560px; }
