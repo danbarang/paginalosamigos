@@ -2484,6 +2484,37 @@ body.rounded-cards {
    como un techo (Daniel, 16-10-2026). Cubre el borde de 4px de la tarjeta para quedar al ras del canto. */
 .card-tejuela { overflow: visible; padding-top: calc(var(--spacing-3) + 20px) !important; }
 .card-tejuela .chilota-tejuela { position: absolute; left: -4px; right: -4px; width: auto; top: -4px; height: 20px; background-position: left top; }
+/* Un color por profesión en sus tejuelas (Daniel, 16-10-2026): inicio, Especialidades y la página de cada especialidad.
+   Se pintan con máscara para poder darles color; el borde al pasar el cursor toma el mismo color. */
+.card-tejuela .chilota-tejuela,
+.esp-card--tejuela > .chilota-tejuela,
+.chilota-tejuela.sp-tejuela {
+  background-image: none;
+  background-color: var(--tejuela-color, var(--primary-dark));
+  -webkit-mask-repeat: repeat-x; mask-repeat: repeat-x;
+  -webkit-mask-position: left top; mask-position: left top;
+  -webkit-mask-size: 108px 27px; mask-size: 108px 27px;
+}
+:is(.card-tejuela, .esp-card--tejuela, .sp-tejuela) .chilota-tejuela--curva,   .chilota-tejuela--curva.sp-tejuela   { -webkit-mask-image: url('/chilota/tejuela-curva.svg');   mask-image: url('/chilota/tejuela-curva.svg'); }
+:is(.card-tejuela, .esp-card--tejuela, .sp-tejuela) .chilota-tejuela--punta,   .chilota-tejuela--punta.sp-tejuela   { -webkit-mask-image: url('/chilota/tejuela-punta.svg');   mask-image: url('/chilota/tejuela-punta.svg'); }
+:is(.card-tejuela, .esp-card--tejuela, .sp-tejuela) .chilota-tejuela--escalon, .chilota-tejuela--escalon.sp-tejuela { -webkit-mask-image: url('/chilota/tejuela-escalon.svg'); mask-image: url('/chilota/tejuela-escalon.svg'); }
+:is(.card-tejuela, .esp-card--tejuela, .sp-tejuela) .chilota-tejuela--ojiva,   .chilota-tejuela--ojiva.sp-tejuela   { -webkit-mask-image: url('/chilota/tejuela-ojiva.svg');   mask-image: url('/chilota/tejuela-ojiva.svg'); }
+:is(.card-tejuela, .esp-card--tejuela, .sp-tejuela) .chilota-tejuela--bisel,   .chilota-tejuela--bisel.sp-tejuela   { -webkit-mask-image: url('/chilota/tejuela-bisel.svg');   mask-image: url('/chilota/tejuela-bisel.svg'); }
+.card-tejuela .chilota-tejuela { -webkit-mask-size: 80px 20px; mask-size: 80px 20px; }
+@media (max-width: 768px) { .esp-card--tejuela > .chilota-tejuela { -webkit-mask-size: 80px 20px; mask-size: 80px 20px; } }
+@media (max-width: 640px) { .chilota-tejuela.sp-tejuela { -webkit-mask-size: 80px 20px; mask-size: 80px 20px; } }
+/* Fonoaudiología lago · Kinesiología madera clara · Terapia ocupacional madera · Psicología bosque · Nutrición salvia */
+.chilota-tejuela--curva   { --tejuela-color: var(--accent-blue); }
+.chilota-tejuela--punta   { --tejuela-color: var(--accent-yellow); }
+.chilota-tejuela--escalon { --tejuela-color: var(--accent-coral); }
+.chilota-tejuela--ojiva   { --tejuela-color: var(--primary-dark); }
+.chilota-tejuela--bisel   { --tejuela-color: var(--accent-green); }
+.card-tejuela:has(> .chilota-tejuela--curva),   .esp-card--tejuela:has(> .chilota-tejuela--curva)   { --card-color: var(--accent-blue); }
+.card-tejuela:has(> .chilota-tejuela--punta),   .esp-card--tejuela:has(> .chilota-tejuela--punta)   { --card-color: var(--accent-yellow); }
+.card-tejuela:has(> .chilota-tejuela--escalon), .esp-card--tejuela:has(> .chilota-tejuela--escalon) { --card-color: var(--accent-coral); }
+.card-tejuela:has(> .chilota-tejuela--ojiva),   .esp-card--tejuela:has(> .chilota-tejuela--ojiva)   { --card-color: var(--primary-dark); }
+.card-tejuela:has(> .chilota-tejuela--bisel),   .esp-card--tejuela:has(> .chilota-tejuela--bisel)   { --card-color: var(--accent-green); }
+
 /* Página Especialidades: la misma tejuela de techo arriba de cada tarjeta grande (Daniel, 16-10-2026). */
 .esp-card--tejuela { overflow: visible; padding-top: calc(var(--spacing-6) + 27px); }
 .esp-card--tejuela > .chilota-tejuela { position: absolute; left: -4px; right: -4px; width: auto; top: -4px; background-position: left top; }
