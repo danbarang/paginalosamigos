@@ -2587,3 +2587,33 @@ body.rounded-cards {
 .prog-card--tejuela > .chilota-tejuela--escalon { -webkit-mask-image: url('/chilota/tejuela-escalon.svg'); mask-image: url('/chilota/tejuela-escalon.svg'); }
 .prog-card--tejuela:hover > .chilota-tejuela,
 .prog-card--tejuela:focus-within > .chilota-tejuela { background-color: var(--accent-coral); }
+
+/* Programas con pictograma y textura (Daniel, 17-10-2026): grano de papel en la tarjeta,
+   cabecera con el ícono de marca en un disco y beneficios en un paño crema. Sin barras de color. */
+.prog-card {
+  background-color: var(--white);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .52 0 0 0 0 .34 0 0 0 0 .18 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+.prog-cabecera { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; }
+.prog-cabecera .prog-titulo { margin-bottom: 0; }
+.prog-icono { flex-shrink: 0; width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center; background: var(--accent-green-light); box-shadow: inset 0 0 0 1px rgba(32,77,57,0.08); transition: background-color var(--transition-normal); }
+.prog-icono img { width: 52px; height: 52px; }
+.prog-card:hover .prog-icono { background: var(--accent-yellow-light); }
+.prog-beneficios {
+  margin-top: auto; padding: 18px 20px 20px;
+  background-color: var(--accent-yellow-light);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .52 0 0 0 0 .34 0 0 0 0 .18 0 0 0 .12 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E");
+}
+.prog-beneficios-titulo { margin: 0 0 12px; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-coral); }
+.prog-beneficios .prog-puntos { margin: 0; gap: 10px; }
+.prog-beneficios .prog-puntos li { padding-left: 28px; }
+.prog-beneficios .prog-puntos li::before { content: ''; top: 3px; width: 18px; height: 18px; border-radius: 50%; background: var(--primary-color) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5 9.4l2.6 2.5L13 6.4' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 18px no-repeat; }
+.prog-destacado { border-left: 0; background: var(--accent-green-light); }
+@media (min-width: 821px) {
+  .prog-card--ancha { align-items: stretch; }
+  .prog-card--ancha .prog-beneficios { margin-top: 0; }
+}
+@media (max-width: 420px) {
+  .prog-icono { width: 60px; height: 60px; }
+  .prog-icono img { width: 44px; height: 44px; }
+}
