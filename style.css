@@ -1663,14 +1663,14 @@ body.rounded-cards {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Estado Activo del Item en Móvil */
-  .specialist-accordion-item.active .accordion-trigger {
+  /* Estado abierto del item en móvil (todos parten cerrados) */
+  .specialist-accordion-item.is-open .accordion-trigger {
     background: #faf6ee;
     color: var(--primary-dark);
     border-bottom-color: rgba(32, 77, 57, 0.15);
   }
 
-  .specialist-accordion-item.active .accordion-arrow {
+  .specialist-accordion-item.is-open .accordion-arrow {
     transform: rotate(180deg);
   }
 
@@ -1684,7 +1684,7 @@ body.rounded-cards {
     transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, padding 0.3s ease;
   }
 
-  .specialists-panels .specialist-accordion-item.active .specialist-tabpanel {
+  .specialists-panels .specialist-accordion-item.is-open .specialist-tabpanel {
     max-height: 1200px;
     opacity: 1;
     padding: 24px 20px;
