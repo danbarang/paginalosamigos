@@ -2555,8 +2555,8 @@ body.rounded-cards {
 .prog-etiqueta { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; line-height: 1.4; text-transform: uppercase; color: var(--accent-coral); margin: 0 0 6px; }
 .prog-titulo { font-family: var(--font-heading); font-size: 1.35rem; line-height: 1.2; color: var(--primary-dark); margin: 0 0 10px; }
 .prog-desc { color: var(--text-muted); font-size: 0.93rem; line-height: 1.55; margin: 0 0 16px; }
-.prog-puntos { list-style: none; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 6px; flex-grow: 1; }
-.prog-puntos li { position: relative; padding-left: 20px; font-size: 0.88rem; color: var(--text-color); line-height: 1.45; }
+.prog-puntos { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
+.prog-puntos li { position: relative; padding-left: 22px; font-size: 0.9rem; color: var(--text-color); line-height: 1.5; }
 .prog-puntos li::before { content: '✓'; position: absolute; left: 0; color: var(--primary-color); font-weight: 700; }
 .prog-nota { font-size: 0.82rem; line-height: 1.4; color: var(--text-muted); margin: 0 0 16px; }
 .prog-cta { width: 100%; justify-content: center; }
@@ -2565,7 +2565,7 @@ body.rounded-cards {
 @media (min-width: 821px) {
   .prog-card--ancha { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); column-gap: 40px; align-items: center; }
   .prog-card--ancha .prog-info > :last-child { margin-bottom: 0; }
-  .prog-card--ancha .prog-compra { margin-top: 0; }
+  .prog-card--ancha .prog-puntos { margin-top: 0; }
 }
 .prog-condiciones { max-width: 760px; margin: 0 auto; color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; }
 
