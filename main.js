@@ -207,15 +207,24 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
       });
 
-      // 2. Actualizar paneles / acordeón en móvil (modo exclusivo)
+      // 2. Actualizar el panel visible en escritorio
       accordionItems.forEach(item => {
-        const isMatch = item.getAttribute('data-specialty') === targetSpecialty;
-        item.classList.toggle('active', isMatch);
+        item.classList.toggle('active', item.getAttribute('data-specialty') === targetSpecialty);
+      });
+    }
+
+    // Acordeón en móvil: todos parten cerrados; abrir uno cierra los demás
+    function toggleAccordion(targetItem) {
+      const willOpen = !targetItem.classList.contains('is-open');
+      accordionItems.forEach(item => {
+        const isMatch = item === targetItem && willOpen;
+        item.classList.toggle('is-open', isMatch);
         const trigger = item.querySelector('.accordion-trigger');
         if (trigger) {
           trigger.setAttribute('aria-expanded', isMatch ? 'true' : 'false');
         }
       });
+      if (willOpen) setActiveSpecialty(targetItem.getAttribute('data-specialty'));
     }
 
     // Interacción de pestañas en escritorio
@@ -232,8 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (trigger) {
         trigger.addEventListener('click', (e) => {
           e.preventDefault();
-          const target = item.getAttribute('data-specialty');
-          setActiveSpecialty(target);
+          toggleAccordion(item);
 
           // Desplazamiento suave para enfocar el encabezado si queda fuera de vista
           setTimeout(() => {
