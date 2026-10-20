@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mientras GSAP anima se apaga la transición CSS del elemento (las tarjetas tienen
   // "transition: all"), porque si no cada cuadro se retrasa 300 ms y la animación
   // se ve lenta y a saltos; al terminar se devuelve para que el hover siga igual.
-  const revelar = (selector, { stagger = 0.06 } = {}) => {
+  const revelar = (selector) => {
     const items = bajoElPliegue(selector);
     if (!items.length) return;
     gsap.set(items, { opacity: 0, y: 24 });
@@ -31,16 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
       start: 'top 95%',
       once: true,
       onEnter: (lote) => {
-        lote.forEach((el) => { el.style.transition = 'none'; });
+        // Se guarda la transición escrita en el HTML (algunas tarjetas la traen en style)
+        // para devolverla tal cual al terminar.
+        lote.forEach((el) => { el.dataset.transicion = el.style.transition; el.style.transition = 'none'; });
         gsap.to(lote, {
           opacity: 1,
           y: 0,
           duration: 0.45,
           ease: 'power2.out',
-          stagger,
+          // Desfase de 60 ms entre elementos, pero el lote completo se reparte en
+          // máximo 180 ms: una fila de 9 no hace esperar al último.
+          stagger: lote.length > 1 ? Math.min(0.06, 0.18 / (lote.length - 1)) : 0,
           overwrite: true,
           onComplete: () => {
-            lote.forEach((el) => { el.style.transition = ''; });
+            lote.forEach((el) => { el.style.transition = el.dataset.transicion; delete el.dataset.transicion; });
             gsap.set(lote, { clearProps: 'opacity,transform' });
           }
         });
@@ -48,31 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // La grilla de servicios tiene su propia animación escalonada (más abajo).
-  if (document.querySelector('.services-grid')) {
-    document.querySelectorAll('.service-col').forEach(el => el.classList.remove('animate-on-scroll'));
-  }
+  // Incluye la grilla de servicios del inicio, que antes esperaba a toda la grilla
+  // y soltaba los 9 de a uno.
   revelar('.animate-on-scroll');
   revelar('.card:not(.animate-on-scroll)');
-
-  // Stagger animation for the new 9-item services grid
-  if (document.querySelector('.services-grid')) {
-    gsap.fromTo(bajoElPliegue('.service-col'), 
-      { y: 40, opacity: 0 },
-      {
-        scrollTrigger: {
-          trigger: '.services-grid',
-          start: 'top 75%',
-          once: true
-        },
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: 'power2.out'
-      }
-    );
-  }
 
   // Floating background blobs
   if (document.querySelector('.bg-shape')) {
@@ -97,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hash) {
       setTimeout(() => {
         gsap.to(window, { 
-          duration: 1, 
+          duration: 0.8, 
           scrollTo: { y: hash, offsetY: 180 }, 
           ease: "power2.inOut",
           onComplete: () => {
@@ -105,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             history.replaceState(null, null, window.location.pathname + window.location.search);
           }
         });
-      }, 500);
+      }, 200);
     }
   }
 });
