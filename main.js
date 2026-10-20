@@ -348,8 +348,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const accordions = document.querySelectorAll('details');
 
     accordions.forEach(acc => {
-      const summary = acc.querySelector('summary');
-      const content = acc.querySelector('div');
+      const summary = acc.querySelector(':scope > summary');
+      if (!summary) return;
+
+      // El contenido animado debe ser un único contenedor. Las preguntas
+      // frecuentes traen un <p> directo, así que lo envolvemos en un <div>.
+      let content = acc.querySelector(':scope > div');
+      if (!content) {
+        content = document.createElement('div');
+        [...acc.children].forEach(child => {
+          if (child !== summary) content.appendChild(child);
+        });
+        acc.appendChild(content);
+      }
 
       summary.addEventListener('click', (e) => {
         e.preventDefault();
@@ -357,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Close all other open accordions smoothly
         accordions.forEach(otherAcc => {
           if (otherAcc !== acc && otherAcc.hasAttribute('open')) {
-            const otherContent = otherAcc.querySelector('div');
+            const otherContent = otherAcc.querySelector(':scope > div');
             otherContent.style.overflow = 'hidden';
 
             const startHeight = otherContent.offsetHeight;
