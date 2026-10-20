@@ -17,67 +17,46 @@ document.addEventListener('DOMContentLoaded', () => {
   const visibleAlCargar = (el) => el.getBoundingClientRect().top < window.innerHeight;
   const bajoElPliegue = (selector) => gsap.utils.toArray(selector).filter((el) => !visibleAlCargar(el));
 
-  // Scroll animations for elements with .animate-on-scroll
-  const elements = bajoElPliegue('.animate-on-scroll');
-  
-  elements.forEach((el) => {
-    gsap.from(el, {
-      scrollTrigger: {
-        trigger: el,
-        start: 'top 85%',
-        once: true
-      },
-      y: 50,
-      opacity: 0,
-      duration: 0.8,
-      ease: 'power3.out'
-    });
-  });
-
-  // Stagger animation  // Group cards for staggered animation if they exist
-  if (document.querySelector('.cards-grid')) {
-    gsap.fromTo(bajoElPliegue('.card'), 
-      { y: 50, opacity: 0 },
-      {
-        scrollTrigger: {
-          trigger: '.cards-grid',
-          start: 'top 80%',
-          once: true
-        },
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        stagger: 0.15,
-        ease: 'power3.out'
-      }
-    );
-  } else {
-    // Fallback if cards exist but not in a grid container
-    bajoElPliegue('.card').forEach(card => {
-      if (!card.classList.contains('animate-on-scroll')) {
-        gsap.fromTo(card, 
-          { y: 50, opacity: 0 },
-          {
-            scrollTrigger: {
-              trigger: card,
-              start: 'top 85%',
-              once: true
-            },
-            y: 0,
-            opacity: 1,
-            duration: 0.6,
-            ease: 'power3.out'
+  // Aparición al bajar: entra apenas el elemento asoma por abajo de la pantalla,
+  // con un movimiento corto. Los que entran juntos (una fila de tarjetas) salen
+  // en el mismo lote con un desfase pequeño.
+  // Mientras GSAP anima se apaga la transición CSS del elemento (las tarjetas tienen
+  // "transition: all"), porque si no cada cuadro se retrasa 300 ms y la animación
+  // se ve lenta y a saltos; al terminar se devuelve para que el hover siga igual.
+  const revelar = (selector, { stagger = 0.06 } = {}) => {
+    const items = bajoElPliegue(selector);
+    if (!items.length) return;
+    gsap.set(items, { opacity: 0, y: 24 });
+    ScrollTrigger.batch(items, {
+      start: 'top 95%',
+      once: true,
+      onEnter: (lote) => {
+        lote.forEach((el) => { el.style.transition = 'none'; });
+        gsap.to(lote, {
+          opacity: 1,
+          y: 0,
+          duration: 0.45,
+          ease: 'power2.out',
+          stagger,
+          overwrite: true,
+          onComplete: () => {
+            lote.forEach((el) => { el.style.transition = ''; });
+            gsap.set(lote, { clearProps: 'opacity,transform' });
           }
-        );
+        });
       }
     });
+  };
+
+  // La grilla de servicios tiene su propia animación escalonada (más abajo).
+  if (document.querySelector('.services-grid')) {
+    document.querySelectorAll('.service-col').forEach(el => el.classList.remove('animate-on-scroll'));
   }
+  revelar('.animate-on-scroll');
+  revelar('.card:not(.animate-on-scroll)');
 
   // Stagger animation for the new 9-item services grid
   if (document.querySelector('.services-grid')) {
-    // Remove animate-on-scroll to avoid duplicate animations
-    document.querySelectorAll('.service-col').forEach(el => el.classList.remove('animate-on-scroll'));
-    
     gsap.fromTo(bajoElPliegue('.service-col'), 
       { y: 40, opacity: 0 },
       {
