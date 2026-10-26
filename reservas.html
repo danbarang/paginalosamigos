@@ -56,7 +56,7 @@
   <main style="padding-top: 180px;">
     <div class="container text-center">
       <h1 class="text-hero mb-2 animate-on-scroll">Reserva tu hora</h1>
-      <p class="text-subtitle mb-4 animate-on-scroll">Agenda directamente en nuestra plataforma o contáctanos por nuestros canales oficiales.</p>
+      <p class="text-subtitle mb-4 animate-on-scroll">Agenda directamente en nuestra plataforma o contáctanos por nuestros canales oficiales. Atendemos de lunes a viernes, de 9:00 a 19:00.</p>
       
       <!-- SECCIÓN: AGENDAR CON ESPECIALISTAS -->
       <section class="specialists-booking-section animate-on-scroll">
@@ -65,19 +65,22 @@
         <div class="specialists-tabs-card">
           <!-- Desktop Tabs Navigation (role="tablist") -->
           <div class="specialists-tablist" role="tablist" aria-label="Especialidades">
-            <button class="specialist-tab-btn active" role="tab" id="tab-medicina" aria-selected="true" aria-controls="panel-medicina" data-target="medicina">Medicina</button>
+            <button class="specialist-tab-btn active" role="tab" id="tab-medicina" aria-selected="true" aria-controls="panel-medicina" data-target="medicina">Especialidades médicas</button>
             <button class="specialist-tab-btn" role="tab" id="tab-fonoaudiologia" aria-selected="false" aria-controls="panel-fonoaudiologia" data-target="fonoaudiologia">Fonoaudiología</button>
             <button class="specialist-tab-btn" role="tab" id="tab-kinesiologia" aria-selected="false" aria-controls="panel-kinesiologia" data-target="kinesiologia">Kinesiología</button>
             <button class="specialist-tab-btn" role="tab" id="tab-terapia-ocupacional" aria-selected="false" aria-controls="panel-terapia-ocupacional" data-target="terapia-ocupacional">Terapia Ocupacional</button>
             <button class="specialist-tab-btn" role="tab" id="tab-psicologia" aria-selected="false" aria-controls="panel-psicologia" data-target="psicologia">Psicología</button>
+            <!-- @oculto: nutricion -->
+            <button class="specialist-tab-btn" role="tab" id="tab-nutricion" aria-selected="false" aria-controls="panel-nutricion" data-target="nutricion">Nutrición</button>
+            <!-- @/oculto -->
           </div>
 
           <!-- Panels / Mobile Accordion Items -->
           <div class="specialists-panels">
-            <!-- Item 1: Medicina (Principal / Más buscado) -->
+            <!-- Item 1: Especialidades médicas -->
             <div class="specialist-accordion-item active" id="item-medicina" data-specialty="medicina">
               <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-medicina">
-                <span class="accordion-title">Medicina</span>
+                <span class="accordion-title">Especialidades médicas</span>
                 <span class="accordion-arrow">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </span>
@@ -86,26 +89,25 @@
               <div class="specialist-tabpanel" role="tabpanel" id="panel-medicina" aria-labelledby="tab-medicina">
                 <div class="specialist-profile">
                   <div class="specialist-avatar-wrap">
-                    <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=400&q=80" alt="Dr. Matías Valenzuela" class="specialist-avatar" loading="lazy" />
-                    <span class="specialist-badge">Medicina General</span>
+                    <img src="https://images.unsplash.com/photo-1622902046580-2b47f47f5471?auto=format&fit=crop&w=400&q=80" alt="Foto referencial del profesional" class="specialist-avatar" loading="lazy" />
+                    <span class="specialist-badge">Especialidades médicas</span>
                   </div>
                   <div class="specialist-info">
                     <div class="specialist-header">
-                      <h3 class="specialist-name">Dr. Matías Valenzuela</h3>
-                      <p class="specialist-role">Médico Cirujano · Enfoque en Salud Integral</p>
+                      <h3 class="specialist-name">Dr. o Dra. NOMBRE APELLIDO</h3>
+                      <p class="specialist-role">Especialista médico</p>
                     </div>
                     <div class="specialist-expertiz">
                       <span class="expertiz-label">Áreas de Expertiz Clínica:</span>
-                      <p class="expertiz-desc">Consulta médica integral, evaluación clínica preventiva, control y seguimiento de patologías crónicas, derivación e interconsulta con el equipo terapéutico y prescripción responsable.</p>
+                      <p class="expertiz-desc">Evaluación médica según la especialidad, coordinación con el equipo terapéutico y seguimiento conjunto de cada persona.</p>
                     </div>
                     <div class="specialist-tags">
-                      <span class="tag">Medicina General</span>
-                      <span class="tag">Control Crónico</span>
-                      <span class="tag">Chequeo Preventivo</span>
-                      <span class="tag">Interconsulta Clínica</span>
+                      <span class="tag">Evaluación médica</span>
+                      <span class="tag">Trabajo en equipo</span>
+                      <span class="tag">Interconsulta</span>
                     </div>
                     <div class="specialist-action">
-                      <a href="https://losamigos.setmore.com/medicina" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
+                      <a href="https://losamigosctr.setmore.com/losamigos" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                         Agendar hora
                       </a>
@@ -127,13 +129,13 @@
               <div class="specialist-tabpanel" role="tabpanel" id="panel-fonoaudiologia" aria-labelledby="tab-fonoaudiologia">
                 <div class="specialist-profile">
                   <div class="specialist-avatar-wrap">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Flga. Daniela Vargas" class="specialist-avatar" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Foto referencial del profesional" class="specialist-avatar" loading="lazy" />
                     <span class="specialist-badge">Fonoaudiología</span>
                   </div>
                   <div class="specialist-info">
                     <div class="specialist-header">
-                      <h3 class="specialist-name">Flga. Daniela Vargas</h3>
-                      <p class="specialist-role">Fonoaudióloga clínica</p>
+                      <h3 class="specialist-name">Flgo. NOMBRE APELLIDO</h3>
+                      <p class="specialist-role">Fonoaudiología clínica</p>
                     </div>
                     <div class="specialist-expertiz">
                       <span class="expertiz-label">Áreas de Expertiz Clínica:</span>
@@ -146,7 +148,7 @@
                       <span class="tag">Motricidad Orofacial</span>
                     </div>
                     <div class="specialist-action">
-                      <a href="https://losamigos.setmore.com/fonoaudiologia" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
+                      <a href="https://losamigosctr.setmore.com/losamigos" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                         Agendar hora
                       </a>
@@ -168,13 +170,13 @@
               <div class="specialist-tabpanel" role="tabpanel" id="panel-kinesiologia" aria-labelledby="tab-kinesiologia">
                 <div class="specialist-profile">
                   <div class="specialist-avatar-wrap">
-                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80" alt="Klgo. Mateo Rivas" class="specialist-avatar" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=400&q=80" alt="Foto referencial del profesional" class="specialist-avatar" loading="lazy" />
                     <span class="specialist-badge">Kinesiología</span>
                   </div>
                   <div class="specialist-info">
                     <div class="specialist-header">
-                      <h3 class="specialist-name">Klgo. Mateo Rivas</h3>
-                      <p class="specialist-role">Kinesiólogo · Neurorehabilitación y Ortopedia</p>
+                      <h3 class="specialist-name">Klgo. NOMBRE APELLIDO</h3>
+                      <p class="specialist-role">Kinesiología · Neurorrehabilitación y traumatología</p>
                     </div>
                     <div class="specialist-expertiz">
                       <span class="expertiz-label">Áreas de Expertiz Clínica:</span>
@@ -187,7 +189,7 @@
                       <span class="tag">Reeducación Motora</span>
                     </div>
                     <div class="specialist-action">
-                      <a href="https://losamigos.setmore.com/kinesiologia" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
+                      <a href="https://losamigosctr.setmore.com/losamigos" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                         Agendar hora
                       </a>
@@ -209,13 +211,13 @@
               <div class="specialist-tabpanel" role="tabpanel" id="panel-terapia-ocupacional" aria-labelledby="tab-terapia-ocupacional">
                 <div class="specialist-profile">
                   <div class="specialist-avatar-wrap">
-                    <img src="https://images.unsplash.com/photo-1594824813598-a664e40e69cb?auto=format&fit=crop&w=400&q=80" alt="T.O. Camila Soto" class="specialist-avatar" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1594824813598-a664e40e69cb?auto=format&fit=crop&w=400&q=80" alt="Foto referencial del profesional" class="specialist-avatar" loading="lazy" />
                     <span class="specialist-badge">Terapia Ocupacional</span>
                   </div>
                   <div class="specialist-info">
                     <div class="specialist-header">
-                      <h3 class="specialist-name">T.O. Camila Soto</h3>
-                      <p class="specialist-role">Terapeuta Ocupacional · Integración Sensorial Infantil</p>
+                      <h3 class="specialist-name">T.O. NOMBRE APELLIDO</h3>
+                      <p class="specialist-role">Terapia ocupacional · Infancia y adultez</p>
                     </div>
                     <div class="specialist-expertiz">
                       <span class="expertiz-label">Áreas de Expertiz Clínica:</span>
@@ -228,7 +230,7 @@
                       <span class="tag">Motricidad Fina</span>
                     </div>
                     <div class="specialist-action">
-                      <a href="https://losamigos.setmore.com/terapia-ocupacional" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
+                      <a href="https://losamigosctr.setmore.com/losamigos" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                         Agendar hora
                       </a>
@@ -250,13 +252,13 @@
               <div class="specialist-tabpanel" role="tabpanel" id="panel-psicologia" aria-labelledby="tab-psicologia">
                 <div class="specialist-profile">
                   <div class="specialist-avatar-wrap">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80" alt="Ps. Laura Méndez" class="specialist-avatar" loading="lazy" />
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80" alt="Foto referencial del profesional" class="specialist-avatar" loading="lazy" />
                     <span class="specialist-badge">Psicología</span>
                   </div>
                   <div class="specialist-info">
                     <div class="specialist-header">
-                      <h3 class="specialist-name">Ps. Laura Méndez</h3>
-                      <p class="specialist-role">Psicóloga Clínica · Infantojuvenil y Adultos</p>
+                      <h3 class="specialist-name">Ps. NOMBRE APELLIDO</h3>
+                      <p class="specialist-role">Psicología clínica · Infantojuvenil y adultos</p>
                     </div>
                     <div class="specialist-expertiz">
                       <span class="expertiz-label">Áreas de Expertiz Clínica:</span>
@@ -269,7 +271,7 @@
                       <span class="tag">Vínculo y Crianza</span>
                     </div>
                     <div class="specialist-action">
-                      <a href="https://losamigos.setmore.com/psicologia" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
+                      <a href="https://losamigosctr.setmore.com/losamigos" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                         Agendar hora
                       </a>
@@ -278,6 +280,48 @@
                 </div>
               </div>
             </div>
+
+            <!-- @oculto: nutricion -->
+            <!-- Item 6: Nutrición -->
+            <div class="specialist-accordion-item" id="item-nutricion" data-specialty="nutricion">
+              <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-nutricion">
+                <span class="accordion-title">Nutrición</span>
+                <span class="accordion-arrow">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </button>
+
+              <div class="specialist-tabpanel" role="tabpanel" id="panel-nutricion" aria-labelledby="tab-nutricion">
+                <div class="specialist-profile">
+                  <div class="specialist-avatar-wrap">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=400&q=80" alt="Foto referencial del profesional" class="specialist-avatar" loading="lazy" />
+                    <span class="specialist-badge">Nutrición</span>
+                  </div>
+                  <div class="specialist-info">
+                    <div class="specialist-header">
+                      <h3 class="specialist-name">Nut. NOMBRE APELLIDO</h3>
+                      <p class="specialist-role">Nutrición · Infancia y adultez</p>
+                    </div>
+                    <div class="specialist-expertiz">
+                      <span class="expertiz-label">Áreas de Expertiz Clínica:</span>
+                      <p class="expertiz-desc">Planes de alimentación adaptados a la rutina de cada persona y su familia, educación alimentaria y acompañamiento en el control de factores de riesgo cardiovascular, junto al resto del equipo.</p>
+                    </div>
+                    <div class="specialist-tags">
+                      <span class="tag">Planes de alimentación</span>
+                      <span class="tag">Educación alimentaria</span>
+                      <span class="tag">Trabajo en equipo</span>
+                    </div>
+                    <div class="specialist-action">
+                      <a href="https://losamigosctr.setmore.com/losamigos" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-booking">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                        Agendar hora
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- @/oculto -->
           </div>
         </div>
 
@@ -291,7 +335,7 @@
             <p style="margin: 0; color: #5b5f62; font-size: 0.95rem;">Nuestro equipo clínico te orienta de forma personalizada para que elijas la disciplina y profesional más adecuado para tu caso.</p>
           </div>
           <div class="support-cta">
-            <a href="https://wa.me/56912345678?text=Hola%2C%20quisiera%20orientaci%C3%B3n%20para%20saber%20qu%C3%A9%20especialista%20debo%20agendar" target="_blank" rel="noopener noreferrer" class="btn btn-accent" style="white-space: nowrap;">
+            <a href="https://wa.me/56950925082?text=Hola%2C%20quisiera%20orientaci%C3%B3n%20para%20saber%20qu%C3%A9%20especialista%20debo%20agendar" target="_blank" rel="noopener noreferrer" class="btn btn-accent" style="white-space: nowrap;">
               Orientación por WhatsApp
             </a>
           </div>
