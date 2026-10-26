@@ -46,8 +46,13 @@ const PAGES = {
   c10: 'autonomia-personas-mayores-castro.html',
   c11: 'ansiedad-castro.html',
   c12: 'depresion-castro.html',
-  c13: 'tdah-castro.html'
+  c13: 'tdah-castro.html',
+  privacidad: 'politica-de-privacidad.html',
+  aviso: 'aviso-legal.html'
 };
+
+// Páginas que se publican pero no se listan en el sitemap.
+const FUERA_DEL_SITEMAP = ['politica-de-privacidad.html', 'aviso-legal.html'];
 
 // Sección del menú que se marca como activa en cada página.
 const NAV_SECTION = {
@@ -89,6 +94,11 @@ const NAV_SECTION = {
   'reservas.html': 'reservas.html'
 };
 
+// Contenido reservado: lo que va entre <!-- @oculto: motivo --> y <!-- @/oculto -->
+// queda en el código fuente pero no se publica (ni visible ni para buscadores).
+// Para volver a mostrarlo, borra los dos marcadores.
+const OCULTO = /<!-- @oculto(?::[^>]*)? -->[\s\S]*?<!-- @\/oculto -->/g;
+
 const partial = (name) => readFileSync(resolve(__dirname, 'partials', name), 'utf8');
 
 function siteLayout() {
@@ -110,6 +120,7 @@ function siteLayout() {
           .replace('<!-- @nav -->', nav)
           .replace('<!-- @footer -->', partial('footer.html'))
           .replace('</head>', `${partial('head.html')}</head>`)
+          .replace(OCULTO, '')
           .replaceAll('%SITE_URL%', SITE_URL)
           .replaceAll('%YEAR%', String(new Date().getFullYear()));
       }
@@ -117,6 +128,7 @@ function siteLayout() {
     generateBundle() {
       const today = new Date().toISOString().slice(0, 10);
       const urls = Object.values(PAGES)
+        .filter((p) => !FUERA_DEL_SITEMAP.includes(p))
         .map((p) => {
           const loc = p === 'index.html' ? `${SITE_URL}/` : `${SITE_URL}/${p}`;
           return `  <url><loc>${loc}</loc><lastmod>${today}</lastmod></url>`;
