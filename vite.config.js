@@ -48,7 +48,8 @@ const PAGES = {
   c12: 'depresion-castro.html',
   c13: 'tdah-castro.html',
   privacidad: 'politica-de-privacidad.html',
-  aviso: 'aviso-legal.html'
+  aviso: 'aviso-legal.html',
+  trabaja: 'trabaja-en-los-amigos.html'
 };
 
 // Páginas que se publican pero no se listan en el sitemap.
@@ -91,7 +92,8 @@ const NAV_SECTION = {
   'ansiedad-castro.html': 'terapias.html',
   'depresion-castro.html': 'terapias.html',
   'tdah-castro.html': 'terapias.html',
-  'reservas.html': 'reservas.html'
+  'reservas.html': 'reservas.html',
+  'trabaja-en-los-amigos.html': 'centro.html'
 };
 
 // Contenido reservado: lo que va entre <!-- @oculto: motivo --> y <!-- @/oculto -->
